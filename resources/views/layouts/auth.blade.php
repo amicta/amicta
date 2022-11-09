@@ -14,11 +14,11 @@
             <div class="container mt-5">
                 <div class="row">
                     @if (Request::is('login*'))
-                    <div
-                        class="col-12 col-sm-8 offset-sm-2 col-md-6 offset-md-3 col-lg-6 offset-lg-3 col-xl-4 offset-xl-4">
-                    @else
-                    <div
-                        class="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-8 offset-lg-2 col-xl-8 offset-xl-2">
+                        <div
+                            class="col-12 col-sm-8 offset-sm-2 col-md-6 offset-md-3 col-lg-6 offset-lg-3 col-xl-4 offset-xl-4">
+                        @else
+                            <div
+                                class="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-8 offset-lg-2 col-xl-8 offset-xl-2">
                     @endif
 
                     <div class="login-brand">
@@ -40,11 +40,12 @@
 
                     @yield('content')
 
-                    <div class="simple-footer">
-                        Copyright &copy; {{ config('app.name') }} {{ date('Y') }}
-                    </div>
                 </div>
             </div>
+    </div>
+    <div class="simple-footer">
+        Copyright &copy; AMICTA 2022 <div class="bullet"></div> Created by <a href="https://amcc.or.id/"
+            target="_blank">Amikom Computer Club (AMCC)</a>
     </div>
     </section>
     </div>

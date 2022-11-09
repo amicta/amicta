@@ -7,6 +7,7 @@ use App\Notifications\Admin\Auth\VerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Support\Facades\Hash;
 
 class Admin extends Authenticatable
 {
@@ -45,18 +46,23 @@ class Admin extends Authenticatable
      * @param  string  $token
      * @return void
      */
-    public function sendPasswordResetNotification($token)
-    {
-        $this->notify(new ResetPassword($token));
-    }
+    // public function sendPasswordResetNotification($token)
+    // {
+    //     $this->notify(new ResetPassword($token));
+    // }
 
     /**
      * Send the email verification notification.
      *
      * @return void
      */
-    public function sendEmailVerificationNotification()
+    // public function sendEmailVerificationNotification()
+    // {
+    //     $this->notify(new VerifyEmail);
+    // }
+
+    public function setPasswordAttribute($value)
     {
-        $this->notify(new VerifyEmail);
+        $this->attributes['password'] = Hash::make($value);
     }
 }
