@@ -27,8 +27,8 @@ class ParticipantCreateRequest extends FormRequest
             'name' => 'required|string|min:3',
             'nim' => 'required|string|min:1|max:10',
             'email' => 'required|string|min:1',
-            'phone' => 'required|integer|min:1',
-            'program_study' => 'required|string|min:1',
+            'phone' => 'required|integer',
+            'program_study' => 'required|string',
             'event_id' => 'required',
             'reference' => 'nullable',
         ];

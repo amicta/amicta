@@ -1,0 +1,201 @@
+body {
+    font-size: 14px;
+    font-family: p-400;
+    background-color: #206F80;
+}
+
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 85vh;
+    opacity: 0.6;
+}
+
+.base {
+    background-color: #206F80;
+}
+.base-text {
+    color: #206F80;
+}
+
+#navbar .drop {
+    display: none;
+}
+
+.button-color {
+    background-color: #F55553;
+}
+
+.wave-white {
+    position: relative;
+    width: 100%;
+    height: 25vh;
+    background-color: #206F80;
+    overflow: hidden;
+}
+
+.wave-white .wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background-image: url(../../assets/img/wave.png);
+    background-size: 1000px 100px;
+}
+
+.wave-white .wave.wave1 {
+    animation: animate 10s linear infinite;
+    z-index: 1000;
+    opacity: 1;
+    animation-delay: 0s;
+    bottom: 0;
+}
+
+.wave-white .wave.wave2 {
+    animation: animate2 15s linear infinite;
+    z-index: 999;
+    opacity: 0.5;
+    animation-delay: -5s;
+    bottom: 10;
+}
+
+.wave-white .wave.wave3 {
+    animation: animate3 15s linear infinite;
+    z-index: 998;
+    opacity: 0.2;
+    animation-delay: -2s;
+    bottom: 15;
+}
+
+.wave-white .wave.wave4 {
+    animation: animate4 5s linear infinite;
+    z-index: 997;
+    opacity: 0.7;
+    animation-delay: -5s;
+    bottom: 20;
+}
+
+.wave-green {
+    position: relative;
+    width: 100%;
+    height: 25vh;
+    background-color: #FFFFFF;
+    overflow: hidden;
+}
+
+.wave-green .wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background-image: url(../../assets/img/wave-1.png);
+    background-size: 1000px 100px;
+}
+
+.wave-green .wave.wave1 {
+    animation: animate 10s linear infinite;
+    z-index: 1000;
+    opacity: 1;
+    animation-delay: 0s;
+    bottom: 0;
+}
+
+.wave-green .wave.wave2 {
+    animation: animate2 15s linear infinite;
+    z-index: 999;
+    opacity: 0.5;
+    animation-delay: -5s;
+    bottom: 10;
+}
+
+.wave-green .wave.wave3 {
+    animation: animate3 15s linear infinite;
+    z-index: 998;
+    opacity: 0.2;
+    animation-delay: -2s;
+    bottom: 15;
+}
+
+.wave-green .wave.wave4 {
+    animation: animate4 5s linear infinite;
+    z-index: 997;
+    opacity: 0.7;
+    animation-delay: -5s;
+    bottom: 20;
+}
+
+@keyframes animate {
+    0% {
+        background-position-x: 0;
+    }
+    100% {
+        background-position-x: 1000px;
+    }
+}
+@keyframes animate2 {
+    0% {
+        background-position-x: 0;
+    }
+    100% {
+        background-position-x: 1000px;
+    }
+}
+@keyframes animate3 {
+    0% {
+        background-position-x: 0;
+    }
+    100% {
+        background-position-x: 1000px;
+    }
+}
+@keyframes animate4 {
+    0% {
+        background-position-x: 0;
+    }
+    100% {
+        background-position-x: 1000px;
+    }
+}
+
+.accordion-button:not(.collapsed) {
+    color: unset!important;
+}
+.collapse {
+    visibility: unset!important;
+}
+
+@media (max-width:640px) {
+    #navbar .drop {
+        display: block;
+    }
+    #navbar .navbar {
+        display: none;
+    }
+    .wave-green, .wave-white {
+        height: 20vh;
+    }
+    .col-reverse {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+}
+
+@media (max-width:425px) {
+    .wave-green, .wave-white {
+        height: 25vh;
+    }
+    #description .benefit {
+        padding: 20px 0;
+    }
+}
+
+@media (max-width:285px) {
+    .button-hero {
+        flex-direction: column;
+    }
+    .button-hero button {
+        margin: 10px 0;
+    }
+}
