@@ -6,9 +6,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'HomeController@index')->name('home');
 Route::get('/dashboard', 'HomeController@dashboard')->name('dashboard');
 
-// Event
-// Route::get('/event', 'EventController@index')->name('event');
 Route::resource('/events', 'EventController')->except('create', 'show');
+Route::resource('/participants', 'ParticipantController')->except('create', 'show');
 
 
 /*

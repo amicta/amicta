@@ -15,10 +15,17 @@
             </a>
         </li>
 
-        <li class="{{ request()->is('admin/event*') ? 'active' : '' }}">
+        <li class="{{ request()->is('admin/events*') ? 'active' : '' }}">
             <a href="{{ route('admin.events.index') }}">
                 <i class="fas fa-calendar-alt"></i>
                 <span>Event</span>
+            </a>
+        </li>
+
+        <li class="{{ request()->is('admin/participants*') ? 'active' : '' }}">
+            <a href="{{ route('admin.participants.index') }}">
+                <i class="fas fa-users"></i>
+                <span>Peserta Event</span>
             </a>
         </li>
 

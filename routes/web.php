@@ -16,7 +16,14 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('welcome');
+
+// Route::get('/seminar', function () {
+//     return view('seminar');
+// })->name('seminar');
+
+Route::get('/seminar',[App\Http\Controllers\EventController::class, 'index'])->name('event.index');
+Route::post('/seminar',[App\Http\Controllers\ParticipantController::class, 'store'])->name('event.register');
 
 Auth::routes();
 

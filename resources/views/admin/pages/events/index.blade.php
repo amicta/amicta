@@ -26,12 +26,10 @@
                             <table class="table table-striped" id="table-1">
                                 <thead>
                                     <tr>
-                                        <th class="text-center">
-                                            #
-                                        </th>
+                                        <th class="text-center">#</th>
                                         <th>Nama</th>
                                         <th>Lokasi</th>
-                                        <th>Quota</th>
+                                        <th>Peserta</th>
                                         <th>Status</th>
                                         <th>Action</th>
                                     </tr>
@@ -42,7 +40,9 @@
                                             <td scope="row" class="text-center">{{ $loop->iteration }}</td>
                                             <td>{{ $event->name }}</td>
                                             <td>{{ $event->location }}</td>
-                                            <td>{{ $event->quota }}</td>
+                                            <td class="@if(!$event->is_available) text-danger @endif">
+                                                {{ $event->current_participant . ' / ' . $event->quota }}
+                                            </td>
                                             <td>
                                                 @if ($event->is_publish)
                                                     <div class="badge badge-success">Published</div>
@@ -60,6 +60,7 @@
                                                         method="POST">
                                                         @csrf
                                                         @method('patch')
+
                                                         @if ($event['is_publish'])
                                                             <input type="hidden" name="is_publish" value="0" />
                                                             <button type="submit" class="btn btn-sm btn-danger btn-icon">
@@ -71,6 +72,7 @@
                                                                 <i class="fas fa-check"></i> Publish
                                                             </button>
                                                         @endif
+
                                                     </form>
                                                     <form
                                                         action="{{ route('admin.events.destroy', ['event' => $event['id']]) }}"
