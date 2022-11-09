@@ -16,7 +16,7 @@
         </li>
 
         <li class="{{ request()->is('admin/event*') ? 'active' : '' }}">
-            <a href="{{ url('table') }}">
+            <a href="{{ route('admin.events.index') }}">
                 <i class="fas fa-calendar-alt"></i>
                 <span>Event</span>
             </a>

@@ -7,6 +7,7 @@
     <title>{{ config('app.name') }} &mdash; @yield('title', 'Home')</title>
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
+    <link href="{{ asset('css/custom.css') }}" rel="stylesheet">
     @stack('stylesheet')
 </head>
 
