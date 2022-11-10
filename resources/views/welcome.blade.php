@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AMICTA 2022 | Amikom Innovative, Creative, Technology, Awards</title>
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/font.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/output.css') }}">
@@ -89,7 +90,8 @@
                 <div class="z-50 self-center text-xs mx-3 lg:text-sm"><a href="#description">Tentang</a></div>
                 <div
                     class="z-50 self-center text-xs mx-3 lg:text-sm button-color p-3 rounded-xl shadow-md hover:bg-orange-700 hover:shadow-lg active:bg-orange-800 active:shadow-lg">
-                    <a href="#">Rulebook Lomba</a></div>
+                    <a href="#">Rulebook Lomba</a>
+                </div>
             </div>
         </div>
     </div>
