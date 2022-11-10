@@ -145,7 +145,7 @@
 
             @forelse ($data['events'] as $event)
                 <div class="px-[8px] sm:px-[50px] lg:px-[100px]">
-                    <div class="p-700 text-base sm:text-[20px] lg:text-[40px] lg:leading-[46px]">
+                    <div class="p-700 text-base sm:text-[20px] lg:text-[40px] lg:leading-[46px] pt-12">
                         Daftar {{ $event->name }}</div>
                     <div class="mt-3 text-xs sm:text-base">{{ $event->description . ' di ' . $event->location }}</div>
                     <div class="mt-3 text-xs sm:text-base">Sisa kuota peserta:
