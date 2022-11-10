@@ -55,19 +55,19 @@
                                 aria-labelledby="dropdownMenuButton1">
                                 <li>
                                     <a class="dropdown-item text-xs sm:text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100"
-                                        href="index.html">Home</a>
+                                        href="{{ route('welcome') }}">Home</a>
                                 </li>
                                 <li>
                                     <a class="dropdown-item text-xs sm:text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100"
-                                        href="seminar.html">Seminar</a>
+                                        href="{{ route('event.index') }}">Seminar</a>
                                 </li>
                                 <li>
                                     <a class="dropdown-item text-xs sm:text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100"
-                                        href="index.html#main-issue">Lomba</a>
+                                        href="{{ route('welcome') }}#main-issue">Lomba</a>
                                 </li>
                                 <li>
                                     <a class="dropdown-item text-xs sm:text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100"
-                                        href="index.html#description">Tentang</a>
+                                        href="{{ route('welcome') }}#description">Tentang</a>
                                 </li>
                                 <li>
                                     <a class="dropdown-item text-xs sm:text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100"

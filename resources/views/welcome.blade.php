@@ -56,15 +56,15 @@
                                 aria-labelledby="dropdownMenuButton1">
                                 <li>
                                     <a class="dropdown-item text-xs sm:text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100"
-                                        href="index.html">Home</a>
+                                        href="{{ route('welcome') }}">Home</a>
                                 </li>
                                 <li>
                                     <a class="dropdown-item text-xs sm:text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100"
-                                        href="seminar.html">Seminar</a>
+                                        href="{{ route('event.index') }}">Seminar</a>
                                 </li>
                                 <li>
                                     <a class="dropdown-item text-xs sm:text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100"
-                                        href="#">Lomba</a>
+                                        href="#main-issue">Lomba</a>
                                 </li>
                                 <li>
                                     <a class="dropdown-item text-xs sm:text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100"
@@ -360,7 +360,7 @@
 
     <!-- sponsor -->
     <section class="text-center bg-white mt-[300px] px-8 sm:px-[50px] lg:px-[150px] pt-[300px]">
-        <h1 class="my-7 sm:my-14 p-700 text-sm sm:text-2xl lg:text-5xl">OUR SPONSOR</h1>
+        <h1 class="my-7 sm:my-14 p-700 text-sm sm:text-2xl lg:text-5xl">IN COLLABORATION WITH</h1>
         <div class="flex justify-center mb-7 sm:mb-14">
             <img class="w-[50px] sm:w-[100px] lg:w-[180px] mx-auto" src="{{ asset('assets/img/aws.png') }}"
                 alt="">
