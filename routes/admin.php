@@ -3,11 +3,13 @@
 use Illuminate\Support\Facades\Route;
 
 // Dashboard
-Route::get('/', 'HomeController@index')->name('home');
-Route::get('/dashboard', 'HomeController@dashboard')->name('dashboard');
+Route::group(['middleware' => ['auth:admin']], function () {
+    Route::get('/', 'HomeController@index')->name('home');
+    Route::get('/dashboard', 'HomeController@dashboard')->name('dashboard');
 
-Route::resource('/events', 'EventController')->except('create', 'show');
-Route::resource('/participants', 'ParticipantController')->except('create', 'show');
+    Route::resource('/events', 'EventController')->except('create', 'show');
+    Route::resource('/participants', 'ParticipantController')->except('create', 'show');
+});
 
 
 /*
