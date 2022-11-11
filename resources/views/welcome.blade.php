@@ -269,7 +269,7 @@
                                 style="width: 150px; height:150px;" />
                             <div class="flex flex-wrap justify-center">
                                 <div class="grow-0 shrink-0 basis-auto w-full lg:w-8/12 px-3">
-                                    <h5 class="text-sm sm:text-lg font-bold mb-3">Fathin Naufal - Product Manager at Gojek</h5>
+                                    <h5 class="text-black text-sm sm:text-lg font-bold mb-3">Fathin Naufal - Product Manager at Gojek</h5>
                                     <p class="text-xs lg:text-sm font-medium text-gray-700 mb-4">
                                         Track Product Development : How to Build Digital Product
                                     </p>
@@ -282,7 +282,7 @@
                                 style="width: 150px; height:150px;" />
                             <div class="flex flex-wrap justify-center">
                                 <div class="grow-0 shrink-0 basis-auto w-full lg:w-8/12 px-3">
-                                    <h5 class="text-sm sm:text-lg font-bold mb-3">Alwy Herfian S - CEO at Widya Robotic</h5>
+                                    <h5 class="text-black text-sm sm:text-lg font-bold mb-3">Alwy Herfian S - CEO at Widya Robotic</h5>
                                     <p class="text-xs lg:text-sm font-medium text-gray-700 mb-4">
                                         Track Startup Journey : Startup Preneur Zillenials
                                     </p>
@@ -295,7 +295,7 @@
                                 style="width: 150px; height:150px;" />
                             <div class="flex flex-wrap justify-center">
                                 <div class="grow-0 shrink-0 basis-auto w-full lg:w-8/12 px-3">
-                                    <h5 class="text-sm sm:text-lg font-bold mb-3">Andrean N - CEO at WHOUSE</h5>
+                                    <h5 class="text-black text-sm sm:text-lg font-bold mb-3">Andrean N - CEO at WHOUSE</h5>
                                     <p class="text-xs lg:text-sm font-medium text-gray-700 mb-4">
                                         Track Startup Journey : From Engineer to be Entrepreneur
                                     </p>
@@ -308,7 +308,7 @@
                                 style="width: 150px; height:150px;" />
                             <div class="flex flex-wrap justify-center">
                                 <div class="grow-0 shrink-0 basis-auto w-full lg:w-8/12 px-3">
-                                    <h5 class="text-sm sm:text-lg font-bold mb-3">Delta Purna W - CEO at Qiscus</h5>
+                                    <h5 class="text-black text-sm sm:text-lg font-bold mb-3">Delta Purna W - CEO at Qiscus</h5>
                                     <p class="text-xs lg:text-sm font-medium text-gray-700 mb-4">
                                         Track Startup Journey : From Engineer to be Entrepreneur
                                     </p>
