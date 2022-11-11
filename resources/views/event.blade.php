@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AMICTA 2022 | Amikom Innovative, Creative, Technology, Awards</title>
+    <title>SEMINAR AMICTA 2022 | Amikom Innovative, Creative, Technology, Awards</title>
     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/font.css') }}">
@@ -31,8 +31,8 @@
 
 <body>
     {{-- floating contact person --}}
-    <button onclick="buttonHandler()" title="Contact Sale"
-        class="fixed z-20 bottom-10 right-8 w-20 h-20 rounded-full drop-shadow-lg flex justify-center items-center text-white text-4xl hover:bg-gray-600 hover:drop-shadow-2xl hover:animate-bounce duration-300">
+    <button onclick="buttonHandler()" title="Contact Person"
+        class="fixed z-20 bottom-4 right-4 sm:bottom-6 sm:right-6 w-12 h-12 sm:w-16 sm:h-16 rounded-full drop-shadow-lg flex justify-center items-center text-white text-4xl hover:bg-gray-600 hover:drop-shadow-2xl hover:animate-bounce duration-300">
         <a target="_blank" href="http://wa.me/6281235493328">
             <img src="{{ asset('assets/img/icon-wa.png') }}" alt="Whatsapp">
         </a>
@@ -78,9 +78,9 @@
                                         href="#description">Tentang</a>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item text-xs sm:text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100"
+                                    <a class="dropdown-item button-color rounded p-2 text-white text-xs sm:text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100"
                                         href="#">
-                                        <div class="button-color rounded p-2 text-white">Rulebook Lomba</div>
+                                        Rulebook Lomba
                                     </a>
                                 </li>
                             </ul>
@@ -95,10 +95,9 @@
                 </div>
                 <div class="z-10 self-center text-xs mx-3 lg:text-sm"><a href="#main-issue">Lomba</a></div>
                 <div class="z-10 self-center text-xs mx-3 lg:text-sm"><a href="#description">Tentang</a></div>
-                <div
-                    class="z-10 self-center text-xs mx-3 lg:text-sm button-color p-3 rounded-xl shadow-md hover:bg-orange-700 hover:shadow-lg active:bg-orange-800 active:shadow-lg">
-                    <a href="#">Rulebook Lomba</a>
-                </div>
+                <a href="#" class="z-10 self-center text-xs mx-3 lg:text-sm button-color p-3 rounded-xl shadow-md hover:bg-orange-700 hover:shadow-lg active:bg-orange-800 active:shadow-lg">
+                    Rulebook Lomba
+                </a>
             </div>
         </div>
     </div>
@@ -114,10 +113,9 @@
                     secara paralel berbagi kisah sukses, lesson learned dalam perjalanannya menyelesaikan berbagai
                     masalah menggunakan teknologi. Inspiring and Insightful.</p>
                 <div class="flex justify-start mt-3">
-                    <div
-                        class="self-center button-color p-2 lg:p-3 rounded-3xl mr-6 text-xs lg:text-sm z-50">
-                        <a href="#form-daftar">Daftar Sekarang</a>
-                    </div>
+                    <a href="#form-daftar" class="self-center button-color p-2 lg:p-3 rounded-3xl mr-6 text-xs lg:text-sm z-50">
+                        Daftar Sekarang
+                    </a>
                 </div>
             </div>
             <div class="w-56 sm:w-[300px] lg:w-[500px] justify-self-center mb-2 z-50"><img

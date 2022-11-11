@@ -32,7 +32,7 @@
 
 <body>
     {{-- floating contact person --}}
-    <button onclick="buttonHandler()" title="Contact Sale"
+    <button onclick="buttonHandler()" title="Contact Person"
         class="fixed z-20 bottom-4 right-4 sm:bottom-6 sm:right-6 w-12 h-12 sm:w-16 sm:h-16 rounded-full drop-shadow-lg flex justify-center items-center text-white text-4xl hover:bg-gray-600 hover:drop-shadow-2xl hover:animate-bounce duration-300">
         <a target="_blank" href="http://wa.me/6281235493328">
             <img src="{{ asset('assets/img/icon-wa.png') }}" alt="Whatsapp">
@@ -63,9 +63,9 @@
                             💸 : GRATIS
                         </div>
                     </h3>
-                    <button data-modal-toggle="popup-modal" type="button" class="mb-2 text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center mr-2">
-                        <a href="{{ route('event.index') }}">Daftar Sekarang</a>
-                    </button>
+                    <a href="{{ route('event.index') }}" data-modal-toggle="popup-modal" type="button" class="mb-2 text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center mr-2">
+                        Daftar Sekarang
+                    </a>
                     <button data-modal-toggle="popup-modal" type="button" class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600">Tutup</button>
                 </div>
             </div>
@@ -113,9 +113,9 @@
                                         href="#description">Tentang</a>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item text-xs sm:text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100"
+                                    <a class="dropdown-item button-color rounded p-2 text-white text-xs sm:text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100"
                                         href="#">
-                                        <div class="button-color rounded p-2 text-white">Rulebook Lomba</div>
+                                        Rulebook Lomba
                                     </a>
                                 </li>
                             </ul>
@@ -130,10 +130,9 @@
                 </div>
                 <div class="z-10 self-center text-xs mx-3 lg:text-sm"><a href="#main-issue">Lomba</a></div>
                 <div class="z-10 self-center text-xs mx-3 lg:text-sm"><a href="#description">Tentang</a></div>
-                <div
-                    class="z-10 self-center text-xs mx-3 lg:text-sm button-color p-3 rounded-xl shadow-md hover:bg-orange-700 hover:shadow-lg active:bg-orange-800 active:shadow-lg">
-                    <a href="#">Rulebook Lomba</a>
-                </div>
+                <a href="#" class="z-10 self-center text-xs mx-3 lg:text-sm button-color p-3 rounded-xl shadow-md hover:bg-orange-700 hover:shadow-lg active:bg-orange-800 active:shadow-lg">
+                    Rulebook Lomba
+                </a>
             </div>
         </div>
     </div>
@@ -149,20 +148,16 @@
                     tingkat fakultas ilmu komputer (FIK) untuk memecahkan masalah masyarakat Indonesia, khususnya pada
                     sektor Industri UMKM, Pertanian & Perikanan atau Antisipasi Perubahan Iklim.</p>
                 <div class="button-hero flex justify-center mt-3 sm:mt-6 mb-3">
-                    <!-- add href inside anchor after register is opened -->
-                    <button class="z-10" data-tooltip-target="tooltip-click" data-tooltip-trigger="click"
-                        type="button">
-                        <a
-                            class="self-center button-color p-2 lg:p-3 rounded-3xl mr-6 text-xs lg:text-sm shadow-md hover:bg-orange-700 hover:shadow-lg active:bg-orange-800 active:shadow-lg">Login
-                            Dashboard Team</a>
-                    </button>
-                    <!-- add href inside anchor after register is opened -->
-                    <button class="z-10" data-tooltip-target="tooltip-click" data-tooltip-trigger="click"
-                        type="button">
-                        <a
-                            class="self-center button-color p-2 lg:p-3 rounded-3xl text-xs lg:text-sm shadow-md hover:bg-orange-700 hover:shadow-lg active:bg-orange-800 active:shadow-lg">Daftar
-                            Team</a>
-                    </button>
+                    <!-- add href inside after register is opened -->
+                    <a class="z-10 self-center button-color p-2 lg:p-3 rounded-3xl mr-6 text-xs lg:text-sm shadow-md hover:bg-orange-700 hover:shadow-lg active:bg-orange-800 active:shadow-lg" data-tooltip-target="tooltip-click" data-tooltip-trigger="click" 
+                        href="#">
+                        Login Dashboard Team
+                    </a>
+                    <!-- add href inside after register is opened -->
+                    <a class="z-10 self-center bg-button-color p-2 lg:p-3 rounded-3xl text-xs lg:text-sm shadow-md hover:bg-orange-700 hover:shadow-lg active:bg-orange-800 active:shadow-lg" data-tooltip-target="tooltip-click" data-tooltip-trigger="click"
+                        href="#">
+                        Daftar Team
+                    </a>
                     <!-- disable if registered is opened -->
                     <div id="tooltip-click" role="tooltip"
                         class="z-[51] inline-block absolute invisible w-64 text-sm font-light text-gray-500 bg-white rounded-lg border border-gray-200 shadow-sm opacity-0 transition-opacity duration-300 dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800">
@@ -419,7 +414,7 @@
         <h1 class="mt-14 p-700 text-2xl lg:text-5xl">TIMELINE</h1>
         <!-- <p class="mt-3 text-xs lg:text-sm">Tiga topik berikut menjadi sasaran utama kasus yang perlu dipecahkan melalui seluruh cabang kompetisi AMICTA 2022</p> -->
         <div class="mt-6 mb-[164px] flex justify-center">
-            <img class="w-3/4 md:w-2/3" src="{{ asset('assets/img/timeline.png') }}" alt="">
+            <img class="w-[90%] md:w-3/4" src="{{ asset('assets/img/timeline.png') }}" alt="">
         </div>
       </section>
 

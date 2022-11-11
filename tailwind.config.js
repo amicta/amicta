@@ -6,6 +6,9 @@ module.exports = {
     "./resources/**/*.vue",
   ],
   theme: {
+    colors: {
+      'button-color' : '#F55553'
+    },
     extend: {},
   },
   plugins: [],
