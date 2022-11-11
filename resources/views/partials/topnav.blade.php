@@ -9,7 +9,7 @@
             <div class="d-sm-none d-lg-inline-block">Halo, {{ Auth::user()->name }}</div>
         </a>
         <div class="dropdown-menu dropdown-menu-right">
-            <div class="dropdown-title">Welcome, {{ Auth::user()->name }}</div>
+            <div class="dropdown-title">Mau Kemana?</div>
 
             {{-- <a href="#" class="dropdown-item has-icon">
                 <i class="far fa-user"></i> Profile Settings

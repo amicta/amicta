@@ -9,6 +9,8 @@ Route::group(['middleware' => ['auth:admin']], function () {
 
     Route::resource('/events', 'EventController')->except('create', 'show');
     Route::resource('/participants', 'ParticipantController')->except('create', 'show');
+
+    Route::resource('/competitions', 'CompetitionController')->except('create', 'show');
 });
 
 
