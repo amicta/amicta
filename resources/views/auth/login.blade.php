@@ -1,5 +1,7 @@
 @extends('layouts.auth')
 
+@section('title', 'Login')
+
 @section('content')
     <div class="card card-primary">
         <div class="card-header">
@@ -64,7 +66,7 @@
 
     @if (Route::has('register'))
         <div class="mt-5 text-muted text-center">
-            Don't have an account? <a href="{{ route('register') }}">Register</a>
+            Belum memiliki akun? <a href="{{ route('register') }}">Daftar</a>
         </div>
     @endif
 @endsection

@@ -22,7 +22,8 @@ Route::get('/', function () {
 Route::get('/seminar', [App\Http\Controllers\EventController::class, 'index'])->name('event.index');
 Route::post('/seminar', [App\Http\Controllers\ParticipantController::class, 'store'])->name('event.register');
 
-Auth::routes(['register' => false]);
+Auth::routes();
+// Auth::routes(['register' => false]);
 
 Route::group(['middleware' => ['auth:web']], function () {
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
