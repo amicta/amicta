@@ -30,6 +30,14 @@
 </head>
 
 <body>
+    {{-- floating contact person --}}
+    <button onclick="buttonHandler()" title="Contact Sale"
+        class="fixed z-20 bottom-10 right-8 w-20 h-20 rounded-full drop-shadow-lg flex justify-center items-center text-white text-4xl hover:bg-gray-600 hover:drop-shadow-2xl hover:animate-bounce duration-300">
+        <a target="_blank" href="http://wa.me/6281235493328">
+            <img src="{{ asset('assets/img/icon-wa.png') }}" alt="Whatsapp">
+        </a>
+    </button>
+
     <section id="particles-js"></section>
     <!-- navbar -->
     <div id="navbar" class="grid grid-cols-3 items-center px-2 sm:px-12">
@@ -37,12 +45,12 @@
                     alt=""></a></div>
         <div class="col-span-2 justify-self-end">
             <!-- drop navbar -->
-            <div class="drop z-51 ">
+            <div class="drop z-51">
                 <div class="flex justify-end">
                     <div>
                         <div class="dropdown relative">
                             <button
-                                class=" dropdown-toggle px-6 py-2.5 bg-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-gray-200 hover:shadow-lg focus:bg-gray-200 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-gray-300 active:shadow-lg active:text-black transition duration-150 ease-in-out flex items-center whitespace-nowrap"
+                                class="z-51 dropdown-toggle px-6 py-2.5 bg-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-gray-200 hover:shadow-lg focus:bg-gray-200 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-gray-300 active:shadow-lg active:text-black transition duration-150 ease-in-out flex items-center whitespace-nowrap"
                                 type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                                 <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="caret-down"
                                     class="w-2" role="img" xmlns="http://www.w3.org/2000/svg"
@@ -51,7 +59,7 @@
                                         d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z" />
                                 </svg>
                             </button>
-                            <ul class="z-51 dropdown-menu min-w-max absolute hidden bg-white text-base float-left py-2 list-none text-left rounded-lg shadow-lg mt-1 hidden m-0 bg-clip-padding border-none"
+                            <ul class="dropdown-menu z-[51] min-w-max absolute hidden bg-white text-base float-left py-2 list-none text-left rounded-lg shadow-lg mt-1 hidden m-0 bg-clip-padding border-none"
                                 aria-labelledby="dropdownMenuButton1">
                                 <li>
                                     <a class="dropdown-item text-xs sm:text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100"
@@ -63,11 +71,11 @@
                                 </li>
                                 <li>
                                     <a class="dropdown-item text-xs sm:text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100"
-                                        href="{{ route('welcome') }}#main-issue">Lomba</a>
+                                        href="#main-issue">Lomba</a>
                                 </li>
                                 <li>
                                     <a class="dropdown-item text-xs sm:text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100"
-                                        href="{{ route('welcome') }}#description">Tentang</a>
+                                        href="#description">Tentang</a>
                                 </li>
                                 <li>
                                     <a class="dropdown-item text-xs sm:text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100"
@@ -82,15 +90,13 @@
             </div>
             <!-- default navbar -->
             <div class="flex text-white p-700 text-center navbar">
-                <div class="z-50 self-center text-xs mx-3 lg:text-sm"><a href="{{ route('welcome') }}">Home</a></div>
-                <div class="z-50 self-center text-xs mx-3 lg:text-sm"><a href="{{ route('event.index') }}">Seminar</a>
+                <div class="z-10 self-center text-xs mx-3 lg:text-sm"><a href="{{ route('welcome') }}">Home</a></div>
+                <div class="z-10 self-center text-xs mx-3 lg:text-sm"><a href="{{ route('event.index') }}">Seminar</a>
                 </div>
-                <div class="z-50 self-center text-xs mx-3 lg:text-sm"><a
-                        href="{{ route('welcome') }}#main-issue">Lomba</a></div>
-                <div class="z-50 self-center text-xs mx-3 lg:text-sm"><a
-                        href="{{ route('welcome') }}#description">Tentang</a></div>
+                <div class="z-10 self-center text-xs mx-3 lg:text-sm"><a href="#main-issue">Lomba</a></div>
+                <div class="z-10 self-center text-xs mx-3 lg:text-sm"><a href="#description">Tentang</a></div>
                 <div
-                    class="z-50 self-center text-xs mx-3 lg:text-sm button-color p-3 rounded-xl shadow-md hover:bg-orange-700 hover:shadow-lg active:bg-orange-800 active:shadow-lg">
+                    class="z-10 self-center text-xs mx-3 lg:text-sm button-color p-3 rounded-xl shadow-md hover:bg-orange-700 hover:shadow-lg active:bg-orange-800 active:shadow-lg">
                     <a href="#">Rulebook Lomba</a>
                 </div>
             </div>
@@ -104,12 +110,12 @@
             <div class="text-white">
                 <h1 class="font-bold text-sm sm:text-[20px] lg:text-[40px] lg:leading-[46px] p-700">MULTITRACK SEMINAR
                     AMICTA 2022</h1>
-                <p class="mt-3 text-[11px] sm:text-xs lg:text-sm">Empat narasumber professional industri teknologi,
+                <p class="mt-3 text-xs lg:text-sm">Empat narasumber professional industri teknologi,
                     secara paralel berbagi kisah sukses, lesson learned dalam perjalanannya menyelesaikan berbagai
                     masalah menggunakan teknologi. Inspiring and Insightful.</p>
                 <div class="flex justify-start mt-3">
                     <div
-                        class="self-center button-color p-2 lg:p-3 rounded-3xl mr-6 text-[11px] sm:text-xs lg:text-sm z-50">
+                        class="self-center button-color p-2 lg:p-3 rounded-3xl mr-6 text-xs lg:text-sm z-50">
                         <a href="#form-daftar">Daftar Sekarang</a>
                     </div>
                 </div>
@@ -337,16 +343,55 @@
 
             <div id="carouselExampleCaptions" class="carousel slide relative carousel-dark" data-bs-ride="carousel">
                 <div class="carousel-inner relative w-full overflow-hidden">
-                    <!-- loop card data pemenang -->
+                    <!-- loop card data pemateri -->
                     <div class="carousel-item active relative float-left w-full">
-                        <img class="rounded-full shadow-lg mb-6 mx-auto"
-                            src="{{ asset('assets/img/comingsoon.gif') }}" alt="avatar"
+                        <img class="rounded-full shadow-xl bg-gray-100 mb-6 mx-auto"
+                            src="{{ asset('assets/img/fathin.png') }}" alt="avatar"
                             style="width: 150px; height:150px;" />
                         <div class="flex flex-wrap justify-center">
                             <div class="grow-0 shrink-0 basis-auto w-full lg:w-8/12 px-3">
-                                <h5 class="text-sm sm:text-lg font-bold mb-3">COMING SOON</h5>
+                                <h5 class="text-sm sm:text-lg font-bold mb-3">Fathin Naufal - Product Manager at Gojek</h5>
                                 <p class="text-xs lg:text-sm font-medium text-gray-700 mb-4">
-                                    Ditunggu ya untuk informasi pemateri kerennya..
+                                    Track Product Development : How to Build Digital Product
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item relative float-left w-full">
+                        <img class="rounded-full shadow-xl bg-gray-100 mb-6 mx-auto"
+                            src="{{ asset('assets/img/alwy.png') }}" alt="avatar"
+                            style="width: 150px; height:150px;" />
+                        <div class="flex flex-wrap justify-center">
+                            <div class="grow-0 shrink-0 basis-auto w-full lg:w-8/12 px-3">
+                                <h5 class="text-sm sm:text-lg font-bold mb-3">Alwy Herfian S - CEO at Widya Robotic</h5>
+                                <p class="text-xs lg:text-sm font-medium text-gray-700 mb-4">
+                                    Track Startup Journey : Startup Preneur Zillenials
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item relative float-left w-full">
+                        <img class="rounded-full shadow-xl bg-gray-100 mb-6 mx-auto"
+                            src="{{ asset('assets/img/andrean.png') }}" alt="avatar"
+                            style="width: 150px; height:150px;" />
+                        <div class="flex flex-wrap justify-center">
+                            <div class="grow-0 shrink-0 basis-auto w-full lg:w-8/12 px-3">
+                                <h5 class="text-sm sm:text-lg font-bold mb-3">Andrean N - CEO at WHOUSE</h5>
+                                <p class="text-xs lg:text-sm font-medium text-gray-700 mb-4">
+                                    Track Startup Journey : From Engineer to be Entrepreneur
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item relative float-left w-full">
+                        <img class="rounded-full shadow-xl bg-gray-100 mb-6 mx-auto"
+                            src="{{ asset('assets/img/delta.png') }}" alt="avatar"
+                            style="width: 150px; height:150px;" />
+                        <div class="flex flex-wrap justify-center">
+                            <div class="grow-0 shrink-0 basis-auto w-full lg:w-8/12 px-3">
+                                <h5 class="text-sm sm:text-lg font-bold mb-3">Delta Purna W - CEO at Qiscus</h5>
+                                <p class="text-xs lg:text-sm font-medium text-gray-700 mb-4">
+                                    Track Startup Journey : From Engineer to be Entrepreneur
                                 </p>
                             </div>
                         </div>
@@ -386,8 +431,8 @@
                     <img src="{{ asset('assets/img/amcc.png') }}" alt="">
                 </div>
             </div>
-            <div class="text-[11px] sm:text-xs lg:text-sm">Contact Person : 081235493328</div>
-            <div class="text-[11px] sm:text-xs lg:text-sm">© 2022 AMICTA. Orginized by AMCC</div>
+            <div class="text-xs lg:text-sm">Contact Person : 081235493328</div>
+            <div class="text-xs lg:text-sm">© 2022 AMICTA. Organized by AMCC</div>
         </footer>
     </section>
 

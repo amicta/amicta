@@ -46,7 +46,6 @@ body {
 
 .wave-white .wave.wave1 {
     animation: animate 10s linear infinite;
-    z-index: 1000;
     opacity: 1;
     animation-delay: 0s;
     bottom: 0;
@@ -54,7 +53,6 @@ body {
 
 .wave-white .wave.wave2 {
     animation: animate2 15s linear infinite;
-    z-index: 999;
     opacity: 0.5;
     animation-delay: -5s;
     bottom: 10;
@@ -62,7 +60,6 @@ body {
 
 .wave-white .wave.wave3 {
     animation: animate3 15s linear infinite;
-    z-index: 998;
     opacity: 0.2;
     animation-delay: -2s;
     bottom: 15;
@@ -70,7 +67,6 @@ body {
 
 .wave-white .wave.wave4 {
     animation: animate4 5s linear infinite;
-    z-index: 997;
     opacity: 0.7;
     animation-delay: -5s;
     bottom: 20;
@@ -96,7 +92,6 @@ body {
 
 .wave-green .wave.wave1 {
     animation: animate 10s linear infinite;
-    z-index: 1000;
     opacity: 1;
     animation-delay: 0s;
     bottom: 0;
@@ -104,7 +99,6 @@ body {
 
 .wave-green .wave.wave2 {
     animation: animate2 15s linear infinite;
-    z-index: 999;
     opacity: 0.5;
     animation-delay: -5s;
     bottom: 10;
@@ -112,7 +106,6 @@ body {
 
 .wave-green .wave.wave3 {
     animation: animate3 15s linear infinite;
-    z-index: 998;
     opacity: 0.2;
     animation-delay: -2s;
     bottom: 15;
@@ -120,7 +113,6 @@ body {
 
 .wave-green .wave.wave4 {
     animation: animate4 5s linear infinite;
-    z-index: 997;
     opacity: 0.7;
     animation-delay: -5s;
     bottom: 20;
