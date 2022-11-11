@@ -14,8 +14,8 @@ class AlterUsersTable extends Migration
     public function up()
     {
         Schema::table('users', function($table) {
-            $table->string('nim')->after('name');
-            $table->string('phone')->after('email_verified_at');
+            $table->string('nim')->after('name')->unique();
+            $table->string('phone')->after('email_verified_at')->unique();
             $table->string('program_study')->after('phone');
         });
     }
