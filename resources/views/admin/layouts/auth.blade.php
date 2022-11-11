@@ -23,7 +23,7 @@
                     @endif
 
                     <div class="login-brand">
-                        <img src="{{ asset('assets/img/stisla-fill.svg') }}" alt="logo" width="100"
+                        <img src="{{ asset('assets/img/amcc-logo.png') }}" alt="logo" width="100"
                             class="shadow-light rounded-circle">
                     </div>
 
