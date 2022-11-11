@@ -40,7 +40,7 @@
         </li>
 
         <li class="{{ request()->is('admin/categories*') ? 'active' : '' }}">
-            <a href="{{ route('admin.events.index') }}">
+            <a href="{{ route('admin.categories.index') }}">
                 <i class="fas fa-layer-group"></i>
                 <span>Kategori</span>
             </a>

@@ -5,20 +5,18 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Competition extends Model
+class Category extends Model
 {
     use HasFactory;
 
     protected $fillable = [
         'name',
         'description',
-        'type',
-        'is_open',
-        'is_publish',
+        'competition_id',
     ];
 
-    public function categories()
+    public function competition()
     {
-        return $this->hasMany(Category::class);
+        return $this->belongsTo(Competition::class);
     }
 }
