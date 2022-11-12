@@ -71,11 +71,11 @@
                                 </li>
                                 <li>
                                     <a class="dropdown-item text-xs sm:text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100"
-                                        href="#main-issue">Lomba</a>
+                                        href="{{ route('welcome') }}#main-issue">Lomba</a>
                                 </li>
                                 <li>
                                     <a class="dropdown-item text-xs sm:text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100"
-                                        href="#description">Tentang</a>
+                                        href="{{ route('welcome') }}#description">Tentang</a>
                                 </li>
                                 <li>
                                     <a class="dropdown-item button-color rounded p-2 text-white text-xs sm:text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100"
@@ -93,8 +93,8 @@
                 <div class="z-10 self-center text-xs mx-3 lg:text-sm"><a href="{{ route('welcome') }}">Home</a></div>
                 <div class="z-10 self-center text-xs mx-3 lg:text-sm"><a href="{{ route('event.index') }}">Seminar</a>
                 </div>
-                <div class="z-10 self-center text-xs mx-3 lg:text-sm"><a href="#main-issue">Lomba</a></div>
-                <div class="z-10 self-center text-xs mx-3 lg:text-sm"><a href="#description">Tentang</a></div>
+                <div class="z-10 self-center text-xs mx-3 lg:text-sm"><a href="{{ route('welcome') }}#main-issue">Lomba</a></div>
+                <div class="z-10 self-center text-xs mx-3 lg:text-sm"><a href="{{ route('welcome') }}#description">Tentang</a></div>
                 <a href="#" class="z-10 self-center text-xs mx-3 lg:text-sm button-color p-3 rounded-xl shadow-md hover:bg-orange-700 hover:shadow-lg active:bg-orange-800 active:shadow-lg">
                     Rulebook Lomba
                 </a>
@@ -151,10 +151,43 @@
                 <div class="px-[8px] sm:px-[50px] lg:px-[100px]">
                     <div class="p-700 text-base sm:text-[20px] lg:text-[40px] lg:leading-[46px] pt-12">
                         Daftar {{ $event->name }}</div>
-                    <div class="mt-3 text-xs sm:text-base">{{ $event->description . ' di ' . $event->location }}</div>
-                    <div class="mt-3 text-xs sm:text-base">Sisa kuota peserta:
+                    <div class="mt-3 sm:text-base">{{ $event->description . ' di ' . $event->location }}</div>
+                    <div class="mt-3 sm:text-base">Sisa kuota peserta:
                         {{ $event->quota - $event->current_participant }}</div>
                     <br>
+
+                    @if($event->id == $data['events']->first()->id)
+                        <div class="p-700 text-base">SESI 1</div>
+                        <div class="flex flex-col sm:flex-row justify-center my-3">
+                            <div class="mx-auto mb-2">
+                                <div class="p-700">Track Product Development</div>
+                                <div class="text-xs">How To Build Digital Product</div>
+                                <div class="text-xs">Fathin - Product Manager at Gojek</div>
+                            </div>
+                            <div class="mx-auto">
+                                <div class="p-700">Track Startup Journey</div>
+                                <div class="text-xs">Startup Preneur Zillenials</div>
+                                <div class="text-xs">Alwy Herfian S - CEO at Widya Robotic</div>
+                            </div>
+                        </div>
+                    @else
+                        <div class="p-700 text-base">SESI 2</div>
+                        <div class="flex flex-col sm:flex-row justify-center my-3">
+                            <div class="mx-auto mb-2">
+                                <div class="p-700">Track Startup Journey</div>
+                                <div class="text-xs">From Engineer to be Entrepreneur</div>
+                                <div class="text-xs">Andrean N - CEO at WHOUSE</div>
+                            </div>
+                            <div class="mx-auto">
+                                <div class="p-700">Track Startup Journey</div>
+                                <div class="text-xs">From Engineer to be Entrepreneur</div>
+                                <div class="text-xs">Delta Purna W - CEO at Qiscus</div>
+                            </div>
+                        </div>
+                    @endif
+
+                    <br>
+
                     @if ($event->is_available)
                         <form class="text-left" action="{{ route('event.register') }}" method="POST">
                             @csrf
