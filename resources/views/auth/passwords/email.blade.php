@@ -46,6 +46,9 @@
         button.btn.btn-primary:hover {
             background-color: #123e48 !important;
         }
+        button.btn.btn-primary:focus {
+            background-color: #123e48 !important;
+        }
         form button:hover {
             background-color: #123e48 !important;
         }

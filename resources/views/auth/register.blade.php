@@ -141,7 +141,13 @@
         .form-group input:focus {
             border-color: #206F80;
         }
+        select#program_study.form-control:focus {
+            border-color: #206F80;
+        }
         .form-group button:hover {
+            background-color: #123e48 !important;
+        }
+        .form-group button:focus {
             background-color: #123e48 !important;
         }
         .control-input:checked ~ .custom-control-label::before {

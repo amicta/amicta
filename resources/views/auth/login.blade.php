@@ -71,6 +71,9 @@
         .form-group button:hover {
             background-color: #123e48 !important;
         }
+        button.btn.btn-primary:focus {
+            background-color: #123e48 !important;
+        }
         .control-input:checked ~ .custom-control-label::before {
             background-color: #206F80 !important;
         }
@@ -81,6 +84,12 @@
         }
         .custom-checkbox .custom-control-input:checked ~ .custom-control-label::after {
             fill: #206F80        
+        }
+        .was-validated .custom-control-input:valid ~ .custom-control-label, .custom-control-input.is-valid ~ .custom-control-label {
+            color: #206F80;
+        }
+        .was-validated .custom-control-input:valid ~ .custom-control-label::before, .custom-control-input.is-valid ~ .custom-control-label::before {
+            border-color: #206F80;
         }
     </style>
 
