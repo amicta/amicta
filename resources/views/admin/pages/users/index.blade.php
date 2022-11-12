@@ -56,6 +56,21 @@
                                                             {{-- <a href="{{ route('admin.users.edit', ['competition' => $competition['id']]) }}" class="btn btn-sm btn-warning btn-icon">
                                                     <i class="fas fa-check"></i> Edit
                                                     </a> --}}
+
+                                                            <form class="mx-1"
+                                                                action="{{ route('admin.users.update', ['user' => $user['id']]) }}"
+                                                                method="POST">
+                                                                @csrf
+                                                                @method('patch')
+
+                                                                <input type="hidden" name="competition_id"
+                                                                    value="{{ $competition->id }}" />
+                                                                <button type="submit"
+                                                                    class="btn btn-sm btn-danger btn-icon">
+                                                                    <i class="fas fa-times-circle"></i> Hapus Peserta
+                                                                </button>
+                                                            </form>
+
                                                             <form
                                                                 action="{{ route('admin.users.destroy', ['user' => $user['id']]) }}"
                                                                 method="POST"
@@ -64,7 +79,7 @@
                                                                 @method('delete')
                                                                 <button type="submit"
                                                                     class="btn btn-sm btn-outline-danger btn-icon mx-1">
-                                                                    <i class="fas fa-trash"></i> Hapus
+                                                                    <i class="fas fa-trash"></i> Hapus Akun
                                                                 </button>
                                                             </form>
                                                         </div>

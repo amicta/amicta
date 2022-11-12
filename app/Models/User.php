@@ -49,4 +49,9 @@ class User extends Authenticatable
     {
         return $this->belongsToMany(Competition::class, 'competition_user');
     }
+
+    public function teams()
+    {
+        return $this->hasMany(Team::class, 'leader_id');
+    }
 }

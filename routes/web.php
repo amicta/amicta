@@ -2,6 +2,10 @@
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\EventController;
+use App\Http\Controllers\ParticipantController;
+use App\Http\Controllers\CompetitionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,12 +23,15 @@ Route::get('/', function () {
 })->name('welcome');
 
 
-Route::get('/seminar', [App\Http\Controllers\EventController::class, 'index'])->name('event.index');
-Route::post('/seminar', [App\Http\Controllers\ParticipantController::class, 'store'])->name('event.register');
+Route::get('/seminar', [EventController::class, 'index'])->name('event.index');
+Route::post('/seminar', [ParticipantController::class, 'store'])->name('event.register');
 
 Auth::routes();
 // Auth::routes(['register' => false]);
 
 Route::group(['middleware' => ['auth:web']], function () {
-    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+    Route::get('/home', [HomeController::class, 'index'])->name('home');
+    Route::get('/dashboard', [HomeController::class, 'dashboard'])->name('dashboard');
+
+    Route::resource('/competitions', CompetitionController::class);
 });

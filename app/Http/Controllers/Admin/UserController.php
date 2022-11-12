@@ -35,9 +35,14 @@ class UserController extends Controller
         //
     }
 
-    public function update(Request $request, $id)
+    public function update(Request $request, User $user)
     {
-        //
+        $user->competitions()->detach($request->competition_id);
+
+        return redirect()->route('admin.users.index')->with('status', [
+            'element' => 'success',
+            'message' => 'Peserta Lomba berhasil dihapus!'
+        ]);
     }
 
     public function destroy(User $user)
@@ -46,7 +51,7 @@ class UserController extends Controller
 
         return redirect()->route('admin.users.index')->with('status', [
             'element' => 'success',
-            'message' => 'Peserta berhasil dihapus!'
+            'message' => 'Akun Peserta berhasil dihapus!'
         ]);
     }
 }

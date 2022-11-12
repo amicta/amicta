@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Auth;
 
 class Competition extends Model
 {
@@ -17,6 +18,21 @@ class Competition extends Model
         'is_publish',
     ];
 
+    protected $casts = [
+        'is_open' => 'bool',
+        'is_publish' => 'bool',
+        'is_registered' => 'bool',
+    ];
+
+    protected $appends = [
+        'is_registered',
+    ];
+
+    public function getIsRegisteredAttribute()
+    {
+        return Auth::user()->competitions()->where('competition_id', $this->id)->count() == 1;
+    }
+
     public function categories()
     {
         return $this->hasMany(Category::class);
@@ -25,5 +41,10 @@ class Competition extends Model
     public function users()
     {
         return $this->belongsToMany(User::class, 'competition_user');
+    }
+
+    public function teams()
+    {
+        return $this->hasMany(Team::class);
     }
 }
