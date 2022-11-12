@@ -1,7 +1,7 @@
 @extends('layouts.auth')
 
 @section('content')
-    <div class="card card-primary">
+    <div class="card card-primary" style="border-top: 2px solid #206F80;">
         <div class="card-header">{{ __('Reset Password') }}</div>
 
         <div class="card-body">
@@ -52,7 +52,7 @@
 
                 <div class="row mb-0">
                     <div class="col-md-6 offset-md-4">
-                        <button type="submit" class="btn btn-primary">
+                        <button type="submit" class="btn btn-primary" style="background-color: #206F80;">
                             {{ __('Reset Password') }}
                         </button>
                     </div>
