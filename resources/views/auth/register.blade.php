@@ -1,9 +1,9 @@
 @extends('layouts.auth')
 
 @section('content')
-    <div class="card card-primary">
+    <div class="card card-primary" style="border-top: 2px solid #206F80;">
         <div class="card-header">
-            <h4>Register</h4>
+            <h4 style="color: #206F80">Register</h4>
         </div>
 
         <div class="card-body">
@@ -106,11 +106,32 @@
                 </div>
 
                 <div class="form-group">
-                    <button type="submit" class="btn btn-primary btn-lg btn-block">
+                    <button style="background-color: #206F80; border-color:#206F80; box-shadow:0 2px 6px #9fe5f5" type="submit" class="btn btn-primary btn-lg btn-block">
                         Register
                     </button>
                 </div>
             </form>
         </div>
-    </div>
+    </div>    
+    
+    <style>
+        .form-group input:focus {
+            border-color: #206F80;
+        }
+        .form-group button:hover {
+            background-color: #123e48 !important;
+        }
+        .control-input:checked ~ .custom-control-label::before {
+            background-color: #206F80 !important;
+        }
+        .custom-control-input:checked ~ .custom-control-label::before {
+            color: #fff;
+            border-color: #206F80;
+            background-color: #206F80 !important;
+        }
+        .custom-checkbox .custom-control-input:checked ~ .custom-control-label::after {
+            fill: #206F80        
+        }
+    </style>
+
 @endsection

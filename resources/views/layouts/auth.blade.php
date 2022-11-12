@@ -23,8 +23,8 @@
                     @endif
 
                     <div class="login-brand">
-                        <img src="{{ asset('assets/img/stisla-fill.svg') }}" alt="logo" width="100"
-                            class="shadow-light rounded-circle">
+                        <img src="{{ asset('assets/img/logo-normal.png') }}" alt="logo" width="130"
+                            class="">
                     </div>
 
                     @if (session()->has('info'))
