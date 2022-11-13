@@ -23,7 +23,7 @@
         </li>
 
         <li class="{{ request()->is('team*') ? 'active' : '' }}">
-            <a href="{{ route('admin.events.index') }}">
+            <a href="{{ route('teams.index') }}">
                 <i class="fas fa-users"></i>
                 <span>Tim</span>
             </a>

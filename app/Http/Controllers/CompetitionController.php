@@ -31,7 +31,7 @@ class CompetitionController extends Controller
 
         if ($request->category_id) {
             $user->teams()->create([
-                'name' => 'Belum Dibuat',
+                'name' => 'Belum dibuat',
                 'competition_id' => $request->competition_id,
                 'category_id' => $request->category_id,
             ]);

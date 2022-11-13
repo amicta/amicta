@@ -1,11 +1,11 @@
 @extends('admin.layouts.app')
 
-@section('title', 'Peserta Lomba')
+@section('title', 'Tim Lomba')
 
 @section('content')
     <section class="section">
         <div class="section-header">
-            <h1>Peserta Lomba</h1>
+            <h1>Tim Lomba</h1>
             {{-- <div class="section-header-button">
                 <button class="btn btn-primary btn-icon icon-left" data-toggle="modal" data-target="#modal-add">
                     <i class="fas fa-plus"></i> Baru
@@ -33,58 +33,35 @@
                                         <thead>
                                             <tr>
                                                 <th class="text-center">#</th>
-                                                <th>NIM</th>
-                                                <th>Nama</th>
-                                                <th>Prodi</th>
-                                                <th>Email</th>
-                                                <th>Phone</th>
-                                                <th>Action</th>
+                                                <th>Ketua Tim</th>
+                                                <th>Nama Tim</th>
+                                                <th>Produk</th>
+                                                {{-- <th>Action</th> --}}
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            @forelse ($competition->users as $user)
+                                            @forelse ($competition->teams as $team)
                                                 <tr>
                                                     <td scope="row" class="text-center">{{ $loop->iteration }}</td>
-                                                    <td>{{ $user->nim }}</td>
-                                                    <td>{{ $user->name }}</td>
-                                                    <td>{{ $user->program_study }}</td>
-                                                    <td>{{ $user->email }}</td>
-                                                    <td>{{ $user->phone }}</td>
+                                                    <td>{{ $team->user->name }}</td>
+                                                    <td @if ($team->name == 'Belum dibuat') class="text-danger" @endif>{{ $team->name }}</td>
+                                                    <td>{{ $team->product }}</td>
 
-                                                    <td>
+                                                    {{-- <td>
                                                         <div class="btn-group">
-                                                            {{-- <a href="{{ route('admin.users.edit', ['competition' => $competition['id']]) }}" class="btn btn-sm btn-warning btn-icon">
-                                                    <i class="fas fa-check"></i> Edit
-                                                    </a> --}}
-
-                                                            <form class="mx-1"
-                                                                action="{{ route('admin.users.update', ['user' => $user['id']]) }}"
-                                                                method="POST"
-                                                                onsubmit="return confirm('Yakin ingin menghapus?')">
-                                                                @csrf
-                                                                @method('patch')
-
-                                                                <input type="hidden" name="competition_id"
-                                                                    value="{{ $competition->id }}" />
-                                                                <button type="submit"
-                                                                    class="btn btn-sm btn-danger btn-icon">
-                                                                    <i class="fas fa-times-circle"></i> Hapus Peserta
-                                                                </button>
-                                                            </form>
-
                                                             <form
-                                                                action="{{ route('admin.users.destroy', ['user' => $user['id']]) }}"
+                                                                action="{{ route('admin.teams.destroy', ['team' => $team['id']]) }}"
                                                                 method="POST"
                                                                 onsubmit="return confirm('Yakin ingin menghapus?')">
                                                                 @csrf
                                                                 @method('delete')
                                                                 <button type="submit"
                                                                     class="btn btn-sm btn-outline-danger btn-icon mx-1">
-                                                                    <i class="fas fa-trash"></i> Hapus Akun
+                                                                    <i class="fas fa-trash"></i> Hapus
                                                                 </button>
                                                             </form>
                                                         </div>
-                                                    </td>
+                                                    </td> --}}
                                                 </tr>
                                             @empty
                                                 <tr>
@@ -103,7 +80,7 @@
         @empty
             <div class="row">
                 <div class="col">
-                    <h5 class="text-center">Belum ada Lomba aktif.</h5>
+                    <h5 class="text-center">Belum ada lomba aktif.</h5>
                 </div>
             </div>
         @endforelse
