@@ -19,6 +19,10 @@ class Team extends Model
         'category_id',
     ];
 
+    protected $casts = [
+        'member' => 'array',
+    ];
+
     public function user()
     {
         return $this->belongsTo(User::class, 'leader_id');

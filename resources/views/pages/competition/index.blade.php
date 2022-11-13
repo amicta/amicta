@@ -46,16 +46,19 @@
                                 @if (!$competition->categories->isEmpty())
                                     <p style="margin-bottom: 0px">Kategori Lomba</p>
 
-                                    <select class="form-control" style="border-radius: 3px" name="category_id"
-                                        required @if ($competition->is_registered) disabled @endif>
+                                    <select class="form-control" style="border-radius: 3px" name="category_id" required
+                                        @if ($competition->is_registered) disabled @endif>
 
-                                        <option value="" selected disabled hidden>Pilih Kategori Lomba
+                                        <option value="" selected disabled hidden>
+                                            Pilih Kategori Lomba
                                         </option>
 
+                                        @foreach ($competition->teams as $team)
+                                        <option selected>{{ $team->category->name }}</option>
+                                        @endforeach
+
                                         @foreach ($competition->categories as $category)
-                                            <option value="{{ $category->id }}"
-                                                @if (Auth::user()->teams->isNotEmpty()) @if ($competition->teams[0]->category_id == $category->id) selected @endif
-                                                @endif>
+                                            <option value="{{ $category->id }}">
                                                 {{ $category->name }}
                                             </option>
                                         @endforeach
@@ -69,15 +72,17 @@
                                     {{-- <button class="btn btn-primary" type="submit">Daftar</button> --}}
                                     <button type="submit" class="w-100 btn text-white mt-4 button-base">Daftar</button>
                                 @else
-                                    <button class="w-100 btn text-white mt-4 btn-secondary" disabled>Pendaftaran Ditutup</button>
+                                    <button class="w-100 btn text-white mt-4 btn-secondary" disabled>
+                                        Pendaftaran Ditutup
+                                    </button>
                                 @endif
                             </form>
                         </div>
                     </div>
                 </div>
-                @empty
-                    <h4>Belum ada lomba</h4>
-                @endforelse
-            </div>
+            @empty
+                <h4>Belum ada lomba</h4>
+            @endforelse
         </div>
-    @endsection
+    </div>
+@endsection

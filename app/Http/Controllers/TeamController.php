@@ -20,8 +20,6 @@ class TeamController extends Controller
         $data['team'] = Team::where('leader_id', $userId)->where('competition_id', $productBased)->first();
         $team = $data['team'];
 
-        // dd($team);
-
         return view('pages.team.index', compact('data', 'team'));
     }
 
@@ -47,8 +45,6 @@ class TeamController extends Controller
 
     public function update(TeamCreateRequest $request, Team $team)
     {
-        // Event::create($request->validated());
-
         $team->name = $request->name;
         $team->product = $request->product;
         $team->description = $request->description;

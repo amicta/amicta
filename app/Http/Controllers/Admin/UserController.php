@@ -37,6 +37,8 @@ class UserController extends Controller
 
     public function update(Request $request, User $user)
     {
+        $user->teams('competition_id', $request->competition_id)->delete();
+
         $user->competitions()->detach($request->competition_id);
 
         return redirect()->route('admin.users.index')->with('status', [

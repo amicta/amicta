@@ -17,7 +17,7 @@
                     @if ($data['team'])
                         <div class="card">
                             <div class="card-header">
-                                <h4>Tim Lomba Product Based</h4>
+                                <h4>Tim Lomba Product Based - {{ $team->category->name }}</h4>
                             </div>
                             <div class="card-body">
                                 <form action="{{ route('teams.update', ['team' => $data['team']->id]) }}" method="POST">
@@ -54,35 +54,40 @@
                                     <div class="form-row">
                                         <div class="form-group col-md-3">
                                             <label for="member-nim">NIM*</label>
-                                            <input type="text" class="form-control" id="member-nim"
-                                                name="member[]" placeholder="xx.xx.xxxx"
-                                                @if ($data['team']->name != 'Belum dibuat') value="{{ $team->member }}" disabled @endif>
+                                            <input type="text" class="form-control" id="member-nim" name="member[0][nim]"
+                                                placeholder="xx.xx.xxxx"
+                                                @if ($data['team']->name != 'Belum dibuat') value="{{ $data['team']->member[0]['nim'] }}" disabled @endif>
                                         </div>
                                         <div class="form-group col-md-9">
                                             <label for="member-name">Nama*</label>
                                             <input type="text" class="form-control" id="member-name"
-                                                name="member[]" placeholder="Nama Lengkap">
+                                                name="member[0][name]" placeholder="Nama Lengkap"
+                                                @if ($data['team']->name != 'Belum dibuat') value="{{ $data['team']->member[0]['name'] }}" disabled @endif>
                                         </div>
                                     </div>
 
-                                    <div class="section-title mt-0">Anggota 2</div>
-                                    <div class="form-row">
-                                        <div class="form-group col-md-3">
-                                            <label for="member2-nim">NIM*</label>
-                                            <input type="text" class="form-control" id="member2-nim"
-                                                name="member[]" placeholder="xx.xx.xxxx">
+                                    @if (!empty($data['team']->member[1]))
+                                        <div class="section-title mt-0">Anggota 2</div>
+                                        <div class="form-row">
+                                            <div class="form-group col-md-3">
+                                                <label for="member2-nim">NIM</label>
+                                                <input type="text" class="form-control" id="member2-nim"
+                                                    name="member[1][nim]" placeholder="xx.xx.xxxx"
+                                                    @if ($data['team']->name != 'Belum dibuat') value="{{ $data['team']->member[1]['nim'] }}" disabled @endif>
+                                            </div>
+                                            <div class="form-group col-md-9">
+                                                <label for="member2-name">Nama</label>
+                                                <input type="text" class="form-control" id="member2-name"
+                                                    name="member[1][name]" placeholder="Nama Lengkap"
+                                                    @if ($data['team']->name != 'Belum dibuat') value="{{ $data['team']->member[1]['name'] }}" disabled @endif>
+                                            </div>
                                         </div>
-                                        <div class="form-group col-md-9">
-                                            <label for="member2-name">Nama*</label>
-                                            <input type="text" class="form-control" id="member2-name"
-                                                name="member[]" placeholder="Nama Lengkap">
-                                        </div>
-                                    </div>
+                                    @endif
 
                             </div>
                             <div class="card-footer">
                                 @if ($data['team']->name == 'Belum dibuat')
-                                <button class="btn btn-primary">Submit</button>
+                                    <button class="btn btn-primary">Submit</button>
                                 @endif
                             </div>
                             </form>

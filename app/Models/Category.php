@@ -13,6 +13,11 @@ class Category extends Model
         'name',
         'description',
         'competition_id',
+        'is_publish',
+    ];
+
+    protected $casts = [
+        'is_publish' => 'bool',
     ];
 
     public function competition()
