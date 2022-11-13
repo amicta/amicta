@@ -1,7 +1,12 @@
 @extends('layouts.app')
 
+@section('title', 'Lomba')
+
 @section('content')
 <div class="container">
+
+    @include('partials.flash')
+    
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card" style="border-radius: 10px">
@@ -10,68 +15,65 @@
         </div>
     </div>
     <div class="row">
+    @forelse ($data['competitions'] as $competition)
         <div class="col-md-4">
             <div class="card h-100 d-flex justify-content-between" style="padding: 25px;">
                 <div>
-                    <div class="text-center p-600 mb-2" style="color: black">Product Base</div>
+                    <div class="text-center p-600 mb-2" style="color: black">{{ $competition->name }}</div>
                     <div class="d-flex justify-content-center">
-                        <img src="{{ asset('assets/img/icon4.svg') }}" class="card-img-top" alt="Hackathon" style="width: 100px">
+                                @if ($competition->type == 'product')
+                                    <img src="{{ asset('assets/img/icon4.svg') }}" class="card-img-top" alt="Product Based" style="width: 100px">
+                                @elseif ($competition->type == 'hackathon')
+                                    <img src="{{ asset('assets/img/icon5.svg') }}" class="card-img-top" alt="Hackathon" style="width: 100px">
+                                @else
+                                    <img src="{{ asset('assets/img/icon6.svg') }}" class="card-img-top" alt="Fun Games" style="width: 100px">
+                                @endif
+                                
+                                <p>{{ $competition->description }}</p>            
                     </div>
                 </div>
                 <div>
-                    <p style="margin-bottom: 0px">Kategori Lomba</p>
-                    <form action="" method="post">
-                        <select style="border-radius: 3px" class="form-select select" id="productBase">
-                            <option disabled selected>Pilih kategori</option>
-                            <option value="artificialintelligence">Artificial Intelligence</option>
-                            <option value="internetofthings">Internet Of Things</option>
-                            <option value="arvr">AR/VR</option>
-                            <option value="animasi">Animasi</option>
-                          </select>
-    
-                        <button type="submit" class="w-100 btn text-white mt-4 button-base">Daftar</button>
+                    <form action="{{ route('competitions.store') }}" method="POST">
+                         @csrf
+
+                        <input type="hidden" name="competition_id" value="{{ $competition->id }}">
+                       
+                       <p style="margin-bottom: 0px">Kategori Lomba</p>
+                        
+                        @if (!$competition->categories->isEmpty())
+                        
+                        <select class="form-select select" style="border-radius: 3px" name="category_id" required
+                                                @if ($competition->is_registered) disabled @endif>
+
+                                                <option value="" selected disabled hidden>Pilih Kategori Lomba
+                                                </option>
+
+                                                @foreach ($competition->categories as $category)
+                                                    <option value="{{ $category->id }}"
+                                                        @if (Auth::user()->teams->isNotEmpty()) @if ($competition->teams[0]->category_id == $category->id) selected @endif
+                                                        @endif>
+                                                        {{ $category->name }}
+                                                    </option>
+                                                @endforeach
+
+                                            </select>
+                                            
+                        @if ($competition->is_registered)
+                                            <button class="btn btn-secondary" disabled>Telah Daftar</button>
+                                        @elseif ($competition->is_open)
+                                            //<button class="btn btn-primary" type="submit">Daftar</button>
+                                            <button type="submit" class="w-100 btn text-white mt-4 button-base">Daftar</button>
+                                        @else
+                                            <button class="btn btn-secondary" disabled>Pendaftaran Ditutup</button>
+                                        @endif
                     </form>
                 </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card h-100 d-flex justify-content-between" style="padding: 25px;">
-                <div>
-                    <div class="text-center p-600 mb-2" style="color: black">Hackathon</div>
-                    <div class="d-flex justify-content-center">
-                        <img src="{{ asset('assets/img/icon5.svg') }}" class="card-img-top" alt="Hackathon" style="width: 100px">
-                    </div>
-                </div>
-                <div>
-                    <form action="" method="post">
-                        <button type="submit" class="w-100 btn text-white mt-4 button-base">Daftar</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card h-100 d-flex justify-content-between" style="padding: 25px;">
-                <div>
-                    <div class="text-center p-600 mb-2" style="color: black">Fun Tech Games</div>
-                    <div class="d-flex justify-content-center">
-                        <img src="{{ asset('assets/img/icon6.svg') }}" class="card-img-top" alt="Hackathon" style="width: 100px">
-                    </div>
-                </div>
-                <div>
-                    <p style="margin-bottom: 0px">Kategori Lomba</p>
-                    <form action="" method="post">
-                        <select style="border-radius: 3px" class="form-select select" id="productBase">
-                            <option disabled selected>Pilih kategori</option>
-                            <option value="fasttypingcompetition">Fast Typing Competition</option>
-                            <option value="codingcompetition">Coding Competition</option>
-                          </select>
-    
-                        <button type="submit" class="w-100 btn text-white mt-4 button-base">Daftar</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
+            
+@empty
+<h4>Belum ada lomba</h4>
+@endforelse
 </div>
+</div>
+
 @endsection
 
