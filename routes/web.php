@@ -23,6 +23,11 @@ Route::get('/', function () {
     return view('welcome');
 })->name('welcome');
 
+Route::get('/competition', function () {
+    return view('pages.competition.index');
+})->name('competition');
+
+
 
 Route::get('/seminar', [EventController::class, 'index'])->name('event.index');
 Route::post('/seminar', [ParticipantController::class, 'store'])->name('event.register');

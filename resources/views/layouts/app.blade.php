@@ -2,7 +2,7 @@
 
 @section('app')
   <div class="main-wrapper">
-    <div class="navbar-bg bg-dark"></div>
+    <div class="navbar-bg" style="background-color: #206F80"></div>
     <nav class="navbar navbar-expand-lg main-navbar">
       @include('partials.topnav')
     </nav>
