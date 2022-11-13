@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class EventCreateRequest extends FormRequest
+class TeamCreateRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -13,7 +13,7 @@ class EventCreateRequest extends FormRequest
      */
     public function authorize()
     {
-        return auth()->guard('admin')->check();
+        return auth()->check();
     }
 
     /**
@@ -23,6 +23,12 @@ class EventCreateRequest extends FormRequest
      */
     public function rules()
     {
-        
+        return [
+            'name' => 'required|string|min:1',
+            'product' => 'required|string|min:1',
+            'description' => 'nullable|string|min:1',
+            'member' => 'nullable|array|min:1',
+            // 'competition_id' => 'required|integer|min:1',
+        ];
     }
 }
