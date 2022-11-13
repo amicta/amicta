@@ -22,7 +22,7 @@ class TeamController extends Controller
 
         // dd($team);
 
-        return view('pages.team', compact('data', 'team'));
+        return view('pages.team.index', compact('data', 'team'));
     }
 
     public function create()

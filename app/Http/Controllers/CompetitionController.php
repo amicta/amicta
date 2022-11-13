@@ -15,7 +15,7 @@ class CompetitionController extends Controller
         $data['competitions'] = Competition::with('categories')->with('teams')->where('is_publish', true)->get();
         $data['categories'] = Category::where('is_achive', true);
 
-        return view('pages.competition', compact('data'));
+        return view('pages.competition.index', compact('data'));
     }
 
     public function create()
