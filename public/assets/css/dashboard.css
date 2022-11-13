@@ -1,0 +1,100 @@
+.button-base {
+    border-radius: 3px; 
+    background-color: #206F80 !important;
+}
+.button-base:hover {
+    border-radius: 3px; 
+    background-color: #123e48 !important;
+}
+
+.select {
+    border: gray 1px solid;
+    border-radius: 3px;
+    padding: 6px;
+    color: gray;
+    width: 100%;
+}
+
+.text-base {
+    font-size: 16px;
+}
+.text-sm {
+    font-size: 14px;
+}
+.text-xs {
+    font-size: 12px;
+}
+
+/* table {
+    border-collapse: collapse;
+    border-radius: 1em;
+    overflow: hidden;
+}
+
+tr, td {
+    padding: 1em;
+    background: white;
+    border-bottom: 1px solid black;
+} */
+
+.dashboard .table:not(.table-sm):not(.table-md):not(.dataTable) td, .table:not(.table-sm):not(.table-md):not(.dataTable) th {
+    height: 40px;
+}
+.dashboard-submission .table:not(.table-sm):not(.table-md):not(.dataTable) td, .table:not(.table-sm):not(.table-md):not(.dataTable) th {
+    height: 60px;
+}
+.dashboard-submission .table:not(.table-sm):not(.table-md):not(.dataTable) td, .table:not(.table-sm):not(.table-md):not(.dataTable) th {
+    height: 120px;
+}
+
+#dashboard a:hover {
+    text-decoration: none !important;
+}
+#dashboard a.badge-green:hover {
+    color: white;
+}
+
+tr {
+    background-color: white;
+}
+
+.badge-yellow {
+    padding: 5px;
+    border-radius: 10px;
+    background-color: #FFC107;
+    color: white;
+    text-align: center;
+    white-space: nowrap;
+}
+.badge-green {
+    padding: 5px;
+    border-radius: 10px;
+    background-color: #47C363;
+    color: white;
+    text-align: center;
+    white-space: nowrap;
+}
+
+@media (max-width:640px) {
+    body {
+        font-size: 12px !important;
+    }
+    .p-500 {
+        font-size: 14px;
+    }
+    .table:not(.table-sm):not(.table-md):not(.dataTable) td, .table:not(.table-sm):not(.table-md):not(.dataTable) th {
+        padding: 0 10px;
+    }
+    .submission {
+        flex-direction: column-reverse;
+    }
+    .dashboard-submission .table:not(.table-sm):not(.table-md):not(.dataTable) td, .table:not(.table-sm):not(.table-md):not(.dataTable) th {
+        height: 80px;
+    }
+}
+
+@media (max-width:375px) {
+    .dashboard-submission .table:not(.table-sm):not(.table-md):not(.dataTable) td, .table:not(.table-sm):not(.table-md):not(.dataTable) th {
+        height: 130px;
+    }
+}

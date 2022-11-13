@@ -3,82 +3,81 @@
 @section('title', 'Lomba')
 
 @section('content')
-    <section class="section">
+    <div class="container">
 
-        <div class="section-header">
-            <h1>Lomba</h1>
+        <div class="row justify-content-center">
+            <div class="col-md-12">
+                <div class="card" style="border-radius: 10px">
+                    <div class="rounded-5 w-100 p-500" style="padding: 20px; font-size: 20px; color: black;">Lomba</div>
+                </div>
+            </div>
         </div>
 
         @include('partials.flash')
 
-        <div class="section-body">
-            <div class="row">
-                <div class="col-12 col-md-6 col-lg-6">
-                    @forelse ($data['competitions'] as $competition)
-                        <div class="card">
-
-                            <div class="card-header">
-                                <h4>{{ $competition->name }}</h4>
-                            </div>
-
-                            <div class="card-body">
+        <div class="row">
+            @forelse ($data['competitions'] as $competition)
+                <div class="col-md-4">
+                    <div class="card h-100 d-flex justify-content-between" style="padding: 25px;">
+                        <div>
+                            <div class="text-center p-600 mb-2" style="color: black">{{ $competition->name }}</div>
+                            <div class="d-flex justify-content-center">
                                 @if ($competition->type == 'product')
-                                    <p>Logo Product Based</p>
-                                    <p>{{ $competition->description }}</p>
+                                    <img src="{{ asset('assets/img/icon4.svg') }}" class="card-img-top" alt="Product Based"
+                                        style="width: 100px">
                                 @elseif ($competition->type == 'hackathon')
-                                    <p>Logo Hackathon</p>
-                                    <p>{{ $competition->description }}</p>
+                                    <img src="{{ asset('assets/img/icon5.svg') }}" class="card-img-top" alt="Hackathon"
+                                        style="width: 100px">
                                 @else
-                                    <p>Logo Fun Games</p>
-                                    <p>{{ $competition->description }}</p>
+                                    <img src="{{ asset('assets/img/icon6.svg') }}" class="card-img-top" alt="Fun Games"
+                                        style="width: 100px">
                                 @endif
 
-                                <form action="{{ route('competitions.store') }}" method="POST">
-                                    @csrf
-
-                                    <input type="hidden" name="competition_id" value="{{ $competition->id }}">
-
-                                    @if (!$competition->categories->isEmpty())
-                                        <div class="form-group">
-                                            <label>Kategori Lomba</label>
-                                            <select class="form-control" name="category_id" required
-                                                @if ($competition->is_registered) disabled @endif>
-
-                                                <option value="" selected disabled hidden>Pilih Kategori Lomba
-                                                </option>
-
-                                                @foreach ($competition->categories as $category)
-                                                    <option value="{{ $category->id }}"
-                                                        @if (Auth::user()->teams->isNotEmpty()) @if ($competition->teams[0]->category_id == $category->id) selected @endif
-                                                        @endif>
-                                                        {{ $category->name }}
-                                                    </option>
-                                                @endforeach
-
-                                            </select>
-                                        </div>
-                                    @endif
-
-                                    <div class="card-footer text-right">
-                                        @if ($competition->is_registered)
-                                            <button class="btn btn-secondary" disabled>Telah Daftar</button>
-                                        @elseif ($competition->is_open)
-                                            <button class="btn btn-primary" type="submit">Daftar</button>
-                                        @else
-                                            <button class="btn btn-secondary" disabled>Pendaftaran Ditutup</button>
-                                        @endif
-                                    </div>
-                                </form>
+                                {{-- <br>
+                                <p>{{ $competition->description }}</p> --}}
                             </div>
-
                         </div>
+                        <div>
+                            <form action="{{ route('competitions.store') }}" method="POST">
+                                @csrf
 
-                        @empty
-                            <h4>Belum ada lomba</h4>
-                        @endforelse
+                                <input type="hidden" name="competition_id" value="{{ $competition->id }}">
+
+                                @if (!$competition->categories->isEmpty())
+                                    <p style="margin-bottom: 0px">Kategori Lomba</p>
+
+                                    <select class="form-control" style="border-radius: 3px" name="category_id"
+                                        required @if ($competition->is_registered) disabled @endif>
+
+                                        <option value="" selected disabled hidden>Pilih Kategori Lomba
+                                        </option>
+
+                                        @foreach ($competition->categories as $category)
+                                            <option value="{{ $category->id }}"
+                                                @if (Auth::user()->teams->isNotEmpty()) @if ($competition->teams[0]->category_id == $category->id) selected @endif
+                                                @endif>
+                                                {{ $category->name }}
+                                            </option>
+                                        @endforeach
+
+                                    </select>
+                                @endif
+
+                                @if ($competition->is_registered)
+                                    <button class="w-100 btn text-white mt-4 btn-secondary" disabled>Telah Daftar</button>
+                                @elseif ($competition->is_open)
+                                    {{-- <button class="btn btn-primary" type="submit">Daftar</button> --}}
+                                    <button type="submit" class="w-100 btn text-white mt-4 button-base">Daftar</button>
+                                @else
+                                    <button class="w-100 btn text-white mt-4 btn-secondary" disabled>Pendaftaran Ditutup</button>
+                                @endif
+                            </form>
+                        </div>
                     </div>
                 </div>
+                @empty
+                    <h4>Belum ada lomba</h4>
+                @endforelse
             </div>
         </div>
-    </section>
-@endsection
+    @endsection

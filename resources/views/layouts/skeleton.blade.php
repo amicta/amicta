@@ -7,10 +7,12 @@
   <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
   <meta name="csrf-token" content="{{ csrf_token() }}">
   <link rel="stylesheet" href="{{ mix('css/app.css') }}">
+  <link rel="stylesheet" href="{{ asset('assets/css/font.css') }}">
+  <link rel="stylesheet" href="{{ asset('assets/css/dashboard.css') }}">
   @stack('stylesheet')
 </head>
 
-<body>
+<body style="font-family: p-400; font-size: 14px">
 <div id="app">
   @yield('app')
 </div>
