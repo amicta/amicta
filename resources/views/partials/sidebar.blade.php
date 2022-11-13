@@ -16,26 +16,6 @@
                 <span>Dashboard</span>
             </a>
         </li>
-        <li class="{{ request()->is('competitions*') ? 'active' : '' }}">
-            <a href="{{ route('home') }}">
-                <i class="fas fa-trophy"></i>
-                <span>Lomba</span>
-            </a>
-        </li>
-
-        <li class="{{ request()->is('team*') ? 'active' : '' }}">
-            <a href="{{ route('admin.events.index') }}">
-                <i class="fas fa-users"></i>
-                <span>Tim</span>
-            </a>
-        </li>
-
-        <li class="{{ request()->is('submission*') ? 'active' : '' }}">
-            <a href="{{ route('admin.events.index') }}">
-                <i class="fas fa-file-alt"></i>
-                <span>Submisi</span>
-            </a>
-        </li>
 
         <li class="{{ request()->is('competitions*') ? 'active' : '' }}">
             <a href="{{ route('competitions.index') }}">

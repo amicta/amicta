@@ -1,12 +1,12 @@
 @extends('layouts.app')
 
-@section('title', 'Lomba')
+@section('title', 'Tim Lomba')
 
 @section('content')
     <section class="section">
 
         <div class="section-header">
-            <h1>Lomba</h1>
+            <h1>Tim Lomba</h1>
         </div>
 
         @include('partials.flash')
