@@ -37,7 +37,11 @@ Auth::routes();
 // Auth::routes(['register' => false]);
 
 Route::group(['middleware' => ['auth:web']], function () {
-    Route::get('/home', [HomeController::class, 'index'])->name('home');
+    // Route::get('/home', [HomeController::class, 'index'])->name('home');
+    Route::get('/home', function () {
+        return redirect()->route('dashboard');
+    })->name('home');
+
     Route::get('/dashboard', [HomeController::class, 'dashboard'])->name('dashboard');
 
     Route::resource('/competitions', CompetitionController::class);

@@ -20,7 +20,8 @@
                 <div class="col-md-4">
                     <div class="card h-100 d-flex justify-content-between" style="padding: 25px;">
                         <div>
-                            <div class="text-center p-600 mb-2" style="color: black">{{ $competition->name }}</div>
+                            <h4 class="text-center p-600 mb-2" style="color: black; font-size: 16px">{{ $competition->name }}</h4>
+                            <br>
                             <div class="d-flex justify-content-center">
                                 @if ($competition->type == 'product')
                                     <img src="{{ asset('assets/img/icon4.svg') }}" class="card-img-top" alt="Product Based"
@@ -33,9 +34,9 @@
                                         style="width: 100px">
                                 @endif
 
-                                {{-- <br>
-                                <p>{{ $competition->description }}</p> --}}
                             </div>
+                            <br>
+                            <p>{{ $competition->description }}</p>
                         </div>
                         <div>
                             <form action="{{ route('competitions.store') }}" method="POST">
@@ -44,7 +45,7 @@
                                 <input type="hidden" name="competition_id" value="{{ $competition->id }}">
 
                                 @if (!$competition->categories->isEmpty())
-                                    <p style="margin-bottom: 0px">Kategori Lomba</p>
+                                    <p class="p-700" style="margin-bottom: 0px">Kategori Lomba</p>
 
                                     <select class="form-control" style="border-radius: 3px" name="category_id" required
                                         @if ($competition->is_registered) disabled @endif>

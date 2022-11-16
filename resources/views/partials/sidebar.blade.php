@@ -39,4 +39,10 @@
         </li>
 
     </ul>
+
+    <style>
+        .main-sidebar .sidebar-menu li.active a {
+            color: #206F80;
+        }
+    </style>
 </aside>

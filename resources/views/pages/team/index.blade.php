@@ -5,7 +5,7 @@
 @section('content')
     <section class="section">
 
-        <div class="section-header">
+        <div class="section-header" style="border-radius: 10px;">
             <h1>Tim Lomba</h1>
         </div>
 
@@ -17,7 +17,7 @@
                     @if ($data['team'])
                         <div class="card">
                             <div class="card-header">
-                                <h4>Tim Lomba Product Based - {{ $team->category->name }}</h4>
+                                <h4 style="color: black">Tim Lomba Product Based - {{ $team->category->name }}</h4>
                             </div>
                             <div class="card-body">
                                 <form action="{{ route('teams.update', ['team' => $data['team']->id]) }}" method="POST">
@@ -87,7 +87,7 @@
                             </div>
                             <div class="card-footer">
                                 @if ($data['team']->name == 'Belum dibuat')
-                                    <button class="btn btn-primary">Submit</button>
+                                    <button style="background-color: #206F80; border-color:#206F80; box-shadow:0 2px 6px #9fe5f5" class="btn btn-primary">Submit</button>
                                 @endif
                             </div>
                             </form>
@@ -100,4 +100,12 @@
         </div>
         </div>
     </section>
+    <style>
+        button.btn.btn-primary:focus {
+            background-color: #123e48 !important;
+        }
+        button.btn.btn-primary:hover {
+            background-color: #123e48 !important;
+        }
+    </style>
 @endsection
