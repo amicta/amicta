@@ -68,7 +68,7 @@
         </li>
 
         <li class="{{ request()->is('admin/submission*') ? 'active' : '' }}">
-            <a href="{{ route('admin.events.index') }}">
+            <a href="{{ route('admin.submissions.index') }}">
                 <i class="fas fa-file-alt"></i>
                 <span>Submisi</span>
             </a>

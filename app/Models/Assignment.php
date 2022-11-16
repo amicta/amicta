@@ -9,6 +9,14 @@ class Assignment extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'title',
+        'description',
+        'due_date',
+        'competition_id',
+        'assign_registered',
+    ];
+
     protected $casts = [
         'assign_registered' => 'bool',
     ];

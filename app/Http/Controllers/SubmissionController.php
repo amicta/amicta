@@ -37,9 +37,16 @@ class SubmissionController extends Controller
         return view('pages.submission.edit', compact('submission'));
     }
 
-    public function update(Request $request, $id)
+    public function update(Request $request, Submission $submission)
     {
-        //
+        $submission->response = $request->response;
+        $submission->status = 'submited';
+        $submission->save();
+
+        return redirect()->route('submissions.index')->with('status', [
+            'element' => 'success',
+            'message' => 'Berhasil memperbarui submisi!'
+        ]);
     }
 
     public function destroy($id)

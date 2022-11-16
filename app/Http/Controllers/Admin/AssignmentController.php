@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\AssignmentCreateRequest;
 use App\Models\Assignment;
 use App\Models\Competition;
 use Illuminate\Http\Request;
@@ -22,9 +23,14 @@ class AssignmentController extends Controller
         //
     }
 
-    public function store(Request $request)
+    public function store(AssignmentCreateRequest $request)
     {
-        //
+        Assignment::create($request->validated());
+
+        return redirect()->route('admin.assignments.index')->with('status', [
+            'element' => 'success',
+            'message' => 'Penugasan baru berhasil disimpan!'
+        ]);
     }
 
     public function show($id)
@@ -42,8 +48,13 @@ class AssignmentController extends Controller
         //
     }
 
-    public function destroy($id)
+    public function destroy(Assignment $assignment)
     {
-        //
+        $assignment->delete();
+
+        return redirect()->route('admin.assignments.index')->with('status', [
+            'element' => 'success',
+            'message' => 'Penugasan berhasil dihapus!'
+        ]);
     }
 }

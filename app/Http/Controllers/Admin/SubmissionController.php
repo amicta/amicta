@@ -3,83 +3,59 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Competition;
+use App\Models\Submission;
 use Illuminate\Http\Request;
 
 class SubmissionController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
-        //
+        $data['competitions'] = Competition::all();
+        $data['submissions'] = Submission::all();
+
+        return view('admin.pages.submissions.index', compact('data'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
         //
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
         //
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function show($id)
     {
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
+    public function edit(Submission $submission)
     {
-        //
+        return view('admin.pages.submissions.edit', compact('submission'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
+    public function update(Request $request, Submission $submission)
     {
-        //
+        $submission->reviewer_note = $request->reviewer_note;
+        $submission->status = $request->status;
+        $submission->save();
+
+        return redirect()->route('admin.submissions.index')->with('status', [
+            'element' => 'success',
+            'message' => 'Berhasil memperbarui submisi!'
+        ]);
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
+    public function destroy(Submission $submission)
     {
-        //
+        $submission->delete();
+
+        return redirect()->route('admin.submissions.index')->with('status', [
+            'element' => 'success',
+            'message' => 'Submisi berhasil dihapus!'
+        ]);
     }
 }
