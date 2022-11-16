@@ -31,7 +31,7 @@
                                 @csrf
                                 @method('patch')
                                 <textarea placeholder="Paste link file submisi kamu disini"
-                                    style="border: 1px solid #6c757d; padding: 10px; border-radius: 3px; width: 100%" name="response" id="response"></textarea>
+                                    style="border: 1px solid #6c757d; padding: 10px; border-radius: 3px; width: 100%" name="response" id="response" required></textarea>
                                 <button style="border: none; padding: 8px" class="align-self-end button-base text-white"
                                     type="submit">Kirim Submisi</button>
                             </form>

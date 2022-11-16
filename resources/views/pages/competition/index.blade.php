@@ -55,7 +55,7 @@
                                         </option>
 
                                         @foreach ($competition->teams as $team)
-                                        <option selected>{{ $team->category->name }}</option>
+                                        <option selected disabled hidden>{{ $team->category->name }}</option>
                                         @endforeach
 
                                         @foreach ($competition->categories as $category)
@@ -70,7 +70,6 @@
                                 @if ($competition->is_registered)
                                     <button class="w-100 btn text-white mt-4 btn-secondary" disabled>Telah Daftar</button>
                                 @elseif ($competition->is_open)
-                                    {{-- <button class="btn btn-primary" type="submit">Daftar</button> --}}
                                     <button type="submit" class="w-100 btn text-white mt-4 button-base">Daftar</button>
                                 @else
                                     <button class="w-100 btn text-white mt-4 btn-secondary" disabled>
