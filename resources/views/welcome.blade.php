@@ -50,7 +50,7 @@
                 <div class="text-center">
                     <h1 class="pt-10 p-700 text-sm sm:text-[20px] lg:text-[30px] lg:leading-[46px] uppercase">amicta 2014</h1>
                     <section class="overflow-hidden text-gray-700">
-                        <div class="container px-5 py-2 mx-auto lg:p-10">
+                        <div class="container px-5 pb-6 pt-2 mx-auto lg:p-10">
                           <div class="flex flex-wrap -m-1 md:-m-2">
                             <div class="flex flex-wrap w-1/2">
                               <div class="w-1/2 p-1 md:p-2">
@@ -97,7 +97,7 @@
                 <div class="text-center">
                     <h1 class="pt-10 p-700 text-sm sm:text-[20px] lg:text-[30px] lg:leading-[46px] uppercase">amicta 2015</h1>
                     <section class="overflow-hidden text-gray-700">
-                        <div class="container px-5 py-2 mx-auto lg:p-10">
+                        <div class="container px-5 pb-6 pt-2 mx-auto lg:p-10">
                           <div class="flex flex-wrap -m-1 md:-m-2">
                             <div class="flex flex-wrap w-1/2">
                               <div class="w-1/2 p-1 md:p-2">
@@ -144,7 +144,7 @@
                 <div class="text-center">
                     <h1 class="pt-10 p-700 text-sm sm:text-[20px] lg:text-[30px] lg:leading-[46px] uppercase">amicta 2016</h1>
                     <section class="overflow-hidden text-gray-700">
-                        <div class="container px-5 py-2 mx-auto lg:p-10">
+                        <div class="container px-5 pb-6 pt-2 mx-auto lg:p-10">
                           <div class="flex flex-wrap -m-1 md:-m-2">
                             <div class="flex flex-wrap w-1/2">
                               <div class="w-1/2 p-1 md:p-2">
@@ -191,7 +191,7 @@
                 <div class="text-center">
                     <h1 class="pt-10 p-700 text-sm sm:text-[20px] lg:text-[30px] lg:leading-[46px] uppercase">amicta 2017</h1>
                     <section class="overflow-hidden text-gray-700">
-                        <div class="container px-5 py-2 mx-auto lg:p-10">
+                        <div class="container px-5 pb-6 pt-2 mx-auto lg:p-10">
                           <div class="flex flex-wrap -m-1 md:-m-2">
                             <div class="flex flex-wrap w-1/2">
                               <div class="w-1/2 p-1 md:p-2">
