@@ -36,7 +36,7 @@ class CompetitionController extends Controller
 
         $user->competitions()->attach($request->competition_id);
 
-        if ($request->category_id) {
+        if ($request->category_id && $request->competition_id == $productBased) {
             $team = $user->teams()->create([
                 'name' => 'Belum dibuat',
                 'competition_id' => $request->competition_id,

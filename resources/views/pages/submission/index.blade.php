@@ -14,7 +14,7 @@
 
         @include('partials.flash')
 
-        <div class="row">
+        <div class="row dashboard">
             <div class="col-md-12">
                 <div class="text-base p-500">Submission</div>
                 <p>Melalui halaman ini, kami sewaktu-waktu akan mengirimkan permintaan submisi yang harus kamu penuhi.
@@ -36,7 +36,7 @@
                         <div class="collapse show" id="quests-issued">
                             <div class="card-body">
                                 <div class="list-group">
-                                    @foreach ($competition->submissions as $submission)
+                                    @foreach ($data['submissions']->where('competition_id', $competition->id) as $submission)
                                         <div class="list-group-item list-group-item-action flex-column align-items-start">
                                             <div class="d-flex w-100 justify-content-between">
                                                 <h6 class="mb-1">
@@ -55,10 +55,10 @@
 
                                                 @if ($submission->status == 'assigned')
                                                     <a href="{{ route('submissions.edit', ['submission' => $submission->id]) }}"
-                                                        class="btn btn-sm btn-warning">Lihat</a>
+                                                        class="btn text-white btn-warning">Lihat</a>
                                                 @else
                                                     <a href="{{ route('submissions.show', ['submission' => $submission->id]) }}"
-                                                        class="btn btn-sm btn-primary">Lihat</a>
+                                                        class="btn text-white button-base">Lihat</a>
                                                 @endif
                                             </div>
                                         </div>
@@ -71,7 +71,12 @@
             </div>
 
         @empty
-            <h4>Belum mendaftar lomba</h4>
+            <div class="alert alert-danger }} alert-has-icon show fade">
+                <div class="alert-icon">
+                    <i class="fas fa-exclamation-triangle"></i>
+                </div>
+                Kamu belum mengikuti Lomba / Lomba yang kamu ikuti tidak membutuhkan pengumpulan submisi
+            </div>
         @endforelse
     </div>
 @endsection

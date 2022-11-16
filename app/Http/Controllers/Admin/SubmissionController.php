@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Assignment;
 use App\Models\Competition;
 use App\Models\Submission;
 use Illuminate\Http\Request;
@@ -42,6 +43,22 @@ class SubmissionController extends Controller
         $submission->reviewer_note = $request->reviewer_note;
         $submission->status = $request->status;
         $submission->save();
+
+        if ($request->status == 'accepted') {
+            $countAssignment = Assignment::where('competition_id', $submission->competition_id)->count();
+
+            if ($countAssignment > 1) {
+                $nextAssignment = Assignment::where('competition_id', $submission->competition_id)->latest()->take(1)->first()->id;
+
+                Submission::create([
+                    'assignment_id' => $nextAssignment,
+                    'competition_id' => $submission->competition_id,
+                    'user_id' => $submission->user->id,
+                    'team_id' => $submission->team->id,
+                    'status' => 'assigned',
+                ]);
+            }
+        }
 
         return redirect()->route('admin.submissions.index')->with('status', [
             'element' => 'success',

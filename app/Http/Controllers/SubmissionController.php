@@ -12,7 +12,7 @@ class SubmissionController extends Controller
     public function index(User $user)
     {
         $data['competitions'] = Auth::user()->competitions;
-        $data['submission'] = Auth::user()->submissions;
+        $data['submissions'] = Auth::user()->submissions;
 
         return view('pages.submission.index', compact('data'));
     }

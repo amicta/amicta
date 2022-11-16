@@ -12,9 +12,9 @@
         @include('partials.flash')
 
         <div class="section-body">
-            <div class="row">
-                <div class="col-12 col-md-6 col-lg-6">
-                    @if ($data['team'])
+            @if ($data['team'])
+                <div class="row">
+                    <div class="col-12 col-md-6 col-lg-6">
                         <div class="card">
                             <div class="card-header">
                                 <h4 style="color: black">Tim Lomba Product Based - {{ $team->category->name }}</h4>
@@ -87,23 +87,31 @@
                             </div>
                             <div class="card-footer">
                                 @if ($data['team']->name == 'Belum dibuat')
-                                    <button style="background-color: #206F80; border-color:#206F80; box-shadow:0 2px 6px #9fe5f5" class="btn btn-primary">Submit</button>
+                                    <button
+                                        style="background-color: #206F80; border-color:#206F80; box-shadow:0 2px 6px #9fe5f5"
+                                        class="btn btn-primary">Submit</button>
                                 @endif
                             </div>
                             </form>
                         </div>
-                    @else
-                        <h4>Belum mengikuti lomba</h4>
-                    @endif
+                    </div>
                 </div>
+        </div>
+        </div>
+        @else
+        <div class="alert alert-danger }} alert-has-icon show fade">
+            <div class="alert-icon">
+                <i class="fas fa-exclamation-triangle"></i>
             </div>
+            Kamu belum mengikuti Lomba Product Based
         </div>
-        </div>
+        @endif
     </section>
     <style>
         button.btn.btn-primary:focus {
             background-color: #123e48 !important;
         }
+
         button.btn.btn-primary:hover {
             background-color: #123e48 !important;
         }
