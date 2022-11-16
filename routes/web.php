@@ -6,6 +6,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\ParticipantController;
 use App\Http\Controllers\CompetitionController;
+use App\Http\Controllers\SubmissionController;
 use App\Http\Controllers\TeamController;
 
 /*
@@ -41,4 +42,5 @@ Route::group(['middleware' => ['auth:web']], function () {
 
     Route::resource('/competitions', CompetitionController::class);
     Route::resource('/teams', TeamController::class);
+    Route::resource('/submissions', SubmissionController::class);
 });

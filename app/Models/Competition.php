@@ -43,6 +43,11 @@ class Competition extends Model
         return $this->hasMany(Assignment::class);
     }
 
+    public function submissions()
+    {
+        return $this->hasMany(Submission::class);
+    }
+
     public function users()
     {
         return $this->belongsToMany(User::class, 'competition_user');
