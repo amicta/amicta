@@ -11,11 +11,37 @@ body {
     opacity: 0.6;
 }
 
+/* .carousel-item {
+    display: unset;
+    margin-right: unset !important;
+    backface-visibility: unset !important;
+    -webkit-transition: unset !important;
+    transition: unset !important;
+    transition: unset !important;
+} */
+
+.modal-backdrop.fade.show {
+    z-index: 50;
+}
+
 .base {
     background-color: #206F80;
 }
 .base-text {
     color: #206F80;
+}
+
+.pink {
+    background-color: #F4CCCC;
+}
+.biru {
+    background-color: #9FC5E8;
+}
+.kuning {
+    background-color: #FFF2CC;
+}
+.hijau {
+    background-color: #D0E0E3;
 }
 
 #navbar .drop {

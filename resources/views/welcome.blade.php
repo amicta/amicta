@@ -39,45 +39,200 @@
         </a>
     </button>
 
-    <!-- popup modal -->
-    <div id="popup-modal" data-modal-show="true" tabindex="-1" class="z-50 hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 md:inset-0 h-modal md:h-full justify-center items-center" aria-hidden="true">
-        <div class="relative p-4 w-full max-w-md h-full md:h-auto">
-            <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
-                <button type="button" class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white" data-modal-toggle="popup-modal">
+    <!-- popup modal gallery AMICTA -->
+    <div id="popup-modal" data-modal-show="false" tabindex="-1" class="z-50 px-4 pt-40 hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 md:inset-0 h-modal md:h-full justify-center items-center" aria-hidden="true">
+        <div class="relative p-0 lg:p-30 w-full max-w-7xl h-full md:h-auto">
+            <div class="relative bg-white rounded-lg shadow">
+                <button type="button" class=" absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 mr-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white" data-modal-toggle="popup-modal">
                     <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
                     <span class="sr-only">Close modal</span>
                 </button>
-                <div class="p-6 text-center">
-                    <svg aria-hidden="true" class="mx-auto mb-4 w-14 h-14 text-gray-400 dark:text-gray-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                    <h3 class="mb-5 text-lg font-normal text-gray-500 dark:text-gray-400">
-                        Hai, Amictarian!
-                        <br>
-                        Kuota Pendaftaran terbatas!!!
-                        <div class="text-left">
-                            <br>
-                            Jangan sampai kelewatan untuk ikut Multitrack Talkshow bersama pemateri-pemateri expert ya :)
-                            <br>
-                            🗓 : 15 November 2022 <br>
-                            ⏱ : 09:00 - Selesai / 13:00 - selesai <br>
-                            📍 : CITRA 1 <br>
-                            💸 : GRATIS
+                <div class="text-center">
+                    <h1 class="pt-10 p-700 text-sm sm:text-[20px] lg:text-[30px] lg:leading-[46px] uppercase">amicta 2014</h1>
+                    <section class="overflow-hidden text-gray-700">
+                        <div class="container px-5 py-2 mx-auto lg:p-10">
+                          <div class="flex flex-wrap -m-1 md:-m-2">
+                            <div class="flex flex-wrap w-1/2">
+                              <div class="w-1/2 p-1 md:p-2">
+                                <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+                                  src="{{ asset('assets/img/2014/1.jpeg') }}">
+                              </div>
+                              <div class="w-1/2 p-1 md:p-2">
+                                <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+                                  src="{{ asset('assets/img/2014/2.jpeg') }}">
+                              </div>
+                              <div class="w-full p-1 md:p-2">
+                                <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+                                  src="{{ asset('assets/img/2014/3.jpeg') }}">
+                              </div>
+                            </div>
+                            <div class="flex flex-wrap w-1/2">
+                              <div class="w-full p-1 md:p-2">
+                                <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+                                  src="{{ asset('assets/img/2014/4.jpeg') }}">
+                              </div>
+                              <div class="w-1/2 p-1 md:p-2">
+                                <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+                                  src="{{ asset('assets/img/2014/5.jpeg') }}">
+                              </div>
+                              <div class="w-1/2 p-1 md:p-2">
+                                <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+                                  src="{{ asset('assets/img/2014/6.jpeg') }}">
+                              </div>
+                            </div>
+                          </div>
                         </div>
-                    </h3>
-                    <a href="{{ route('event.index') }}" data-modal-toggle="popup-modal" type="button" class="mb-2 text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center mr-2">
-                        Daftar Sekarang
-                    </a>
-                    <button data-modal-toggle="popup-modal" type="button" class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600">Tutup</button>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="popup-modal-1" data-modal-show="false" tabindex="-1" class="z-50 px-4 pt-40 hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 md:inset-0 h-modal md:h-full justify-center items-center" aria-hidden="true">
+        <div class="relative w-full max-w-7xl h-full md:h-auto">
+            <div class="relative bg-white rounded-lg shadow">
+                <button type="button" class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white" data-modal-toggle="popup-modal-1">
+                    <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                    <span class="sr-only">Close modal</span>
+                </button>
+                <div class="text-center">
+                    <h1 class="pt-10 p-700 text-sm sm:text-[20px] lg:text-[30px] lg:leading-[46px] uppercase">amicta 2015</h1>
+                    <section class="overflow-hidden text-gray-700">
+                        <div class="container px-5 py-2 mx-auto lg:p-10">
+                          <div class="flex flex-wrap -m-1 md:-m-2">
+                            <div class="flex flex-wrap w-1/2">
+                              <div class="w-1/2 p-1 md:p-2">
+                                <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+                                  src="{{ asset('assets/img/2015/1.jpg') }}">
+                              </div>
+                              <div class="w-1/2 p-1 md:p-2">
+                                <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+                                  src="{{ asset('assets/img/2015/2.jpg') }}">
+                              </div>
+                              <div class="w-full p-1 md:p-2">
+                                <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+                                  src="{{ asset('assets/img/2015/3.jpg') }}">
+                              </div>
+                            </div>
+                            <div class="flex flex-wrap w-1/2">
+                              <div class="w-full p-1 md:p-2">
+                                <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+                                  src="{{ asset('assets/img/2015/4.jpg') }}">
+                              </div>
+                              <div class="w-1/2 p-1 md:p-2">
+                                <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+                                  src="{{ asset('assets/img/2015/5.jpg') }}">
+                              </div>
+                              <div class="w-1/2 p-1 md:p-2">
+                                <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+                                  src="{{ asset('assets/img/2015/6.jpg') }}">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="popup-modal-2" data-modal-show="false" tabindex="-1" class="z-50 px-4 pt-40 hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 md:inset-0 h-modal md:h-full justify-center items-center" aria-hidden="true">
+        <div class="relative w-full max-w-7xl h-full md:h-auto">
+            <div class="relative bg-white rounded-lg shadow">
+                <button type="button" class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white" data-modal-toggle="popup-modal-2">
+                    <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                    <span class="sr-only">Close modal</span>
+                </button>
+                <div class="text-center">
+                    <h1 class="pt-10 p-700 text-sm sm:text-[20px] lg:text-[30px] lg:leading-[46px] uppercase">amicta 2016</h1>
+                    <section class="overflow-hidden text-gray-700">
+                        <div class="container px-5 py-2 mx-auto lg:p-10">
+                          <div class="flex flex-wrap -m-1 md:-m-2">
+                            <div class="flex flex-wrap w-1/2">
+                              <div class="w-1/2 p-1 md:p-2">
+                                <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+                                  src="{{ asset('assets/img/2016/1.jpg') }}">
+                              </div>
+                              <div class="w-1/2 p-1 md:p-2">
+                                <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+                                  src="{{ asset('assets/img/2016/2.jpg') }}">
+                              </div>
+                              <div class="w-full p-1 md:p-2">
+                                <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+                                  src="{{ asset('assets/img/2016/3.jpg') }}">
+                              </div>
+                            </div>
+                            <div class="flex flex-wrap w-1/2">
+                              <div class="w-full p-1 md:p-2">
+                                <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+                                  src="{{ asset('assets/img/2016/4.jpg') }}">
+                              </div>
+                              <div class="w-1/2 p-1 md:p-2">
+                                <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+                                  src="{{ asset('assets/img/2016/5.jpg') }}">
+                              </div>
+                              <div class="w-1/2 p-1 md:p-2">
+                                <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+                                  src="{{ asset('assets/img/2016/6.jpg') }}">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="popup-modal-3" data-modal-show="false" tabindex="-1" class="z-50 px-4 pt-40 hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 md:inset-0 h-modal md:h-full justify-center items-center" aria-hidden="true">
+        <div class="relative w-full max-w-7xl h-full md:h-auto">
+            <div class="relative bg-white rounded-lg shadow">
+                <button type="button" class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white" data-modal-toggle="popup-modal-3">
+                    <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                    <span class="sr-only">Close modal</span>
+                </button>
+                <div class="text-center">
+                    <h1 class="pt-10 p-700 text-sm sm:text-[20px] lg:text-[30px] lg:leading-[46px] uppercase">amicta 2017</h1>
+                    <section class="overflow-hidden text-gray-700">
+                        <div class="container px-5 py-2 mx-auto lg:p-10">
+                          <div class="flex flex-wrap -m-1 md:-m-2">
+                            <div class="flex flex-wrap w-1/2">
+                              <div class="w-1/2 p-1 md:p-2">
+                                <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+                                  src="{{ asset('assets/img/2017/1.jpg') }}">
+                              </div>
+                              <div class="w-1/2 p-1 md:p-2">
+                                <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+                                  src="{{ asset('assets/img/2017/2.jpg') }}">
+                              </div>
+                              <div class="w-full p-1 md:p-2">
+                                <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+                                  src="{{ asset('assets/img/2017/3.jpg') }}">
+                              </div>
+                            </div>
+                            <div class="flex flex-wrap w-1/2">
+                              <div class="w-full p-1 md:p-2">
+                                <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+                                  src="{{ asset('assets/img/2017/4.jpg') }}">
+                              </div>
+                              <div class="w-1/2 p-1 md:p-2">
+                                <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+                                  src="{{ asset('assets/img/2017/5.jpg') }}">
+                              </div>
+                              <div class="w-1/2 p-1 md:p-2">
+                                <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+                                  src="{{ asset('assets/img/2017/6.jpg') }}">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                    </section>
                 </div>
             </div>
         </div>
     </div>
 
-
     <section id="particles-js"></section>
     <!-- navbar -->
     <div id="navbar" class="grid grid-cols-3 items-center px-2 sm:px-12">
-        <div class="w-20 lg:w-40"><a href="index.html"><img src="{{ asset('assets/img/logo-white.png') }}"
-                    alt=""></a></div>
+        <a class="z-10 w-20 lg:w-30 pt-3" href="{{ route('welcome') }}"><img src="{{ asset('assets/img/logo-white.png') }}" alt=""></a>
         <div class="col-span-2 justify-self-end">
             <!-- drop navbar -->
             <div class="drop z-51">
@@ -102,7 +257,7 @@
                                 </li>
                                 <li>
                                     <a class="dropdown-item text-xs sm:text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100"
-                                        href="{{ route('event.index') }}">Seminar</a>
+                                        href="https://drive.google.com/drive/folders/1ak6mo6ZH35nphXSeM-rN5uPd4h5rgKAN?usp=share_link">Rulebook</a>
                                 </li>
                                 <li>
                                     <a class="dropdown-item text-xs sm:text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100"
@@ -114,8 +269,8 @@
                                 </li>
                                 <li>
                                     <a class="dropdown-item button-color rounded p-2 text-white text-xs sm:text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100"
-                                        href="#">
-                                        Rulebook Lomba
+                                        href="{{ route('login') }}" style="background-color: #F55553; color: white;">
+                                        Login Tim
                                     </a>
                                 </li>
                             </ul>
@@ -126,12 +281,12 @@
             <!-- default navbar -->
             <div class="flex text-white p-700 text-center navbar">
                 <div class="z-10 self-center text-xs mx-3 lg:text-sm"><a href="{{ route('welcome') }}">Home</a></div>
-                <div class="z-10 self-center text-xs mx-3 lg:text-sm"><a href="{{ route('event.index') }}">Seminar</a>
+                <div class="z-10 self-center text-xs mx-3 lg:text-sm"><a href="https://drive.google.com/drive/folders/1ak6mo6ZH35nphXSeM-rN5uPd4h5rgKAN?usp=share_link">Rulebook</a>
                 </div>
                 <div class="z-10 self-center text-xs mx-3 lg:text-sm"><a href="#main-issue">Lomba</a></div>
                 <div class="z-10 self-center text-xs mx-3 lg:text-sm"><a href="#description">Tentang</a></div>
-                <a href="#" class="z-10 self-center text-xs mx-3 lg:text-sm button-color p-3 rounded-xl shadow-md hover:bg-orange-700 hover:shadow-lg active:bg-orange-800 active:shadow-lg">
-                    Rulebook Lomba
+                <a href="{{ route('login') }}" class="z-10 self-center text-xs mx-3 lg:text-sm button-color p-3 rounded-xl shadow-md hover:bg-orange-700 hover:shadow-lg active:bg-orange-800 active:shadow-lg">
+                    Login Tim
                 </a>
             </div>
         </div>
@@ -139,27 +294,26 @@
 
     <!-- hero -->
     <section id="hero">
-        <div
-            class="flex flex-col-reverse sm:grid sm:grid-cols-2 md:grid md:grid-cols-2 lg:grid lg:grid-cols-2 px-4 sm:px-12 items-center">
-            <div class="text-white text-center">
-                <h1 class="font-bold text-sm sm:text-[20px] lg:text-[40px] lg:leading-[46px] p-700">Amikom Innovative,
+        <div class="flex flex-col-reverse sm:grid sm:grid-cols-2 md:grid md:grid-cols-2 lg:grid lg:grid-cols-2 px-4 sm:px-12 items-center">
+            <div class="text-white">
+                <h1 class="font-bold text-sm sm:text-[20px] lg:text-[30px] lg:leading-[46px] p-700">Amikom Innovative,
                     Creative, Technology, Awards</h1>
                 <p class="mt-3 text-xs lg:text-sm">AMICTA 2022 adalah Kompetisi inovasi produk digital
                     tingkat fakultas ilmu komputer (FIK) untuk memecahkan masalah masyarakat Indonesia, khususnya pada
                     sektor Industri UMKM, Pertanian & Perikanan atau Antisipasi Perubahan Iklim.</p>
-                <div class="button-hero flex justify-center mt-3 sm:mt-6 mb-3">
+                <div class="button-hero flex justify-start mt-3 sm:mt-5 mb-3">
                     <!-- add href inside after register is opened -->
                     <a class="z-10 self-center button-color p-2 lg:p-3 rounded-3xl mr-6 text-xs lg:text-sm shadow-md hover:bg-orange-700 hover:shadow-lg active:bg-orange-800 active:shadow-lg" data-tooltip-target="tooltip-click" data-tooltip-trigger="click" 
-                        href="#">
-                        Login Dashboard Team
+                        href="{{ route('register') }}">
+                        Segera Daftar Sekarang
                     </a>
                     <!-- add href inside after register is opened -->
-                    <a class="z-10 self-center bg-button-color p-2 lg:p-3 rounded-3xl text-xs lg:text-sm shadow-md hover:bg-orange-700 hover:shadow-lg active:bg-orange-800 active:shadow-lg" data-tooltip-target="tooltip-click" data-tooltip-trigger="click"
+                    {{-- <a class="z-10 self-center bg-button-color p-2 lg:p-3 rounded-3xl text-xs lg:text-sm shadow-md hover:bg-orange-700 hover:shadow-lg active:bg-orange-800 active:shadow-lg" data-tooltip-target="tooltip-click" data-tooltip-trigger="click"
                         href="#">
                         Daftar Team
-                    </a>
+                    </a> --}}
                     <!-- disable if registered is opened -->
-                    <div id="tooltip-click" role="tooltip"
+                    {{-- <div id="tooltip-click" role="tooltip"
                         class="z-[51] inline-block absolute invisible w-64 text-sm font-light text-gray-500 bg-white rounded-lg border border-gray-200 shadow-sm opacity-0 transition-opacity duration-300 dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800">
                         <div
                             class="py-2 px-3 bg-gray-100 rounded-t-lg border-b border-gray-200 dark:border-gray-600 dark:bg-gray-700">
@@ -169,7 +323,7 @@
                             <p>Tunggu sampai waktu pendaftaran dibuka ya...</p>
                         </div>
                         <div class="tooltip-arrow" data-popper-arrow></div>
-                    </div>
+                    </div> --}}
                     <!-- disable if registered is opened -->
 
                 </div>
@@ -187,39 +341,75 @@
 
     <!-- description -->
     <section id="description">
-        <div class="bg-white px-12 text-center">
+        <div class="bg-white px-12 pb-5 text-center">
             <div class="flex justify-center">
-                <img class="w-40 lg:w-64" src="{{ asset('assets/img/logo-normal.png') }}" alt="">
+                <div class="p-700 text-sm sm:text-[20px] lg:text-[30px] lg:leading-[46px]">PARTICIPANT ENTHUSIASTS</div>
             </div>
-            <div class="px-[8px] sm:px-[50px] lg:px-[200px]">
-                <div class="p-700 text-sm sm:text-[20px] lg:text-[40px] lg:leading-[46px]">Apa itu AMICTA ?</div>
-                <div class="mt-3 text-xs lg:text-sm">AMICTA 2022 adalah Kompetisi inovasi produk digital
-                    tingkat fakultas ilmu komputer (FIK) untuk memecahkan masalah masyarakat Indonesia, khususnya pada
-                    sektor Industri UMKM, Pertanian & Perikanan atau Antisipasi Perubahan Iklim.</div>
-                <br>
-                <div class="text-xs lg:text-sm">Solusi-solusi yang dilombakan harus menggunakan salah
-                    satu dari empat teknologi berikut (1) Internet of Things, (2) Kecerdasan Buatan, (3) AR/VR atau (4)
-                    Animasi.</div>
-                <br>
-                <div class="text-red-600 text-sm sm:text-[20px] lg:text-[40px] lg:leading-[46px] p-700">"Hack The
-                    Future"</div>
-                <div class="mt-3 text-xs lg:text-sm">Sepuluh persen dari 2000 Mahasiswa aktif di
-                    lingkungan FIK diharapkan dapat merasakan impact sekaligus berpartisipasi dalam kompetisi AMICTA
-                    2022. Mahasiswa dapat berpartisipasi melalui ragam kegiatan antara lain Talkshow, Product
-                    Competition, Hackathon atau Fun Tech Games.</div>
+            <div class="mt-3 px-[8px] sm:px-[50px] lg:px-[100px]">
+                <div class="flex flex-col sm:grid sm:grid-rows-2 gap-1">
+                    <div class="flex flex-col sm:grid sm:grid-cols-3 gap-1">
+                        <div class="text-center p-2 pink">
+                            <div class="p-700 text-sm sm:text-[20px] lg:text-[30px] lg:leading-[46px]">2000++</div>
+                            <div class="mt-3 text-xs lg:text-sm">
+                                Talenta Digital Berpotensi
+                            </div>
+                        </div>
+                        <div class="text-center p-2 biru">
+                            <div class="p-700 text-sm sm:text-[20px] lg:text-[30px] lg:leading-[46px]">400</div>
+                            <div class="mt-3 text-xs lg:text-sm">
+                                Peserta Seminar
+                            </div>
+                        </div>
+                        <div class="text-center p-2 kuning">
+                            <div class="p-700 text-sm sm:text-[20px] lg:text-[30px] lg:leading-[46px]">200</div>
+                            <div class="mt-3 text-xs lg:text-sm">
+                                Peserta Kompetisi
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-3">
+                        <div class="col-span-3">
+                            <div class="text-center p-2 hijau">
+                                <div class="p-700 text-sm sm:text-[20px] lg:text-[30px] lg:leading-[46px]">National Eksposure</div>
+                                <div class="mt-3 text-xs lg:text-sm">
+                                    Berbagai ulasan menarik, dirilis dalam berbagai jejaring berita 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <div class="px-[80px] lg:px-[150px] benefit">
-                <h1 class="mt-14 p-700 text-sm sm:text-2xl lg:text-5xl">Benefit Mengikuti AMICTA 2022</h1>
-                <div class="mt-7 flex flex-col sm:grid sm:grid-cols-3 justify-items-center">
-                    <div class="text-center mx-2 mb-6 sm:mb-0">
+            <div class="mt-14 mb-3 p-700 text-sm sm:text-[20px] lg:text-[30px] lg:leading-[46px]">Apa itu AMICTA ?</div>
+            <div class="flex flex-col sm:flex-row px-[8px] sm:px-[50px] lg:px-[75px] items-center">
+                <img class="w-40 lg:w-60" src="{{ asset('assets/img/logo-normal.png') }}" alt="">
+                <div class="text-left">
+                    <div class="mt-3 text-xs lg:text-sm">AMICTA 2022 adalah Kompetisi inovasi produk digital
+                        tingkat fakultas ilmu komputer (FIK) untuk memecahkan masalah masyarakat Indonesia, khususnya pada
+                        sektor Industri UMKM, Pertanian & Perikanan atau Antisipasi Perubahan Iklim.</div>
+                    <br>
+                    <div class="text-xs lg:text-sm">Solusi-solusi yang dilombakan harus menggunakan salah
+                        satu dari empat teknologi berikut (1) Internet of Things, (2) Kecerdasan Buatan, (3) AR/VR atau (4)
+                        Animasi.</div>
+                    <br>
+                    <div class="text-xs lg:text-sm">Sepuluh persen dari 2000 Mahasiswa aktif di
+                        lingkungan FIK diharapkan dapat merasakan impact sekaligus berpartisipasi dalam kompetisi AMICTA
+                        2022. Mahasiswa dapat berpartisipasi melalui ragam kegiatan antara lain <strong class="p-700">Talkshow, Product
+                            Competition, Hackathon atau Fun Tech Games</strong>.</div>
+                </div>
+            </div>
+
+            <div class="mt-14 px-[80px] lg:px-[150px] benefit">
+                <h1 class="p-700 text-sm sm:text-[20px] lg:text-[30px] lg:leading-[46px]">Benefit Mengikuti AMICTA 2022</h1>
+                <div class="mt-7 flex flex-col sm:grid sm:grid-cols-3 gap-5">
+                    <div class="text-center rounded-xl border border-solid bg-white drop-shadow-md p-3 mb-6 sm:mb-0">
                         <div class="flex justify-center">
                             <img class="w-14 sm:w-20 lg:w-28" src="{{ asset('assets/img/icon7.svg') }}"
                                 alt="">
                         </div>
                         <p class="mt-3 text-xs lg:text-sm">Hadiah Jutaan Rupiah</p>
                     </div>
-                    <div class="text-center mx-2 mb-6 sm:mb-0">
+                    <div class="text-center rounded-xl border border-solid bg-white drop-shadow-md p-3 mb-6 sm:mb-0">
                         <div class="flex justify-center">
                             <img class="w-14 sm:w-20 lg:w-28" src="{{ asset('assets/img/icon8.svg') }}"
                                 alt="">
@@ -227,7 +417,7 @@
                         <p class="mt-3 text-xs lg:text-sm">Kesempatan Internship di Industri Technology
                             Nasional</p>
                     </div>
-                    <div class="text-center mx-2 mb-6 sm:mb-0">
+                    <div class="text-center rounded-xl border border-solid bg-white drop-shadow-md p-3 mb-6 sm:mb-0">
                         <div class="flex justify-center">
                             <img class="w-14 sm:w-20 lg:w-28" src="{{ asset('assets/img/icon9.svg') }}"
                                 alt="">
@@ -250,100 +440,102 @@
     <section class="text-center text-white px-[50px] lg:px-[150px]">
 
         <!-- multitrack seminar -->
-        <h1 class="mt-6 p-700 text-sm sm:text-2xl lg:text-5xl">Multitrack Seminar AMICTA 2022</h1>
-        <p class="mt-3 text-xs lg:text-sm">Empat narasumber professional industri teknologi, secara
-            paralel berbagi kisah sukses, lesson learned dalam perjalanannya menyelesaikan berbagai masalah menggunakan
-            teknologi. Inspiring and Insightful.</p>
-        <br>
-        <!-- pemateri -->
-        <section class="px-[8px] sm:px-[50px] lg:px-[150px]">
-            <div class="text-center bg-white drop-shadow-lg rounded-3xl py-6">
-                <h2 class="text-xl sm:text-3xl p-700 mb-12 text-black">Pemateri</h2>
-
-                <div id="carouselExampleCaptions" class="carousel slide relative carousel-dark" data-bs-ride="carousel">
-                    <div class="carousel-inner relative w-full overflow-hidden">
-                        <!-- loop card data pemateri -->
-                        <div class="carousel-item active relative float-left w-full">
-                            <img class="rounded-full shadow-xl bg-gray-100 mb-6 mx-auto"
-                                src="{{ asset('assets/img/fathin.png') }}" alt="avatar"
-                                style="width: 150px; height:150px;" />
-                            <div class="flex flex-wrap justify-center">
-                                <div class="grow-0 shrink-0 basis-auto w-full lg:w-8/12 px-3">
-                                    <h5 class="text-black text-sm sm:text-lg font-bold mb-3">Fathin Naufal - Product Manager at Gojek</h5>
-                                    <p class="text-xs lg:text-sm font-medium text-gray-700 mb-4">
-                                        Track Product Development : How to Build Digital Product
-                                    </p>
+        {{-- <section>
+            <h1 class="mt-6 p-700 text-sm sm:text-[20px] lg:text-[30px] lg:leading-[46px]">Multitrack Seminar AMICTA 2022</h1>
+            <p class="mt-3 text-xs lg:text-sm">Empat narasumber professional industri teknologi, secara
+                paralel berbagi kisah sukses, lesson learned dalam perjalanannya menyelesaikan berbagai masalah menggunakan
+                teknologi. Inspiring and Insightful.</p>
+            <br>
+            <!-- pemateri -->
+            <section class="px-[8px] sm:px-[50px] lg:px-[150px]">
+                <div class="text-center bg-white drop-shadow-lg rounded-3xl py-6">
+                    <h2 class="text-xl sm:text-3xl p-700 mb-12 text-black">Pemateri</h2>
+    
+                    <div id="carouselsejarah" class="carousel slide relative carousel-dark" data-bs-ride="carousel">
+                        <div class="carousel-inner relative w-full overflow-hidden">
+                            <!-- loop card data pemateri -->
+                            <div class="carousel-item active relative float-left w-full">
+                                <img class="rounded-full shadow-xl bg-gray-100 mb-6 mx-auto"
+                                    src="{{ asset('assets/img/fathin.png') }}" alt="avatar"
+                                    style="width: 150px; height:150px;" />
+                                <div class="flex flex-wrap justify-center">
+                                    <div class="grow-0 shrink-0 basis-auto w-full lg:w-8/12 px-3">
+                                        <h5 class="text-black text-sm sm:text-lg font-bold mb-3">Fathin Naufal - Product Manager at Gojek</h5>
+                                        <p class="text-xs lg:text-sm font-medium text-gray-700 mb-4">
+                                            Track Product Development : How to Build Digital Product
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="carousel-item relative float-left w-full">
-                            <img class="rounded-full shadow-xl bg-gray-100 mb-6 mx-auto"
-                                src="{{ asset('assets/img/alwy.png') }}" alt="avatar"
-                                style="width: 150px; height:150px;" />
-                            <div class="flex flex-wrap justify-center">
-                                <div class="grow-0 shrink-0 basis-auto w-full lg:w-8/12 px-3">
-                                    <h5 class="text-black text-sm sm:text-lg font-bold mb-3">Alwy Herfian S - CEO at Widya Robotic</h5>
-                                    <p class="text-xs lg:text-sm font-medium text-gray-700 mb-4">
-                                        Track Startup Journey : Startup Preneur Zillenials
-                                    </p>
+                            <div class="carousel-item relative float-left w-full">
+                                <img class="rounded-full shadow-xl bg-gray-100 mb-6 mx-auto"
+                                    src="{{ asset('assets/img/alwy.png') }}" alt="avatar"
+                                    style="width: 150px; height:150px;" />
+                                <div class="flex flex-wrap justify-center">
+                                    <div class="grow-0 shrink-0 basis-auto w-full lg:w-8/12 px-3">
+                                        <h5 class="text-black text-sm sm:text-lg font-bold mb-3">Alwy Herfian S - CEO at Widya Robotic</h5>
+                                        <p class="text-xs lg:text-sm font-medium text-gray-700 mb-4">
+                                            Track Startup Journey : Startup Preneur Zillenials
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="carousel-item relative float-left w-full">
-                            <img class="rounded-full shadow-xl bg-gray-100 mb-6 mx-auto"
-                                src="{{ asset('assets/img/andrean.png') }}" alt="avatar"
-                                style="width: 150px; height:150px;" />
-                            <div class="flex flex-wrap justify-center">
-                                <div class="grow-0 shrink-0 basis-auto w-full lg:w-8/12 px-3">
-                                    <h5 class="text-black text-sm sm:text-lg font-bold mb-3">Andrean N - CEO at WHOUSE</h5>
-                                    <p class="text-xs lg:text-sm font-medium text-gray-700 mb-4">
-                                        Track Startup Journey : From Engineer to be Entrepreneur
-                                    </p>
+                            <div class="carousel-item relative float-left w-full">
+                                <img class="rounded-full shadow-xl bg-gray-100 mb-6 mx-auto"
+                                    src="{{ asset('assets/img/andrean.png') }}" alt="avatar"
+                                    style="width: 150px; height:150px;" />
+                                <div class="flex flex-wrap justify-center">
+                                    <div class="grow-0 shrink-0 basis-auto w-full lg:w-8/12 px-3">
+                                        <h5 class="text-black text-sm sm:text-lg font-bold mb-3">Andrean N - CEO at WHOUSE</h5>
+                                        <p class="text-xs lg:text-sm font-medium text-gray-700 mb-4">
+                                            Track Startup Journey : From Engineer to be Entrepreneur
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="carousel-item relative float-left w-full">
-                            <img class="rounded-full shadow-xl bg-gray-100 mb-6 mx-auto"
-                                src="{{ asset('assets/img/delta.png') }}" alt="avatar"
-                                style="width: 150px; height:150px;" />
-                            <div class="flex flex-wrap justify-center">
-                                <div class="grow-0 shrink-0 basis-auto w-full lg:w-8/12 px-3">
-                                    <h5 class="text-black text-sm sm:text-lg font-bold mb-3">Delta Purna W - CEO at Qiscus</h5>
-                                    <p class="text-xs lg:text-sm font-medium text-gray-700 mb-4">
-                                        Track Startup Journey : From Engineer to be Entrepreneur
-                                    </p>
+                            <div class="carousel-item relative float-left w-full">
+                                <img class="rounded-full shadow-xl bg-gray-100 mb-6 mx-auto"
+                                    src="{{ asset('assets/img/delta.png') }}" alt="avatar"
+                                    style="width: 150px; height:150px;" />
+                                <div class="flex flex-wrap justify-center">
+                                    <div class="grow-0 shrink-0 basis-auto w-full lg:w-8/12 px-3">
+                                        <h5 class="text-black text-sm sm:text-lg font-bold mb-3">Delta Purna W - CEO at Qiscus</h5>
+                                        <p class="text-xs lg:text-sm font-medium text-gray-700 mb-4">
+                                            Track Startup Journey : From Engineer to be Entrepreneur
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
+                            <!-- end loop data -->
                         </div>
-                        <!-- end loop data -->
+                        <button
+                            class="carousel-control-prev absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline left-0"
+                            type="button" data-bs-target="#carouselsejarah" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon inline-block bg-no-repeat" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button
+                            class="carousel-control-next absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline right-0"
+                            type="button" data-bs-target="#carouselsejarah" data-bs-slide="next">
+                            <span class="carousel-control-next-icon inline-block bg-no-repeat" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
                     </div>
-                    <button
-                        class="carousel-control-prev absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline left-0"
-                        type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon inline-block bg-no-repeat" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button
-                        class="carousel-control-next absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline right-0"
-                        type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-                        <span class="carousel-control-next-icon inline-block bg-no-repeat" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
                 </div>
+            </section>
+    
+            <br>
+            <p class="mt-3 text-xs lg:text-sm">Sayangnya tempat terbatas. Siapa cepat dia dapat! Yuks Daftar Segera!</p>
+            <br>
+            <div class="mt-6">
+                <a class="text-xs lg:text-sm button-color p-3 rounded-xl shadow-md hover:bg-orange-700 hover:shadow-lg active:bg-orange-800 active:shadow-lg"
+                    href="{{ route('event.index') }}">Daftar Sekarang</a>
             </div>
-        </section>
-
-        <br>
-        <p class="mt-3 text-xs lg:text-sm">Sayangnya tempat terbatas. Siapa cepat dia dapat! Yuks Daftar Segera!</p>
-        <br>
-        <div class="mt-6">
-            <a class="text-xs lg:text-sm button-color p-3 rounded-xl shadow-md hover:bg-orange-700 hover:shadow-lg active:bg-orange-800 active:shadow-lg"
-                href="{{ route('event.index') }}">Daftar Sekarang</a>
-        </div>
+        </section> --}}
 
         <!-- main issue -->
         <div id="main-issue">
-            <h1 class="mt-14 p-700 text-sm sm:text-2xl lg:text-5xl">Main Issue</h1>
+            <h1 class="mt-14 p-700 text-sm sm:text-[20px] lg:text-[30px] lg:leading-[46px]">PERMASALAHAN DI INDONESIA</h1>
             <p class="mt-3 text-xs lg:text-sm">Tiga topik berikut menjadi sasaran utama kasus yang perlu
                 dipecahkan melalui seluruh cabang kompetisi AMICTA 2022</p>
             <div class="mt-6 grid grid-cols-3 justify-items-center">
@@ -363,7 +555,7 @@
         </div>
 
         <!-- kompetisi -->
-        <h1 class="mt-14 p-700 text-sm sm:text-2xl lg:text-5xl">COMPETITION</h1>
+        <h1 class="mt-14 p-700 text-sm sm:text-[20px] lg:text-[30px] lg:leading-[46px]">Kompetisi</h1>
         <p class="mt-3 text-xs lg:text-sm">Ajang pencarian solusi nyata atas ruang lingkup permasalahan
             yang telah ditentukan menggunakan inovasi produk digital. Produk tidak terbatas pada aplikasi Android/iOS,
             Desktop atau Web. Kompetisi dibagi menjadi tiga jalur (track) dengan rincian sebagai berikut.</p>
@@ -373,12 +565,15 @@
                 <div class="flex flex-col sm:grid sm:grid-cols-6 gap-0.5 lg:gap-2 items-center">
                     <div class="w-16 lg:w-28 p-1 mb-2 sm:mb-0"><img src="{{ asset('assets/img/icon4.svg') }}"
                             alt=""></div>
-                    <div class="col-span-5 text-black text-left">
-                        <h2 class="text-center sm:text-left p-700 text-sm sm:text-lg lg:text-3xl">Product Based</h2>
-                        <p class="text-[10px] sm:text-xs lg:text-sm">Mahasiswa mengunggah gagasan sekaligus prototype
+                    <div class="col-span-3 sm:col-span-4 text-black text-left">
+                        <h2 class="text-center sm:text-left p-700 text-sm sm:text-xl">Product Based</h2>
+                        <p class="text-[10px] sm:text-xs">Mahasiswa mengunggah gagasan sekaligus prototype
                             produk. Gagasan-gagasan akan dikelompokkan dalam empat kategori berikut :</p>
-                        <p class="text-[10px] sm:text-xs lg:text-sm">Artificial Intelligence, Internet Of Things,
+                        <p class="text-[10px] sm:text-xs">Artificial Intelligence, Internet Of Things,
                             AR/VR, Animasi.</p>
+                    </div>
+                    <div class="col-span-2 sm:col-span-1 mt-4 flex justify-end"><a class="text-[10px] sm:text-xs button-color p-3 rounded-xl shadow-md hover:bg-orange-700 hover:shadow-lg active:bg-orange-800 active:shadow-lg"
+                        href="{{ route('register') }}">Daftar Sekarang</a>
                     </div>
                 </div>
             </div>
@@ -386,13 +581,16 @@
                 <div class="flex flex-col sm:grid sm:grid-cols-6 gap-0.5 lg:gap-2 items-center">
                     <div class="w-16 lg:w-28 p-1 mb-2 sm:mb-0"><img src="{{ asset('assets/img/icon5.svg') }}"
                             alt=""></div>
-                    <div class="col-span-5 text-black text-left">
-                        <h2 class="text-center sm:text-left p-700 text-sm sm:text-lg lg:text-3xl">Hackathon</h2>
-                        <p class="text-[10px] sm:text-xs lg:text-sm">Mahasiswa mengikuti serangkaian kegiatan Hackathon
+                    <div class="col-span-3 sm:col-span-4 text-black text-left">
+                        <h2 class="text-center sm:text-left p-700 text-sm sm:text-xl">Hackathon</h2>
+                        <p class="text-[10px] sm:text-xs">Mahasiswa mengikuti serangkaian kegiatan Hackathon
                             untuk mewujudkan Gagasan dalam rentang waktu tertentu. Pendaftaran jalur ini bersifat
                             individu dan akan melalui tahap Team Building :</p>
-                        <p class="text-[10px] sm:text-xs lg:text-sm">Idea Submission, Speed Dating ( Team Building ),
+                        <p class="text-[10px] sm:text-xs">Idea Submission, Speed Dating ( Team Building ),
                             Hackathon.</p>
+                    </div>
+                    <div class="col-span-2 sm:col-span-1 mt-4 flex justify-end"><a class="text-[10px] sm:text-xs button-color p-3 rounded-xl shadow-md hover:bg-orange-700 hover:shadow-lg active:bg-orange-800 active:shadow-lg"
+                        href="{{ route('register') }}">Daftar Sekarang</a>
                     </div>
                 </div>
             </div>
@@ -400,11 +598,14 @@
                 <div class="flex flex-col sm:grid sm:grid-cols-6 gap-0.5 lg:gap-2 items-center">
                     <div class="w-16 lg:w-28 p-1 mb-2 sm:mb-0"><img src="{{ asset('assets/img/icon6.svg') }}"
                             alt=""></div>
-                    <div class="col-span-5 text-black text-left">
-                        <h2 class="text-center sm:text-left p-700 text-sm sm:text-lg lg:text-3xl">Fun Tech Games</h2>
-                        <p class="text-[10px] sm:text-xs lg:text-sm">Mahasiswa dapat memvalidasi potensi skill individu
+                    <div class="col-span-3 sm:col-span-4 text-black text-left">
+                        <h2 class="text-center sm:text-left p-700 text-sm sm:text-xl">Fun Tech Games</h2>
+                        <p class="text-[10px] sm:text-xs">Mahasiswa dapat memvalidasi potensi skill individu
                             sekaligus membangun reputasi positif melalui aneka kegiatan berikut :</p>
-                        <p class="text-[10px] sm:text-xs lg:text-sm">Fast Typing Competition, Coding Competition.</p>
+                        <p class="text-[10px] sm:text-xs">Fast Typing Competition, Coding Competition.</p>
+                    </div>
+                    <div class="col-span-2 sm:col-span-1 mt-4 flex justify-end"><a class="text-[10px] sm:text-xs button-color p-3 rounded-xl shadow-md hover:bg-orange-700 hover:shadow-lg active:bg-orange-800 active:shadow-lg"
+                        href="{{ route('register') }}">Daftar Sekarang</a>
                     </div>
                 </div>
             </div>
@@ -413,60 +614,160 @@
         <!-- timeline -->
         <h1 class="mt-14 p-700 text-2xl lg:text-5xl">TIMELINE</h1>
         <!-- <p class="mt-3 text-xs lg:text-sm">Tiga topik berikut menjadi sasaran utama kasus yang perlu dipecahkan melalui seluruh cabang kompetisi AMICTA 2022</p> -->
-        <div class="mt-6 mb-[164px] flex justify-center">
+        <div class="mt-6 flex justify-center">
             <img class="w-[90%] md:w-3/4" src="{{ asset('assets/img/timeline.png') }}" alt="">
         </div>
+        
+        {{-- mentor --}}
+        <h1 class="mt-14 p-700 text-sm sm:text-[20px] lg:text-[30px] lg:leading-[46px]">Mentor</h1>
+        <div class="mt-6 mb-[164px] flex flex-col sm:grid sm:grid-cols-2 lg:grid-cols-4 gap-0.5 sm:gap-7 lg:gap-4 items-center">
+            <div class="flex justify-center mb-3 h-full">
+                <div class="rounded-lg shadow-lg bg-white max-w-sm">
+                  <a href="#!">
+                    <img class="h-[200px] w-[250px] object-cover rounded-t-lg " src="{{ asset('assets/img/mentor/arif.jpeg') }}" alt=""/>
+                  </a>
+                  <div class="p-3">
+                    <h5 class="p-700 text-black text-base font-medium mb-1 uppercase">Arif Akbarul Huda</h5>
+                    <p class="text-gray-700 mb-3 text-xs">
+                        Software Engineer, Entrepeneur
+                    </p>
+                    <p class="text-gray-700 text-xs text-left">
+                        Experience : 
+                    </p>
+                    <ul class="text-gray-700 mb-2 text-xs text-left list-disc px-3">
+                        <li>Chief of Technology Hepicar</li>
+                        <li>Business Mentor ABP Incubator</li>
+                    </ul>
+                  </div>
+                </div>
+            </div>
+            <div class="flex justify-center mb-3 h-full">
+                <div class="rounded-lg shadow-lg bg-white max-w-sm">
+                  <a href="#!">
+                    <img class="h-[200px] w-[250px] object-cover rounded-t-lg " src="{{ asset('assets/img/mentor/eli.jpeg') }}" alt=""/>
+                  </a>
+                  <div class="p-3">
+                    <h5 class="p-700 text-black text-base font-medium mb-1 uppercase">Eli Pujastuti </h5>
+                    <p class="text-gray-700 mb-3 text-xs whitespace-pre-line">
+                        Digital Marketing,<br> UX Strategy, SME Digitization
+                    </p>
+                    <p class="text-gray-700 text-xs text-left">
+                        Experience : 
+                    </p>
+                    <ul class="text-gray-700 mb-2 text-xs text-left list-disc px-3">
+                        <li>Startup Weekend Indonesia <br> Nextgen & Google (2020)</li>
+                        <li>Hackathon LKMMTD <br> UNY (2021)</li>
+                        <li>LPDB Mentor Kemenkop (2022)</li>
+                    </ul>
+                  </div>
+                </div>
+            </div>
+            <div class="flex justify-center mb-3 h-full">
+                <div class="rounded-lg shadow-lg bg-white max-w-sm">
+                  <a href="#!">
+                    <img class="h-[200px] w-[250px] object-cover rounded-t-lg " src="{{ asset('assets/img/mentor/rifda.jpeg') }}" alt=""/>
+                  </a>
+                  <div class="p-3">
+                    <h5 class="p-700 text-black text-base font-medium mb-1 uppercase">Rifda Faticha Alfa Aziza</h5>
+                    <p class="text-gray-700 mb-3 text-xs">
+                        UX Reseacher
+                    </p>
+                    <p class="text-gray-700 text-xs text-left">
+                        Experience : 
+                    </p>
+                    <ul class="text-gray-700 mb-2 text-xs text-left list-disc px-3">
+                        <li>Dosen Prodi Informatika</li>
+                        <li>Project Manager Manasta Studio</li>
+                        <li>CTO Perempuan Punya Karya</li>
+                    </ul>
+                  </div>
+                </div>
+            </div>
+            <div class="flex justify-center mb-3 h-full">
+                <div class="rounded-lg shadow-lg bg-white max-w-sm">
+                  <a href="#!">
+                    <img class="h-[200px] w-[250px] object-cover rounded-t-lg " src="{{ asset('assets/img/mentor/donni.jpeg') }}" alt=""/>
+                  </a>
+                  <div class="p-3">
+                    <h5 class="p-700 text-black text-base font-medium mb-1 uppercase">Donni Prabowo</h5>
+                    <p class="text-gray-700 mb-3 text-xs">
+                        Startup Development 
+                    </p>
+                    <p class="text-gray-700 text-xs text-left">
+                        Experience : 
+                    </p>
+                    <ul class="text-gray-700 mb-2 text-xs text-left list-disc px-3">
+                        <li>10 Tahun pengalaman <br> bidang startup development</li>
+                        <li>2 Tahun pengalaman <br> di Venture Capital</li>
+                    </ul>
+                  </div>
+                </div>
+            </div>
+        </div>
+
       </section>
 
-    <!-- pemenang tahun lalu -->
+    <!-- sejarah amicta -->
     <section class="px-[8px] sm:px-[50px] lg:px-[150px] relative">
         <div
             class="text-center bg-white drop-shadow-lg rounded-3xl py-6 absolute top-[-90px] left-[10px] right-[10px] sm:left-[150px] sm:right-[150px]">
-            <h2 class="text-xl sm:text-3xl p-700 mb-12">Pemenang Tahun Lalu</h2>
+            <h2 class="text-xl sm:text-3xl p-700 mb-5">Sejarah AMICTA</h2>
 
-            <div id="carouselExampleCaptions" class="carousel slide relative carousel-dark" data-bs-ride="carousel">
+            <div id="carouselsejarah" class="carousel slide relative carousel-dark" data-bs-interval="false" data-bs-ride="carousel">
                 <div class="carousel-inner relative w-full overflow-hidden">
                     <!-- loop card data pemenang -->
-                    <div class="carousel-item active relative float-left w-full">
-                        <img class="rounded-full shadow-lg mb-6 mx-auto"
-                            src="{{ asset('assets/img/comingsoon.gif') }}" alt="avatar"
-                            style="width: 150px; height: 150px;" />
+                    <button type="button" class="carousel-item active relative float-left w-full" data-modal-toggle="popup-modal">
+                        <img class="rounded-xl shadow-lg mb-6 mx-auto object-cover w-1/2"
+                            src="{{ asset('assets/img/2014/1.jpeg') }}" alt="amicta 2014"
+                             />
                         <div class="flex flex-wrap justify-center">
                             <div class="grow-0 shrink-0 basis-auto w-full lg:w-8/12 px-3">
-                                <h5 class="text-sm sm:text-lg font-bold mb-3">COMING SOON</h5>
-                                <p class="text-xs lg:text-sm font-medium text-gray-700 mb-4">Juara 1 ...</p>
-                                <p class="text-xs lg:text-sm text-gray-500 mb-6">
-                                    Ditunggu ya untuk informasi pemenang kerennya..
-                                </p>
+                                <h5 class="text-sm sm:text-lg p-700 mb-3">AMICTA 2014</h5>
                             </div>
                         </div>
-                    </div>
+                    </button>
+                    <button type="button" class="carousel-item relative float-left w-full" data-modal-toggle="popup-modal-1">
+                        <img class="rounded-xl shadow-lg mb-6 mx-auto object-cover w-1/2"
+                            src="{{ asset('assets/img/2015/3.jpg') }}" alt="amicta 2015"
+                             />
+                        <div class="flex flex-wrap justify-center">
+                            <div class="grow-0 shrink-0 basis-auto w-full lg:w-8/12 px-3">
+                                <h5 class="text-sm sm:text-lg p-700 mb-3">AMICTA 2015</h5>
+                            </div>
+                        </div>
+                    </button>
+                    <button type="button" class="carousel-item relative float-left w-full" data-modal-toggle="popup-modal-2">
+                        <img class="rounded-xl shadow-lg mb-6 mx-auto object-cover w-1/2"
+                            src="{{ asset('assets/img/2016/1.jpg') }}" alt="amicta 2016"
+                             />
+                        <div class="flex flex-wrap justify-center">
+                            <div class="grow-0 shrink-0 basis-auto w-full lg:w-8/12 px-3">
+                                <h5 class="text-sm sm:text-lg p-700 mb-3">AMICTA 2016</h5>
+                            </div>
+                        </div>
+                    </button>
+                    <button type="button" class="carousel-item relative float-left w-full" data-modal-toggle="popup-modal-3">
+                        <img class="rounded-xl shadow-lg mb-6 mx-auto object-cover w-1/2"
+                            src="{{ asset('assets/img/2017/6.jpg') }}" alt="amicta 2017"
+                             />
+                        <div class="flex flex-wrap justify-center">
+                            <div class="grow-0 shrink-0 basis-auto w-full lg:w-8/12 px-3">
+                                <h5 class="text-sm sm:text-lg p-700 mb-3">AMICTA 2017</h5>
+                            </div>
+                        </div>
+                    </button>
 
-                    <div class="carousel-item relative float-left w-full">
-                        <img class="rounded-full shadow-lg mb-6 mx-auto"
-                            src="{{ asset('assets/img/comingsoon.gif') }}" alt="avatar"
-                            style="width: 150px; height: 150px;" />
-                        <div class="flex flex-wrap justify-center">
-                            <div class="grow-0 shrink-0 basis-auto w-full lg:w-8/12 px-3">
-                                <h5 class="text-sm sm:text-lg font-bold mb-3">COMING SOON</h5>
-                                <p class="text-xs lg:text-sm font-medium text-gray-700 mb-4">Juara 2 ...</p>
-                                <p class="text-xs lg:text-sm text-gray-500 mb-6">
-                                    Ditunggu ya untuk informasi pemenang kerennya..
-                                </p>
-                            </div>
-                        </div>
-                    </div>
                     <!-- end loop data -->
                 </div>
                 <button
                     class="carousel-control-prev absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline left-0"
-                    type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                    type="button" data-bs-target="#carouselsejarah" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon inline-block bg-no-repeat" aria-hidden="true"></span>
                     <span class="visually-hidden">Previous</span>
                 </button>
                 <button
                     class="carousel-control-next absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline right-0"
-                    type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                    type="button" data-bs-target="#carouselsejarah" data-bs-slide="next">
                     <span class="carousel-control-next-icon inline-block bg-no-repeat" aria-hidden="true"></span>
                     <span class="visually-hidden">Next</span>
                 </button>
@@ -476,7 +777,7 @@
 
     <!-- sponsor -->
     <section class="text-center bg-white mt-[300px] px-8 sm:px-[50px] lg:px-[150px] pt-[300px]">
-        <h1 class="my-7 sm:my-14 p-700 text-sm sm:text-2xl lg:text-5xl">IN COLLABORATION WITH</h1>
+        <h1 class="my-7 sm:my-14 p-700 text-sm sm:text-[20px] lg:text-[30px] lg:leading-[46px]">IN COLLABORATION WITH</h1>
         <div class="flex justify-center mb-7 sm:mb-14">
             <img class="w-[50px] sm:w-[100px] lg:w-[180px] mx-auto" src="{{ asset('assets/img/aws.png') }}"
                 alt="">
@@ -486,8 +787,8 @@
                 alt="">
         </div>
 
-        <h1 class="my-7 sm:my-14 p-700 text-sm sm:text-2xl lg:text-5xl">OUR COMMUNITY PARTNER</h1>
-        <div id="carouselExample" class="carousel slide relative carousel-dark" data-bs-ride="carousel">
+        <h1 class="my-7 sm:my-14 p-700 text-sm sm:text-[20px] lg:text-[30px] lg:leading-[46px]">OUR COMMUNITY PARTNER</h1>
+        <div id="carouselsponsor" class="carousel slide relative carousel-dark" data-bs-interval="false" data-bs-ride="carousel">
             <div class="carousel-inner relative w-full">
                 <!-- loop card data media partner -->
                 <div class="carousel-item active relative float-left w-full">
@@ -498,28 +799,27 @@
                             src="{{ asset('assets/img/hmif.png') }}" />
                         <img class="lg:mb-6 mx-1 sm:mx-8 w-[35px] sm:w-[50px] lg:w-[100px]"
                             src="{{ asset('assets/img/fa.png') }}" />
+                    </div>
+                </div>
+                <div class="carousel-item relative float-left w-full">
+                    <div class="flex justify-center">
+                        <img class="lg:mb-6 mx-1 sm:mx-8 w-[35px] sm:w-[50px] lg:w-[100px]" src="{{ asset('assets/img/himtekk.png') }}" />
                         <img class="lg:mb-6 mx-1 sm:mx-8 w-[35px] sm:w-[50px] lg:w-[100px]"
                             src="{{ asset('assets/img/himmi.png') }}" />
                         <img class="lg:mb-6 mx-1 sm:mx-8 w-[35px] sm:w-[50px] lg:w-[100px]"
                             src="{{ asset('assets/img/himti.png') }}" />
                     </div>
                 </div>
-                <!-- <div class="carousel-item relative float-left w-full">
-                <div class="flex justify-center">
-                    <img class="lg:mb-6 mx-1 sm:mx-8 w-[35px] sm:w-[50px] lg:w-[100px]" src="{{ asset('assets/img/hmif.png') }}" />
-                    <img class="lg:mb-6 mx-1 sm:mx-8 w-[35px] sm:w-[50px] lg:w-[100px]" src="{{ asset('assets/img/hmif.png') }}" />
-                </div>
-              </div> -->
             </div>
             <button
                 class="carousel-control-prev absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline left-0"
-                type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                type="button" data-bs-target="#carouselsponsor" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon inline-block bg-no-repeat" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
             </button>
             <button
                 class="carousel-control-next absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline right-0"
-                type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                type="button" data-bs-target="#carouselsponsor" data-bs-slide="next">
                 <span class="carousel-control-next-icon inline-block bg-no-repeat" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
             </button>
