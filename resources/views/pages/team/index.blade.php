@@ -28,7 +28,7 @@
                                         <label for="name">Nama Tim*</label>
 
                                         <input type="text" class="form-control" id="name" name="name"
-                                            @if ($data['team']->name == 'Belum dibuat') value="{{ old('name') }}"
+                                            @if ($data['team']->name == 'Belum dibuat') value="{{ old('name') }}" required
                                         @else
                                             value="{{ $data['team']->name }}" disabled @endif>
                                     </div>
@@ -36,7 +36,7 @@
                                         <label for="product">Nama Produk*</label>
 
                                         <input type="text" class="form-control" id="product" name="product"
-                                            @if ($data['team']->name == 'Belum dibuat') value="{{ old('product') }}"
+                                            @if ($data['team']->name == 'Belum dibuat') value="{{ old('product') }}" required
                                         @else
                                             value="{{ $data['team']->product }}" disabled @endif>
                                     </div>
@@ -55,18 +55,18 @@
                                         <div class="form-group col-md-3">
                                             <label for="member-nim">NIM*</label>
                                             <input type="text" class="form-control" id="member-nim" name="member[0][nim]"
-                                                placeholder="xx.xx.xxxx"
+                                                placeholder="xx.xx.xxxx" required
                                                 @if ($data['team']->name != 'Belum dibuat') value="{{ $data['team']->member[0]['nim'] }}" disabled @endif>
                                         </div>
                                         <div class="form-group col-md-9">
                                             <label for="member-name">Nama*</label>
                                             <input type="text" class="form-control" id="member-name"
-                                                name="member[0][name]" placeholder="Nama Lengkap"
+                                                name="member[0][name]" placeholder="Nama Lengkap" required
                                                 @if ($data['team']->name != 'Belum dibuat') value="{{ $data['team']->member[0]['name'] }}" disabled @endif>
                                         </div>
                                     </div>
 
-                                    @if (!empty($data['team']->member[1]) || $data['team']->name == 'Belum dibuat')
+                                    @if (empty($data['team']->member[1]) || $data['team']->name == 'Belum dibuat')
                                         <div class="section-title mt-0">Anggota 2</div>
                                         <div class="form-row">
                                             <div class="form-group col-md-3">

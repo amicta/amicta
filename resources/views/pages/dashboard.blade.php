@@ -23,7 +23,7 @@
                             @empty
                                 <li class="gap-1 list-group-item d-flex justify-content-between align-items-center">
                                     Belum ada lomba apapun yang kamu ikuti
-                                    <a href="{{ route('competitions.index') }}" class="btn btn-primary">Daftar</a>
+                                    <a href="{{ route('competitions.index') }}" class="btn text-white button-base">Daftar</a>
                                 </li>
                             @endforelse
                         </ul>
