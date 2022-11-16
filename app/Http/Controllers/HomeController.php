@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
@@ -28,6 +29,12 @@ class HomeController extends Controller
 
     public function dashboard()
     {
-        return view('pages.dashboard');
+        $user = Auth::user();
+
+        $data['user'] = $user;
+        $data['competitions'] = Auth::user()->competitions;
+        $data['submissions'] = Auth::user()->submissions;
+
+        return view('pages.dashboard', compact('data', 'user'));
     }
 }

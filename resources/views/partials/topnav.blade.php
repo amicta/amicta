@@ -27,3 +27,10 @@
         </div>
     </li>
 </ul>
+<style>
+    a.dropdown-item:focus, a.dropdown-item:active, a.dropdown-item.active {
+        background-color: #206F80;
+        color: #fff !important;
+    }
+</style>
+

@@ -52,9 +52,9 @@ class TeamController extends Controller
 
         $team->save();
 
-        return redirect()->route('teams.index')->with('status', [
+        return redirect()->route('submissions.index')->with('status', [
             'element' => 'success',
-            'message' => 'Update sukses!'
+            'message' => 'Penambahan data TIM berhasil! Silahkan menyelesaikan submisi kamu'
         ]);
     }
 

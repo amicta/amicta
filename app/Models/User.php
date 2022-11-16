@@ -54,4 +54,9 @@ class User extends Authenticatable
     {
         return $this->hasMany(Team::class, 'leader_id');
     }
+
+    public function submissions()
+    {
+        return $this->hasMany(Submission::class);
+    }
 }
