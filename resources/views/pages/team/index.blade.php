@@ -66,7 +66,7 @@
                                         </div>
                                     </div>
 
-                                    {{-- @if (!empty($data['team']->member[1])) --}}
+                                    @if (!empty($data['team']->member[1]) || $data['team']->name == 'Belum dibuat')
                                         <div class="section-title mt-0">Anggota 2</div>
                                         <div class="form-row">
                                             <div class="form-group col-md-3">
@@ -82,7 +82,7 @@
                                                     @if ($data['team']->name != 'Belum dibuat') value="{{ $data['team']->member[1]['name'] }}" disabled @endif>
                                             </div>
                                         </div>
-                                    {{-- @endif --}}
+                                    @endif
 
                             </div>
                             <div class="card-footer">
