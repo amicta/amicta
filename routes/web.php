@@ -6,6 +6,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\ParticipantController;
 use App\Http\Controllers\CompetitionController;
+use App\Http\Controllers\SubmissionController;
 use App\Http\Controllers\TeamController;
 
 /*
@@ -36,9 +37,14 @@ Auth::routes();
 // Auth::routes(['register' => false]);
 
 Route::group(['middleware' => ['auth:web']], function () {
-    Route::get('/home', [HomeController::class, 'index'])->name('home');
+    // Route::get('/home', [HomeController::class, 'index'])->name('home');
+    Route::get('/home', function () {
+        return redirect()->route('dashboard');
+    })->name('home');
+
     Route::get('/dashboard', [HomeController::class, 'dashboard'])->name('dashboard');
 
     Route::resource('/competitions', CompetitionController::class);
     Route::resource('/teams', TeamController::class);
+    Route::resource('/submissions', SubmissionController::class);
 });

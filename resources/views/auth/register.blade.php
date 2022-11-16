@@ -144,6 +144,9 @@
         select#program_study.form-control:focus {
             border-color: #206F80;
         }
+        button.btn.btn-primary:focus {
+            background-color: #123e48 !important;
+        }
         .form-group button:hover {
             background-color: #123e48 !important;
         }

@@ -32,11 +32,17 @@
         </li>
 
         <li class="{{ request()->is('submission*') ? 'active' : '' }}">
-            <a href="{{ route('admin.events.index') }}">
+            <a href="{{ route('submissions.index') }}">
                 <i class="fas fa-file-alt"></i>
                 <span>Submisi</span>
             </a>
         </li>
 
     </ul>
+
+    <style>
+        .main-sidebar .sidebar-menu li.active a {
+            color: #206F80;
+        }
+    </style>
 </aside>

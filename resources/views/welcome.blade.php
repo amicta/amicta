@@ -303,7 +303,7 @@
                     sektor Industri UMKM, Pertanian & Perikanan atau Antisipasi Perubahan Iklim.</p>
                 <div class="button-hero flex justify-start mt-3 sm:mt-5 mb-3">
                     <!-- add href inside after register is opened -->
-                    <a class="z-10 self-center button-color p-2 lg:p-3 rounded-3xl mr-6 text-xs lg:text-sm shadow-md hover:bg-orange-700 hover:shadow-lg active:bg-orange-800 active:shadow-lg" data-tooltip-target="tooltip-click" data-tooltip-trigger="click" 
+                    <a class="z-10 self-center button-color p-2 lg:p-3 rounded-3xl mr-6 text-xs lg:text-sm shadow-md hover:bg-orange-700 hover:shadow-lg active:bg-orange-800 active:shadow-lg" data-tooltip-target="tooltip-click" data-tooltip-trigger="click"
                         href="{{ route('register') }}">
                         Segera Daftar Sekarang
                     </a>
@@ -372,7 +372,7 @@
                             <div class="text-center p-2 hijau">
                                 <div class="p-700 text-sm sm:text-[20px] lg:text-[30px] lg:leading-[46px]">National Eksposure</div>
                                 <div class="mt-3 text-xs lg:text-sm">
-                                    Berbagai ulasan menarik, dirilis dalam berbagai jejaring berita 
+                                    Berbagai ulasan menarik, dirilis dalam berbagai jejaring berita
                                 </div>
                             </div>
                         </div>
@@ -450,7 +450,7 @@
             <section class="px-[8px] sm:px-[50px] lg:px-[150px]">
                 <div class="text-center bg-white drop-shadow-lg rounded-3xl py-6">
                     <h2 class="text-xl sm:text-3xl p-700 mb-12 text-black">Pemateri</h2>
-    
+
                     <div id="carouselsejarah" class="carousel slide relative carousel-dark" data-bs-ride="carousel">
                         <div class="carousel-inner relative w-full overflow-hidden">
                             <!-- loop card data pemateri -->
@@ -523,7 +523,7 @@
                     </div>
                 </div>
             </section>
-    
+
             <br>
             <p class="mt-3 text-xs lg:text-sm">Sayangnya tempat terbatas. Siapa cepat dia dapat! Yuks Daftar Segera!</p>
             <br>
@@ -617,7 +617,7 @@
         <div class="mt-6 flex justify-center">
             <img class="w-[90%] md:w-3/4" src="{{ asset('assets/img/timeline.png') }}" alt="">
         </div>
-        
+
         {{-- mentor --}}
         <h1 class="mt-14 p-700 text-sm sm:text-[20px] lg:text-[30px] lg:leading-[46px]">Mentor</h1>
         <div class="mt-6 mb-[164px] flex flex-col sm:grid sm:grid-cols-2 lg:grid-cols-4 gap-0.5 sm:gap-7 lg:gap-4 items-center">
@@ -632,7 +632,7 @@
                         Software Engineer, Entrepeneur
                     </p>
                     <p class="text-gray-700 text-xs text-left">
-                        Experience : 
+                        Experience :
                     </p>
                     <ul class="text-gray-700 mb-2 text-xs text-left list-disc px-3">
                         <li>Chief of Technology Hepicar</li>
@@ -652,7 +652,7 @@
                         Digital Marketing,<br> UX Strategy, SME Digitization
                     </p>
                     <p class="text-gray-700 text-xs text-left">
-                        Experience : 
+                        Experience :
                     </p>
                     <ul class="text-gray-700 mb-2 text-xs text-left list-disc px-3">
                         <li>Startup Weekend Indonesia <br> Nextgen & Google (2020)</li>
@@ -673,7 +673,7 @@
                         UX Reseacher
                     </p>
                     <p class="text-gray-700 text-xs text-left">
-                        Experience : 
+                        Experience :
                     </p>
                     <ul class="text-gray-700 mb-2 text-xs text-left list-disc px-3">
                         <li>Dosen Prodi Informatika</li>
@@ -691,10 +691,10 @@
                   <div class="p-3">
                     <h5 class="p-700 text-black text-base font-medium mb-1 uppercase">Donni Prabowo</h5>
                     <p class="text-gray-700 mb-3 text-xs">
-                        Startup Development 
+                        Startup Development
                     </p>
                     <p class="text-gray-700 text-xs text-left">
-                        Experience : 
+                        Experience :
                     </p>
                     <ul class="text-gray-700 mb-2 text-xs text-left list-disc px-3">
                         <li>10 Tahun pengalaman <br> bidang startup development</li>
@@ -876,12 +876,12 @@
             <div class="accordion-item bg-white border-gray-200 mb-3">
               <h2 class="accordion-header mb-0" id="headingFour">
                 <button class="accordion-button collapsed relative flex text-left sm:items-center w-full py-4 px-5 text-sm lg:text-base p-700 bg-white border-0 rounded-none transition focus:outline-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
-                  Apakah acara AMICTA 2022 ada biaya pendaftaran? 
+                  Apakah acara AMICTA 2022 ada biaya pendaftaran?
                 </button>
               </h2>
               <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
                 <div class="text-black text-left accordion-body py-4 px-5 text-xs lg:text-sm">
-                  Halo sobat AMICTA, untuk pendaftaran tidak ada biaya sama sekali alias gratis. 
+                  Halo sobat AMICTA, untuk pendaftaran tidak ada biaya sama sekali alias gratis.
                 </div>
               </div>
             </div>
