@@ -27,7 +27,7 @@ class TeamCreateRequest extends FormRequest
             'name' => 'required|string|min:1',
             'product' => 'required|string|min:1',
             'description' => 'nullable|string|min:1',
-            'member' => 'nullable|array|min:1',
+            'member[0]' => 'required|array',
             // 'competition_id' => 'required|integer|min:1',
         ];
     }

@@ -32,8 +32,8 @@
                     </div>
                     <div class="col-md-12">
                         <div class="card" style="padding: 25px;">
-                            <p style="border: 1px solid #6c757d; padding: 10px; border-radius: 3px;">
-                                {{ $submission->response }}</p>
+                            <label for="description">Link File Submisi</label>
+                            <textarea class="form-control" style="min-height: 100px;" name="response" id="response" disabled>{{ $submission->response }}</textarea>
                         </div>
                     </div>
                 </div>

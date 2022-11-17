@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\SubmissionUpdateRequest;
 use App\Models\Submission;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -37,9 +38,10 @@ class SubmissionController extends Controller
         return view('pages.submission.edit', compact('submission'));
     }
 
-    public function update(Request $request, Submission $submission)
+    public function update(SubmissionUpdateRequest $request, Submission $submission)
     {
-        $submission->response = $request->response;
+        $request = $request->validated();
+        $submission->response = $request['response'];
         $submission->status = 'submited';
         $submission->save();
 

@@ -69,11 +69,11 @@
                                                     </a>
                                                     <form
                                                         action="{{ route('admin.submissions.destroy', ['submission' => $submission['id']]) }}"
-                                                        method="POST" onsubmit="return confirm('Yakin ingin menghapus?')">
+                                                        method="POST">
                                                         @csrf
                                                         @method('delete')
                                                         <button type="submit"
-                                                            class="btn btn-sm btn-outline-danger btn-icon mx-1">
+                                                            class="btn btn-sm btn-outline-danger btn-icon mx-1 delete_confirm">
                                                             <i class="fas fa-trash"></i> Hapus
                                                         </button>
                                                     </form>

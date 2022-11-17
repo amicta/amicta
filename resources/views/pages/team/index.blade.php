@@ -27,24 +27,39 @@
                                     <div class="form-group">
                                         <label for="name">Nama Tim*</label>
 
-                                        <input type="text" class="form-control" id="name" name="name"
+                                        <input type="text" class="form-control @error('name') is-invalid @enderror"
+                                            id="name" name="name"
                                             @if ($data['team']->name == 'Belum dibuat') value="{{ old('name') }}" required
                                         @else
                                             value="{{ $data['team']->name }}" disabled @endif>
+
+                                        @error('name')
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                        @enderror
                                     </div>
                                     <div class="form-group">
                                         <label for="product">Nama Produk*</label>
 
-                                        <input type="text" class="form-control" id="product" name="product"
+                                        <input type="text" class="form-control @error('product') is-invalid @enderror"
+                                            id="product" name="product"
                                             @if ($data['team']->name == 'Belum dibuat') value="{{ old('product') }}" required
                                         @else
                                             value="{{ $data['team']->product }}" disabled @endif>
+
+                                        @error('product')
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                        @enderror
                                     </div>
 
                                     <div class="form-group">
                                         <label for="description">Deskripsi Produk</label>
                                         @if ($data['team']->name == 'Belum dibuat')
-                                            <textarea id="description" class="form-control" name="description" style="min-height: 100px;">{{ old('description') }}</textarea>
+                                            <textarea id="description" class="form-control @error('description') is-invalid @enderror" name="description"
+                                                style="min-height: 100px;">{{ old('description') }}</textarea>
                                         @else
                                             <textarea id="description" class="form-control" name="description" style="min-height: 100px;" disabled>{{ $data['team']->description }}</textarea>
                                         @endif
@@ -55,14 +70,14 @@
                                         <div class="form-group col-md-3">
                                             <label for="member-nim">NIM*</label>
                                             <input type="text" class="form-control" id="member-nim"
-                                                placeholder="xx.xx.xxxx" required
-                                                value="{{ $data['user']->nim }}" disabled>
+                                                placeholder="xx.xx.xxxx" required value="{{ $data['user']->nim }}"
+                                                disabled>
                                         </div>
                                         <div class="form-group col-md-9">
                                             <label for="member-name">Nama*</label>
                                             <input type="text" class="form-control" id="member-name"
-                                                placeholder="Nama Lengkap" required
-                                                 value="{{ $data['user']->name }}" disabled>
+                                                placeholder="Nama Lengkap" required value="{{ $data['user']->name }}"
+                                                disabled>
                                         </div>
                                     </div>
 
@@ -70,16 +85,24 @@
                                     <div class="form-row">
                                         <div class="form-group col-md-3">
                                             <label for="member-nim">NIM*</label>
-                                            <input type="text" class="form-control" id="member-nim" name="member[0][nim]"
-                                                placeholder="xx.xx.xxxx" required
+                                            <input type="text"
+                                                class="form-control @error('member[0]') is-invalid @enderror"
+                                                id="member-nim" name="member[0][nim]" placeholder="xx.xx.xxxx" required
                                                 @if ($data['team']->name != 'Belum dibuat') value="{{ $data['team']->member[0]['nim'] }}" disabled @endif>
                                         </div>
                                         <div class="form-group col-md-9">
                                             <label for="member-name">Nama*</label>
-                                            <input type="text" class="form-control" id="member-name"
-                                                name="member[0][name]" placeholder="Nama Lengkap" required
+                                            <input type="text"
+                                                class="form-control @error('member[0]') is-invalid @enderror"
+                                                id="member-name" name="member[0][name]" placeholder="Nama Lengkap" required
                                                 @if ($data['team']->name != 'Belum dibuat') value="{{ $data['team']->member[0]['name'] }}" disabled @endif>
                                         </div>
+
+                                        @error('member[0]')
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                        @enderror
                                     </div>
 
                                     @if (!empty($data['team']->member[1]) || $data['team']->name == 'Belum dibuat')
@@ -100,21 +123,20 @@
                                         </div>
                                     @endif
 
+                                    @if ($data['team']->name == 'Belum dibuat')
+                                        <button
+                                            style="background-color: #206F80; border-color:#206F80; box-shadow:0 2px 6px #9fe5f5"
+                                            class="btn btn-primary float-right save_confirm" type="submit">Simpan</button>
+                                    @endif
+
+                                </form>
                             </div>
-                            <div class="card-footer">
-                                @if ($data['team']->name == 'Belum dibuat')
-                                    <button
-                                        style="background-color: #206F80; border-color:#206F80; box-shadow:0 2px 6px #9fe5f5"
-                                        class="btn btn-primary">Submit</button>
-                                @endif
-                            </div>
-                            </form>
                         </div>
                     </div>
                 </div>
         </div>
         </div>
-        @else
+    @else
         <div class="alert alert-danger }} alert-has-icon show fade">
             <div class="alert-icon">
                 <i class="fas fa-exclamation-triangle"></i>
@@ -133,3 +155,25 @@
         }
     </style>
 @endsection
+
+@push('javascript')
+    <script>
+        $('.save_confirm').click(function(event) {
+            var form = $(this).closest("form");
+            var name = $(this).data("name");
+            event.preventDefault();
+            swal({
+                    title: `Apakah kamu yakin data Tim sudah benar?`,
+                    text: "Data Tim tidak bisa diubah lagi.",
+                    icon: "warning",
+                    buttons: true,
+                    dangerMode: true,
+                })
+                .then((willConfirm) => {
+                    if (willConfirm) {
+                        form.submit();
+                    }
+                });
+        });
+    </script>
+@endpush

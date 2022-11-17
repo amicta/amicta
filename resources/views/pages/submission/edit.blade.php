@@ -30,9 +30,17 @@
                                 method="POST">
                                 @csrf
                                 @method('patch')
-                                <textarea placeholder="Paste link file submisi kamu disini"
-                                    style="border: 1px solid #6c757d; padding: 10px; border-radius: 3px; width: 100%" name="response" id="response" required></textarea>
-                                <button style="border: none; padding: 8px" class="align-self-end button-base text-white"
+                                <label for="description">Link File Submisi</label>
+                                <textarea class="form-control @error('response') is-invalid @enderror" placeholder="Paste link file submisi kamu disini"
+                                    style="min-height: 100px;" name="response" id="response" required></textarea>
+                                @error('response')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+
+                                <button style="border: none; padding: 8px"
+                                    class="align-self-end button-base text-white float-right mt-3 submit_confirm"
                                     type="submit">Kirim Submisi</button>
                             </form>
                         </div>
@@ -60,3 +68,25 @@
         </div>
     </div>
 @endsection
+
+@push('javascript')
+    <script>
+        $('.submit_confirm').click(function(event) {
+            var form = $(this).closest("form");
+            var name = $(this).data("name");
+            event.preventDefault();
+            swal({
+                    title: `Apakah kamu yakin link file submisi sudah benar?`,
+                    text: "Data tidak bisa diubah lagi.",
+                    icon: "warning",
+                    buttons: true,
+                    dangerMode: true,
+                })
+                .then((willConfirm) => {
+                    if (willConfirm) {
+                        form.submit();
+                    }
+                });
+        });
+    </script>
+@endpush

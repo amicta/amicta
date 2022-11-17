@@ -71,13 +71,19 @@
                                                             </button>
                                                         @endif
                                                     </form>
+
+                                                    <button class="btn btn-sm btn-outline-danger btn-icon mx-1 delete_confirm"
+                                                        id="test">
+                                                        <i class="fas fa-trash"></i> Test
+                                                    </button>
+
                                                     <form
                                                         action="{{ route('admin.categories.destroy', ['category' => $category['id']]) }}"
-                                                        method="POST" onsubmit="return confirm('Yakin ingin menghapus?')">
+                                                        method="POST">
                                                         @csrf
                                                         @method('delete')
                                                         <button type="submit"
-                                                            class="btn btn-sm btn-outline-danger btn-icon mx-1">
+                                                            class="btn btn-sm btn-outline-danger btn-icon mx-1 delete_confirm">
                                                             <i class="fas fa-trash"></i> Hapus
                                                         </button>
                                                     </form>
@@ -143,3 +149,6 @@
         </div>
     </div>
 @endsection
+
+@push('javascript')
+@endpush

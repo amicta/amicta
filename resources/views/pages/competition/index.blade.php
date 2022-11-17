@@ -70,7 +70,7 @@
                                 @if ($competition->is_registered)
                                     <button class="w-100 btn text-white mt-4 btn-secondary" disabled>Telah Daftar</button>
                                 @elseif ($competition->is_open)
-                                    <button type="submit" class="w-100 btn text-white mt-4 button-base">Daftar</button>
+                                    <button type="submit" class="w-100 btn text-white mt-4 button-base register_confirm">Daftar</button>
                                 @else
                                     <button class="w-100 btn text-white mt-4 btn-secondary" disabled>
                                         Pendaftaran Ditutup
@@ -86,3 +86,24 @@
         </div>
     </div>
 @endsection
+
+@push('javascript')
+    <script>
+        $('.register_confirm').click(function(event) {
+            var form = $(this).closest("form");
+            var name = $(this).data("name");
+            event.preventDefault();
+            swal({
+                    title: `Apakah kamu yakin ingin mendaftar lomba ini?`,
+                    icon: "warning",
+                    buttons: true,
+                    dangerMode: true,
+                })
+                .then((willConfirm) => {
+                    if (willConfirm) {
+                        form.submit();
+                    }
+                });
+        });
+    </script>
+@endpush

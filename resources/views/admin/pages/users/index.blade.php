@@ -59,27 +59,25 @@
 
                                                             <form class="mx-1"
                                                                 action="{{ route('admin.users.update', ['user' => $user['id']]) }}"
-                                                                method="POST"
-                                                                onsubmit="return confirm('Yakin ingin menghapus?')">
+                                                                method="POST">
                                                                 @csrf
                                                                 @method('patch')
 
                                                                 <input type="hidden" name="competition_id"
                                                                     value="{{ $competition->id }}" />
                                                                 <button type="submit"
-                                                                    class="btn btn-sm btn-danger btn-icon">
+                                                                    class="btn btn-sm btn-danger btn-icon delete_confirm">
                                                                     <i class="fas fa-times-circle"></i> Hapus Peserta
                                                                 </button>
                                                             </form>
 
                                                             <form
                                                                 action="{{ route('admin.users.destroy', ['user' => $user['id']]) }}"
-                                                                method="POST"
-                                                                onsubmit="return confirm('Yakin ingin menghapus?')">
+                                                                method="POST">
                                                                 @csrf
                                                                 @method('delete')
                                                                 <button type="submit"
-                                                                    class="btn btn-sm btn-outline-danger btn-icon mx-1">
+                                                                    class="btn btn-sm btn-outline-danger btn-icon mx-1 delete_confirm">
                                                                     <i class="fas fa-trash"></i> Hapus Akun
                                                                 </button>
                                                             </form>
