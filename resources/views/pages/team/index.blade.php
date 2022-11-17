@@ -4,10 +4,16 @@
 
 @section('content')
     <section class="section">
-
-        <div class="section-header" style="border-radius: 10px;">
-            <h1>Tim Lomba</h1>
+        <div class="row justify-content-center">
+            <div class="col-md-12">
+                <div class="card" style="border-radius: 10px">
+                    <div class="rounded-5 w-100 p-500" style="padding: 20px; font-size: 20px; color: black;">Tim Lomba</div>
+                </div>
+            </div>
         </div>
+        {{-- <div class="section-header" style="border-radius: 10px;">
+            <h1>Tim Lomba</h1>
+        </div> --}}
 
         @include('partials.flash')
 

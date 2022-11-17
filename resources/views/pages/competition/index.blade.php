@@ -33,7 +33,6 @@
                                     <img src="{{ asset('assets/img/icon6.svg') }}" class="card-img-top" alt="Fun Games"
                                         style="width: 100px">
                                 @endif
-
                             </div>
                             <br>
                             <p>{{ $competition->description }}</p>
@@ -77,6 +76,13 @@
                                     </button>
                                 @endif
                             </form>
+                            @if ($competition->type == 'product')
+                                <a target="_blank" href="https://ungu.in/product-based" class="w-100 btn mt-2 button-base-outline">Detail</a>
+                            @elseif ($competition->type == 'hackathon')
+                                <a target="_blank" href="https://ungu.in/hackathon" class="w-100 btn mt-2 button-base-outline">Detail</a>
+                            @else
+                                <a href="{{ route('funtech') }}" class="w-100 btn mt-2 button-base-outline">Detail</a>
+                            @endif
                         </div>
                     </div>
                 </div>

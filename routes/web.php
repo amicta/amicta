@@ -24,12 +24,6 @@ Route::get('/', function () {
     return view('welcome');
 })->name('welcome');
 
-Route::get('/competition', function () {
-    return view('pages.competition.index');
-})->name('competition');
-
-
-
 Route::get('/seminar', [EventController::class, 'index'])->name('event.index');
 Route::post('/seminar', [ParticipantController::class, 'store'])->name('event.register');
 
@@ -45,6 +39,10 @@ Route::group(['middleware' => ['auth:web']], function () {
     Route::get('/dashboard', [HomeController::class, 'dashboard'])->name('dashboard');
 
     Route::resource('/competitions', CompetitionController::class);
+    Route::get('/fun-coding', function () {
+        return view('pages.competition.funcoding');
+    })->name('funtech');
+
     Route::resource('/teams', TeamController::class);
     Route::resource('/submissions', SubmissionController::class);
 });

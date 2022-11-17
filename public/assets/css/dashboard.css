@@ -7,6 +7,27 @@
     background-color: #123e48 !important;
 }
 
+.button-base-outline {
+    border-radius: 3px; 
+    border-color: #206F80 !important;
+    color: #206F80;
+}
+.button-base-outline:hover {
+    border-radius: 3px; 
+    background-color: #2e93aa !important;
+    color: white;
+}
+
+.btn:not(.btn-social):not(.btn-social-icon):focus {
+    border-color: currentColor !important;
+}
+
+body.sidebar-mini .main-sidebar .sidebar-menu > li.active > a {
+    box-shadow: 0 4px 8px #2e93aa;
+    background-color: #206F80;
+    color: #fff;
+}
+
 .select {
     border: gray 1px solid;
     border-radius: 3px;
