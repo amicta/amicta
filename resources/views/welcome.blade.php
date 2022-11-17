@@ -28,6 +28,19 @@
             }
         }
     </script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-93ZHXK6RDS"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-93ZHXK6RDS');
+    </script>
 </head>
 
 <body>
@@ -40,188 +53,252 @@
     </button>
 
     <!-- popup modal gallery AMICTA -->
-    <div id="popup-modal" data-modal-show="false" tabindex="-1" class="z-50 px-4 pt-40 hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 md:inset-0 h-modal md:h-full justify-center items-center" aria-hidden="true">
+    <div id="popup-modal" data-modal-show="false" tabindex="-1"
+        class="z-50 px-4 pt-40 hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 md:inset-0 h-modal md:h-full justify-center items-center"
+        aria-hidden="true">
         <div class="relative p-0 lg:p-30 w-full max-w-7xl h-full md:h-auto">
             <div class="relative bg-white rounded-lg shadow">
-                <button type="button" class=" absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 mr-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white" data-modal-toggle="popup-modal">
-                    <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                <button type="button"
+                    class=" absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 mr-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white"
+                    data-modal-toggle="popup-modal">
+                    <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                            clip-rule="evenodd"></path>
+                    </svg>
                     <span class="sr-only">Close modal</span>
                 </button>
                 <div class="text-center">
-                    <h1 class="pt-10 p-700 text-sm sm:text-[20px] lg:text-[30px] lg:leading-[46px] uppercase">amicta 2014</h1>
+                    <h1 class="pt-10 p-700 text-sm sm:text-[20px] lg:text-[30px] lg:leading-[46px] uppercase">amicta
+                        2014</h1>
                     <section class="overflow-hidden text-gray-700">
                         <div class="container px-5 pb-6 pt-2 mx-auto lg:p-10">
-                          <div class="flex flex-wrap -m-1 md:-m-2">
-                            <div class="flex flex-wrap w-1/2">
-                              <div class="w-1/2 p-1 md:p-2">
-                                <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-                                  src="{{ asset('assets/img/2014/1.jpeg') }}">
-                              </div>
-                              <div class="w-1/2 p-1 md:p-2">
-                                <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-                                  src="{{ asset('assets/img/2014/2.jpeg') }}">
-                              </div>
-                              <div class="w-full p-1 md:p-2">
-                                <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-                                  src="{{ asset('assets/img/2014/3.jpeg') }}">
-                              </div>
+                            <div class="flex flex-wrap -m-1 md:-m-2">
+                                <div class="flex flex-wrap w-1/2">
+                                    <div class="w-1/2 p-1 md:p-2">
+                                        <img alt="gallery"
+                                            class="block object-cover object-center w-full h-full rounded-lg"
+                                            src="{{ asset('assets/img/2014/1.jpeg') }}">
+                                    </div>
+                                    <div class="w-1/2 p-1 md:p-2">
+                                        <img alt="gallery"
+                                            class="block object-cover object-center w-full h-full rounded-lg"
+                                            src="{{ asset('assets/img/2014/2.jpeg') }}">
+                                    </div>
+                                    <div class="w-full p-1 md:p-2">
+                                        <img alt="gallery"
+                                            class="block object-cover object-center w-full h-full rounded-lg"
+                                            src="{{ asset('assets/img/2014/3.jpeg') }}">
+                                    </div>
+                                </div>
+                                <div class="flex flex-wrap w-1/2">
+                                    <div class="w-full p-1 md:p-2">
+                                        <img alt="gallery"
+                                            class="block object-cover object-center w-full h-full rounded-lg"
+                                            src="{{ asset('assets/img/2014/4.jpeg') }}">
+                                    </div>
+                                    <div class="w-1/2 p-1 md:p-2">
+                                        <img alt="gallery"
+                                            class="block object-cover object-center w-full h-full rounded-lg"
+                                            src="{{ asset('assets/img/2014/5.jpeg') }}">
+                                    </div>
+                                    <div class="w-1/2 p-1 md:p-2">
+                                        <img alt="gallery"
+                                            class="block object-cover object-center w-full h-full rounded-lg"
+                                            src="{{ asset('assets/img/2014/6.jpeg') }}">
+                                    </div>
+                                </div>
                             </div>
-                            <div class="flex flex-wrap w-1/2">
-                              <div class="w-full p-1 md:p-2">
-                                <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-                                  src="{{ asset('assets/img/2014/4.jpeg') }}">
-                              </div>
-                              <div class="w-1/2 p-1 md:p-2">
-                                <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-                                  src="{{ asset('assets/img/2014/5.jpeg') }}">
-                              </div>
-                              <div class="w-1/2 p-1 md:p-2">
-                                <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-                                  src="{{ asset('assets/img/2014/6.jpeg') }}">
-                              </div>
-                            </div>
-                          </div>
                         </div>
                     </section>
                 </div>
             </div>
         </div>
     </div>
-    <div id="popup-modal-1" data-modal-show="false" tabindex="-1" class="z-50 px-4 pt-40 hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 md:inset-0 h-modal md:h-full justify-center items-center" aria-hidden="true">
+    <div id="popup-modal-1" data-modal-show="false" tabindex="-1"
+        class="z-50 px-4 pt-40 hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 md:inset-0 h-modal md:h-full justify-center items-center"
+        aria-hidden="true">
         <div class="relative w-full max-w-7xl h-full md:h-auto">
             <div class="relative bg-white rounded-lg shadow">
-                <button type="button" class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white" data-modal-toggle="popup-modal-1">
-                    <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                <button type="button"
+                    class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white"
+                    data-modal-toggle="popup-modal-1">
+                    <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                            clip-rule="evenodd"></path>
+                    </svg>
                     <span class="sr-only">Close modal</span>
                 </button>
                 <div class="text-center">
-                    <h1 class="pt-10 p-700 text-sm sm:text-[20px] lg:text-[30px] lg:leading-[46px] uppercase">amicta 2015</h1>
+                    <h1 class="pt-10 p-700 text-sm sm:text-[20px] lg:text-[30px] lg:leading-[46px] uppercase">amicta
+                        2015</h1>
                     <section class="overflow-hidden text-gray-700">
                         <div class="container px-5 pb-6 pt-2 mx-auto lg:p-10">
-                          <div class="flex flex-wrap -m-1 md:-m-2">
-                            <div class="flex flex-wrap w-1/2">
-                              <div class="w-1/2 p-1 md:p-2">
-                                <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-                                  src="{{ asset('assets/img/2015/1.jpg') }}">
-                              </div>
-                              <div class="w-1/2 p-1 md:p-2">
-                                <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-                                  src="{{ asset('assets/img/2015/2.jpg') }}">
-                              </div>
-                              <div class="w-full p-1 md:p-2">
-                                <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-                                  src="{{ asset('assets/img/2015/3.jpg') }}">
-                              </div>
+                            <div class="flex flex-wrap -m-1 md:-m-2">
+                                <div class="flex flex-wrap w-1/2">
+                                    <div class="w-1/2 p-1 md:p-2">
+                                        <img alt="gallery"
+                                            class="block object-cover object-center w-full h-full rounded-lg"
+                                            src="{{ asset('assets/img/2015/1.jpg') }}">
+                                    </div>
+                                    <div class="w-1/2 p-1 md:p-2">
+                                        <img alt="gallery"
+                                            class="block object-cover object-center w-full h-full rounded-lg"
+                                            src="{{ asset('assets/img/2015/2.jpg') }}">
+                                    </div>
+                                    <div class="w-full p-1 md:p-2">
+                                        <img alt="gallery"
+                                            class="block object-cover object-center w-full h-full rounded-lg"
+                                            src="{{ asset('assets/img/2015/3.jpg') }}">
+                                    </div>
+                                </div>
+                                <div class="flex flex-wrap w-1/2">
+                                    <div class="w-full p-1 md:p-2">
+                                        <img alt="gallery"
+                                            class="block object-cover object-center w-full h-full rounded-lg"
+                                            src="{{ asset('assets/img/2015/4.jpg') }}">
+                                    </div>
+                                    <div class="w-1/2 p-1 md:p-2">
+                                        <img alt="gallery"
+                                            class="block object-cover object-center w-full h-full rounded-lg"
+                                            src="{{ asset('assets/img/2015/5.jpg') }}">
+                                    </div>
+                                    <div class="w-1/2 p-1 md:p-2">
+                                        <img alt="gallery"
+                                            class="block object-cover object-center w-full h-full rounded-lg"
+                                            src="{{ asset('assets/img/2015/6.jpg') }}">
+                                    </div>
+                                </div>
                             </div>
-                            <div class="flex flex-wrap w-1/2">
-                              <div class="w-full p-1 md:p-2">
-                                <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-                                  src="{{ asset('assets/img/2015/4.jpg') }}">
-                              </div>
-                              <div class="w-1/2 p-1 md:p-2">
-                                <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-                                  src="{{ asset('assets/img/2015/5.jpg') }}">
-                              </div>
-                              <div class="w-1/2 p-1 md:p-2">
-                                <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-                                  src="{{ asset('assets/img/2015/6.jpg') }}">
-                              </div>
-                            </div>
-                          </div>
                         </div>
                     </section>
                 </div>
             </div>
         </div>
     </div>
-    <div id="popup-modal-2" data-modal-show="false" tabindex="-1" class="z-50 px-4 pt-40 hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 md:inset-0 h-modal md:h-full justify-center items-center" aria-hidden="true">
+    <div id="popup-modal-2" data-modal-show="false" tabindex="-1"
+        class="z-50 px-4 pt-40 hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 md:inset-0 h-modal md:h-full justify-center items-center"
+        aria-hidden="true">
         <div class="relative w-full max-w-7xl h-full md:h-auto">
             <div class="relative bg-white rounded-lg shadow">
-                <button type="button" class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white" data-modal-toggle="popup-modal-2">
-                    <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                <button type="button"
+                    class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white"
+                    data-modal-toggle="popup-modal-2">
+                    <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                            clip-rule="evenodd"></path>
+                    </svg>
                     <span class="sr-only">Close modal</span>
                 </button>
                 <div class="text-center">
-                    <h1 class="pt-10 p-700 text-sm sm:text-[20px] lg:text-[30px] lg:leading-[46px] uppercase">amicta 2016</h1>
+                    <h1 class="pt-10 p-700 text-sm sm:text-[20px] lg:text-[30px] lg:leading-[46px] uppercase">amicta
+                        2016</h1>
                     <section class="overflow-hidden text-gray-700">
                         <div class="container px-5 pb-6 pt-2 mx-auto lg:p-10">
-                          <div class="flex flex-wrap -m-1 md:-m-2">
-                            <div class="flex flex-wrap w-1/2">
-                              <div class="w-1/2 p-1 md:p-2">
-                                <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-                                  src="{{ asset('assets/img/2016/1.jpg') }}">
-                              </div>
-                              <div class="w-1/2 p-1 md:p-2">
-                                <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-                                  src="{{ asset('assets/img/2016/2.jpg') }}">
-                              </div>
-                              <div class="w-full p-1 md:p-2">
-                                <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-                                  src="{{ asset('assets/img/2016/3.jpg') }}">
-                              </div>
+                            <div class="flex flex-wrap -m-1 md:-m-2">
+                                <div class="flex flex-wrap w-1/2">
+                                    <div class="w-1/2 p-1 md:p-2">
+                                        <img alt="gallery"
+                                            class="block object-cover object-center w-full h-full rounded-lg"
+                                            src="{{ asset('assets/img/2016/1.jpg') }}">
+                                    </div>
+                                    <div class="w-1/2 p-1 md:p-2">
+                                        <img alt="gallery"
+                                            class="block object-cover object-center w-full h-full rounded-lg"
+                                            src="{{ asset('assets/img/2016/2.jpg') }}">
+                                    </div>
+                                    <div class="w-full p-1 md:p-2">
+                                        <img alt="gallery"
+                                            class="block object-cover object-center w-full h-full rounded-lg"
+                                            src="{{ asset('assets/img/2016/3.jpg') }}">
+                                    </div>
+                                </div>
+                                <div class="flex flex-wrap w-1/2">
+                                    <div class="w-full p-1 md:p-2">
+                                        <img alt="gallery"
+                                            class="block object-cover object-center w-full h-full rounded-lg"
+                                            src="{{ asset('assets/img/2016/4.jpg') }}">
+                                    </div>
+                                    <div class="w-1/2 p-1 md:p-2">
+                                        <img alt="gallery"
+                                            class="block object-cover object-center w-full h-full rounded-lg"
+                                            src="{{ asset('assets/img/2016/5.jpg') }}">
+                                    </div>
+                                    <div class="w-1/2 p-1 md:p-2">
+                                        <img alt="gallery"
+                                            class="block object-cover object-center w-full h-full rounded-lg"
+                                            src="{{ asset('assets/img/2016/6.jpg') }}">
+                                    </div>
+                                </div>
                             </div>
-                            <div class="flex flex-wrap w-1/2">
-                              <div class="w-full p-1 md:p-2">
-                                <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-                                  src="{{ asset('assets/img/2016/4.jpg') }}">
-                              </div>
-                              <div class="w-1/2 p-1 md:p-2">
-                                <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-                                  src="{{ asset('assets/img/2016/5.jpg') }}">
-                              </div>
-                              <div class="w-1/2 p-1 md:p-2">
-                                <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-                                  src="{{ asset('assets/img/2016/6.jpg') }}">
-                              </div>
-                            </div>
-                          </div>
                         </div>
                     </section>
                 </div>
             </div>
         </div>
     </div>
-    <div id="popup-modal-3" data-modal-show="false" tabindex="-1" class="z-50 px-4 pt-40 hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 md:inset-0 h-modal md:h-full justify-center items-center" aria-hidden="true">
+    <div id="popup-modal-3" data-modal-show="false" tabindex="-1"
+        class="z-50 px-4 pt-40 hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 md:inset-0 h-modal md:h-full justify-center items-center"
+        aria-hidden="true">
         <div class="relative w-full max-w-7xl h-full md:h-auto">
             <div class="relative bg-white rounded-lg shadow">
-                <button type="button" class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white" data-modal-toggle="popup-modal-3">
-                    <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                <button type="button"
+                    class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white"
+                    data-modal-toggle="popup-modal-3">
+                    <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                            clip-rule="evenodd"></path>
+                    </svg>
                     <span class="sr-only">Close modal</span>
                 </button>
                 <div class="text-center">
-                    <h1 class="pt-10 p-700 text-sm sm:text-[20px] lg:text-[30px] lg:leading-[46px] uppercase">amicta 2017</h1>
+                    <h1 class="pt-10 p-700 text-sm sm:text-[20px] lg:text-[30px] lg:leading-[46px] uppercase">amicta
+                        2017</h1>
                     <section class="overflow-hidden text-gray-700">
                         <div class="container px-5 pb-6 pt-2 mx-auto lg:p-10">
-                          <div class="flex flex-wrap -m-1 md:-m-2">
-                            <div class="flex flex-wrap w-1/2">
-                              <div class="w-1/2 p-1 md:p-2">
-                                <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-                                  src="{{ asset('assets/img/2017/1.jpg') }}">
-                              </div>
-                              <div class="w-1/2 p-1 md:p-2">
-                                <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-                                  src="{{ asset('assets/img/2017/2.jpg') }}">
-                              </div>
-                              <div class="w-full p-1 md:p-2">
-                                <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-                                  src="{{ asset('assets/img/2017/3.jpg') }}">
-                              </div>
+                            <div class="flex flex-wrap -m-1 md:-m-2">
+                                <div class="flex flex-wrap w-1/2">
+                                    <div class="w-1/2 p-1 md:p-2">
+                                        <img alt="gallery"
+                                            class="block object-cover object-center w-full h-full rounded-lg"
+                                            src="{{ asset('assets/img/2017/1.jpg') }}">
+                                    </div>
+                                    <div class="w-1/2 p-1 md:p-2">
+                                        <img alt="gallery"
+                                            class="block object-cover object-center w-full h-full rounded-lg"
+                                            src="{{ asset('assets/img/2017/2.jpg') }}">
+                                    </div>
+                                    <div class="w-full p-1 md:p-2">
+                                        <img alt="gallery"
+                                            class="block object-cover object-center w-full h-full rounded-lg"
+                                            src="{{ asset('assets/img/2017/3.jpg') }}">
+                                    </div>
+                                </div>
+                                <div class="flex flex-wrap w-1/2">
+                                    <div class="w-full p-1 md:p-2">
+                                        <img alt="gallery"
+                                            class="block object-cover object-center w-full h-full rounded-lg"
+                                            src="{{ asset('assets/img/2017/4.jpg') }}">
+                                    </div>
+                                    <div class="w-1/2 p-1 md:p-2">
+                                        <img alt="gallery"
+                                            class="block object-cover object-center w-full h-full rounded-lg"
+                                            src="{{ asset('assets/img/2017/5.jpg') }}">
+                                    </div>
+                                    <div class="w-1/2 p-1 md:p-2">
+                                        <img alt="gallery"
+                                            class="block object-cover object-center w-full h-full rounded-lg"
+                                            src="{{ asset('assets/img/2017/6.jpg') }}">
+                                    </div>
+                                </div>
                             </div>
-                            <div class="flex flex-wrap w-1/2">
-                              <div class="w-full p-1 md:p-2">
-                                <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-                                  src="{{ asset('assets/img/2017/4.jpg') }}">
-                              </div>
-                              <div class="w-1/2 p-1 md:p-2">
-                                <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-                                  src="{{ asset('assets/img/2017/5.jpg') }}">
-                              </div>
-                              <div class="w-1/2 p-1 md:p-2">
-                                <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-                                  src="{{ asset('assets/img/2017/6.jpg') }}">
-                              </div>
-                            </div>
-                          </div>
                         </div>
                     </section>
                 </div>
@@ -232,7 +309,8 @@
     <section id="particles-js"></section>
     <!-- navbar -->
     <div id="navbar" class="grid grid-cols-3 items-center px-2 sm:px-12">
-        <a class="z-10 w-20 lg:w-30 pt-3" href="{{ route('welcome') }}"><img src="{{ asset('assets/img/logo-white.png') }}" alt=""></a>
+        <a class="z-10 w-20 lg:w-30 pt-3" href="{{ route('welcome') }}"><img
+                src="{{ asset('assets/img/logo-white.png') }}" alt=""></a>
         <div class="col-span-2 justify-self-end">
             <!-- drop navbar -->
             <div class="drop z-51">
@@ -241,7 +319,8 @@
                         <div class="dropdown relative">
                             <button
                                 class="z-51 dropdown-toggle px-6 py-2.5 bg-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-gray-200 hover:shadow-lg focus:bg-gray-200 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-gray-300 active:shadow-lg active:text-black transition duration-150 ease-in-out flex items-center whitespace-nowrap"
-                                type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+                                aria-expanded="false">
                                 <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="caret-down"
                                     class="w-2" role="img" xmlns="http://www.w3.org/2000/svg"
                                     viewBox="0 0 320 512">
@@ -281,11 +360,13 @@
             <!-- default navbar -->
             <div class="flex text-white p-700 text-center navbar">
                 <div class="z-10 self-center text-xs mx-3 lg:text-sm"><a href="{{ route('welcome') }}">Home</a></div>
-                <div class="z-10 self-center text-xs mx-3 lg:text-sm"><a href="https://drive.google.com/drive/folders/1ak6mo6ZH35nphXSeM-rN5uPd4h5rgKAN?usp=share_link">Rulebook</a>
+                <div class="z-10 self-center text-xs mx-3 lg:text-sm"><a
+                        href="https://drive.google.com/drive/folders/1ak6mo6ZH35nphXSeM-rN5uPd4h5rgKAN?usp=share_link">Rulebook</a>
                 </div>
                 <div class="z-10 self-center text-xs mx-3 lg:text-sm"><a href="#main-issue">Lomba</a></div>
                 <div class="z-10 self-center text-xs mx-3 lg:text-sm"><a href="#description">Tentang</a></div>
-                <a href="{{ route('login') }}" class="z-10 self-center text-xs mx-3 lg:text-sm button-color p-3 rounded-xl shadow-md hover:bg-orange-700 hover:shadow-lg active:bg-orange-800 active:shadow-lg">
+                <a href="{{ route('login') }}"
+                    class="z-10 self-center text-xs mx-3 lg:text-sm button-color p-3 rounded-xl shadow-md hover:bg-orange-700 hover:shadow-lg active:bg-orange-800 active:shadow-lg">
                     Login Tim
                 </a>
             </div>
@@ -294,7 +375,8 @@
 
     <!-- hero -->
     <section id="hero">
-        <div class="flex flex-col-reverse sm:grid sm:grid-cols-2 md:grid md:grid-cols-2 lg:grid lg:grid-cols-2 px-4 sm:px-12 items-center">
+        <div
+            class="flex flex-col-reverse sm:grid sm:grid-cols-2 md:grid md:grid-cols-2 lg:grid lg:grid-cols-2 px-4 sm:px-12 items-center">
             <div class="text-white">
                 <h1 class="font-bold text-sm sm:text-[20px] lg:text-[30px] lg:leading-[46px] p-700">Amikom Innovative,
                     Creative, Technology, Awards</h1>
@@ -303,7 +385,8 @@
                     sektor Industri UMKM, Pertanian & Perikanan atau Antisipasi Perubahan Iklim.</p>
                 <div class="button-hero flex justify-start mt-3 sm:mt-5 mb-3">
                     <!-- add href inside after register is opened -->
-                    <a class="z-10 self-center button-color p-2 lg:p-3 rounded-3xl mr-6 text-xs lg:text-sm shadow-md hover:bg-orange-700 hover:shadow-lg active:bg-orange-800 active:shadow-lg" data-tooltip-target="tooltip-click" data-tooltip-trigger="click"
+                    <a class="z-10 self-center button-color p-2 lg:p-3 rounded-3xl mr-6 text-xs lg:text-sm shadow-md hover:bg-orange-700 hover:shadow-lg active:bg-orange-800 active:shadow-lg"
+                        data-tooltip-target="tooltip-click" data-tooltip-trigger="click"
                         href="{{ route('register') }}">
                         Segera Daftar Sekarang
                     </a>
@@ -343,7 +426,8 @@
     <section id="description">
         <div class="bg-white px-12 pb-5 text-center">
             <div class="flex justify-center">
-                <div class="p-700 text-sm sm:text-[20px] lg:text-[30px] lg:leading-[46px]">PARTICIPANT ENTHUSIASTS</div>
+                <div class="p-700 text-sm sm:text-[20px] lg:text-[30px] lg:leading-[46px]">PARTICIPANT ENTHUSIASTS
+                </div>
             </div>
             <div class="mt-3 px-[8px] sm:px-[50px] lg:px-[100px]">
                 <div class="flex flex-col sm:grid sm:grid-rows-2 gap-1">
@@ -370,7 +454,8 @@
                     <div class="grid grid-cols-3">
                         <div class="col-span-3">
                             <div class="text-center p-2 hijau">
-                                <div class="p-700 text-sm sm:text-[20px] lg:text-[30px] lg:leading-[46px]">National Eksposure</div>
+                                <div class="p-700 text-sm sm:text-[20px] lg:text-[30px] lg:leading-[46px]">National
+                                    Eksposure</div>
                                 <div class="mt-3 text-xs lg:text-sm">
                                     Berbagai ulasan menarik, dirilis dalam berbagai jejaring berita
                                 </div>
@@ -380,27 +465,32 @@
                 </div>
             </div>
 
-            <div class="mt-14 mb-3 p-700 text-sm sm:text-[20px] lg:text-[30px] lg:leading-[46px]">Apa itu AMICTA ?</div>
+            <div class="mt-14 mb-3 p-700 text-sm sm:text-[20px] lg:text-[30px] lg:leading-[46px]">Apa itu AMICTA ?
+            </div>
             <div class="flex flex-col sm:flex-row px-[8px] sm:px-[50px] lg:px-[75px] items-center">
                 <img class="w-40 lg:w-60" src="{{ asset('assets/img/logo-normal.png') }}" alt="">
                 <div class="text-left">
                     <div class="mt-3 text-xs lg:text-sm">AMICTA 2022 adalah Kompetisi inovasi produk digital
-                        tingkat fakultas ilmu komputer (FIK) untuk memecahkan masalah masyarakat Indonesia, khususnya pada
+                        tingkat fakultas ilmu komputer (FIK) untuk memecahkan masalah masyarakat Indonesia, khususnya
+                        pada
                         sektor Industri UMKM, Pertanian & Perikanan atau Antisipasi Perubahan Iklim.</div>
                     <br>
                     <div class="text-xs lg:text-sm">Solusi-solusi yang dilombakan harus menggunakan salah
-                        satu dari empat teknologi berikut (1) Internet of Things, (2) Kecerdasan Buatan, (3) AR/VR atau (4)
+                        satu dari empat teknologi berikut (1) Internet of Things, (2) Kecerdasan Buatan, (3) AR/VR atau
+                        (4)
                         Animasi.</div>
                     <br>
                     <div class="text-xs lg:text-sm">Sepuluh persen dari 2000 Mahasiswa aktif di
                         lingkungan FIK diharapkan dapat merasakan impact sekaligus berpartisipasi dalam kompetisi AMICTA
-                        2022. Mahasiswa dapat berpartisipasi melalui ragam kegiatan antara lain <strong class="p-700">Talkshow, Product
+                        2022. Mahasiswa dapat berpartisipasi melalui ragam kegiatan antara lain <strong
+                            class="p-700">Talkshow, Product
                             Competition, Hackathon atau Fun Tech Games</strong>.</div>
                 </div>
             </div>
 
             <div class="mt-14 px-[80px] lg:px-[150px] benefit">
-                <h1 class="p-700 text-sm sm:text-[20px] lg:text-[30px] lg:leading-[46px]">Benefit Mengikuti AMICTA 2022</h1>
+                <h1 class="p-700 text-sm sm:text-[20px] lg:text-[30px] lg:leading-[46px]">Benefit Mengikuti AMICTA 2022
+                </h1>
                 <div class="mt-7 flex flex-col sm:grid sm:grid-cols-3 gap-5">
                     <div class="text-center rounded-xl border border-solid bg-white drop-shadow-md p-3 mb-6 sm:mb-0">
                         <div class="flex justify-center">
@@ -535,7 +625,8 @@
 
         <!-- main issue -->
         <div id="main-issue">
-            <h1 class="mt-14 p-700 text-sm sm:text-[20px] lg:text-[30px] lg:leading-[46px]">PERMASALAHAN DI INDONESIA</h1>
+            <h1 class="mt-14 p-700 text-sm sm:text-[20px] lg:text-[30px] lg:leading-[46px]">PERMASALAHAN DI INDONESIA
+            </h1>
             <p class="mt-3 text-xs lg:text-sm">Tiga topik berikut menjadi sasaran utama kasus yang perlu
                 dipecahkan melalui seluruh cabang kompetisi AMICTA 2022</p>
             <div class="mt-6 grid grid-cols-3 justify-items-center">
@@ -572,8 +663,9 @@
                         <p class="text-[10px] sm:text-xs">Artificial Intelligence, Internet Of Things,
                             AR/VR, Animasi.</p>
                     </div>
-                    <div class="col-span-2 sm:col-span-1 mt-4 flex justify-end"><a class="text-[10px] sm:text-xs button-color p-3 rounded-xl shadow-md hover:bg-orange-700 hover:shadow-lg active:bg-orange-800 active:shadow-lg"
-                        href="{{ route('register') }}">Daftar Sekarang</a>
+                    <div class="col-span-2 sm:col-span-1 mt-4 flex justify-end"><a
+                            class="text-[10px] sm:text-xs button-color p-3 rounded-xl shadow-md hover:bg-orange-700 hover:shadow-lg active:bg-orange-800 active:shadow-lg"
+                            href="{{ route('register') }}">Daftar Sekarang</a>
                     </div>
                 </div>
             </div>
@@ -589,8 +681,9 @@
                         <p class="text-[10px] sm:text-xs">Idea Submission, Speed Dating ( Team Building ),
                             Hackathon.</p>
                     </div>
-                    <div class="col-span-2 sm:col-span-1 mt-4 flex justify-end"><a class="text-[10px] sm:text-xs button-color p-3 rounded-xl shadow-md hover:bg-orange-700 hover:shadow-lg active:bg-orange-800 active:shadow-lg"
-                        href="{{ route('register') }}">Daftar Sekarang</a>
+                    <div class="col-span-2 sm:col-span-1 mt-4 flex justify-end"><a
+                            class="text-[10px] sm:text-xs button-color p-3 rounded-xl shadow-md hover:bg-orange-700 hover:shadow-lg active:bg-orange-800 active:shadow-lg"
+                            href="{{ route('register') }}">Daftar Sekarang</a>
                     </div>
                 </div>
             </div>
@@ -604,8 +697,9 @@
                             sekaligus membangun reputasi positif melalui aneka kegiatan berikut :</p>
                         <p class="text-[10px] sm:text-xs">Fast Typing Competition, Coding Competition.</p>
                     </div>
-                    <div class="col-span-2 sm:col-span-1 mt-4 flex justify-end"><a class="text-[10px] sm:text-xs button-color p-3 rounded-xl shadow-md hover:bg-orange-700 hover:shadow-lg active:bg-orange-800 active:shadow-lg"
-                        href="{{ route('register') }}">Daftar Sekarang</a>
+                    <div class="col-span-2 sm:col-span-1 mt-4 flex justify-end"><a
+                            class="text-[10px] sm:text-xs button-color p-3 rounded-xl shadow-md hover:bg-orange-700 hover:shadow-lg active:bg-orange-800 active:shadow-lg"
+                            href="{{ route('register') }}">Daftar Sekarang</a>
                     </div>
                 </div>
             </div>
@@ -620,92 +714,97 @@
 
         {{-- mentor --}}
         <h1 class="mt-14 p-700 text-sm sm:text-[20px] lg:text-[30px] lg:leading-[46px]">Mentor</h1>
-        <div class="mt-6 mb-[164px] flex flex-col sm:grid sm:grid-cols-2 lg:grid-cols-4 gap-0.5 sm:gap-7 lg:gap-4 items-center">
+        <div
+            class="mt-6 mb-[164px] flex flex-col sm:grid sm:grid-cols-2 lg:grid-cols-4 gap-0.5 sm:gap-7 lg:gap-4 items-center">
             <div class="flex justify-center mb-3 h-full">
                 <div class="rounded-lg shadow-lg bg-white max-w-sm">
-                  <a href="#!">
-                    <img class="h-[200px] w-[250px] object-cover rounded-t-lg " src="{{ asset('assets/img/mentor/arif.jpeg') }}" alt=""/>
-                  </a>
-                  <div class="p-3">
-                    <h5 class="p-700 text-black text-base font-medium mb-1 uppercase">Arif Akbarul Huda</h5>
-                    <p class="text-gray-700 mb-3 text-xs">
-                        Software Engineer, Entrepeneur
-                    </p>
-                    <p class="text-gray-700 text-xs text-left">
-                        Experience :
-                    </p>
-                    <ul class="text-gray-700 mb-2 text-xs text-left list-disc px-3">
-                        <li>Chief of Technology Hepicar</li>
-                        <li>Business Mentor ABP Incubator</li>
-                    </ul>
-                  </div>
+                    <a href="#!">
+                        <img class="h-[200px] w-[250px] object-cover rounded-t-lg "
+                            src="{{ asset('assets/img/mentor/arif.jpeg') }}" alt="" />
+                    </a>
+                    <div class="p-3">
+                        <h5 class="p-700 text-black text-base font-medium mb-1 uppercase">Arif Akbarul Huda</h5>
+                        <p class="text-gray-700 mb-3 text-xs">
+                            Software Engineer, Entrepeneur
+                        </p>
+                        <p class="text-gray-700 text-xs text-left">
+                            Experience :
+                        </p>
+                        <ul class="text-gray-700 mb-2 text-xs text-left list-disc px-3">
+                            <li>Chief of Technology Hepicar</li>
+                            <li>Business Mentor ABP Incubator</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
             <div class="flex justify-center mb-3 h-full">
                 <div class="rounded-lg shadow-lg bg-white max-w-sm">
-                  <a href="#!">
-                    <img class="h-[200px] w-[250px] object-cover rounded-t-lg " src="{{ asset('assets/img/mentor/eli.jpeg') }}" alt=""/>
-                  </a>
-                  <div class="p-3">
-                    <h5 class="p-700 text-black text-base font-medium mb-1 uppercase">Eli Pujastuti </h5>
-                    <p class="text-gray-700 mb-3 text-xs whitespace-pre-line">
-                        Digital Marketing,<br> UX Strategy, SME Digitization
-                    </p>
-                    <p class="text-gray-700 text-xs text-left">
-                        Experience :
-                    </p>
-                    <ul class="text-gray-700 mb-2 text-xs text-left list-disc px-3">
-                        <li>Startup Weekend Indonesia <br> Nextgen & Google (2020)</li>
-                        <li>Hackathon LKMMTD <br> UNY (2021)</li>
-                        <li>LPDB Mentor Kemenkop (2022)</li>
-                    </ul>
-                  </div>
+                    <a href="#!">
+                        <img class="h-[200px] w-[250px] object-cover rounded-t-lg "
+                            src="{{ asset('assets/img/mentor/eli.jpeg') }}" alt="" />
+                    </a>
+                    <div class="p-3">
+                        <h5 class="p-700 text-black text-base font-medium mb-1 uppercase">Eli Pujastuti </h5>
+                        <p class="text-gray-700 mb-3 text-xs whitespace-pre-line">
+                            Digital Marketing,<br> UX Strategy, SME Digitization
+                        </p>
+                        <p class="text-gray-700 text-xs text-left">
+                            Experience :
+                        </p>
+                        <ul class="text-gray-700 mb-2 text-xs text-left list-disc px-3">
+                            <li>Startup Weekend Indonesia <br> Nextgen & Google (2020)</li>
+                            <li>Hackathon LKMMTD <br> UNY (2021)</li>
+                            <li>LPDB Mentor Kemenkop (2022)</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
             <div class="flex justify-center mb-3 h-full">
                 <div class="rounded-lg shadow-lg bg-white max-w-sm">
-                  <a href="#!">
-                    <img class="h-[200px] w-[250px] object-cover rounded-t-lg " src="{{ asset('assets/img/mentor/rifda.jpeg') }}" alt=""/>
-                  </a>
-                  <div class="p-3">
-                    <h5 class="p-700 text-black text-base font-medium mb-1 uppercase">Rifda Faticha Alfa Aziza</h5>
-                    <p class="text-gray-700 mb-3 text-xs">
-                        UX Reseacher
-                    </p>
-                    <p class="text-gray-700 text-xs text-left">
-                        Experience :
-                    </p>
-                    <ul class="text-gray-700 mb-2 text-xs text-left list-disc px-3">
-                        <li>Dosen Prodi Informatika</li>
-                        <li>Project Manager Manasta Studio</li>
-                        <li>CTO Perempuan Punya Karya</li>
-                    </ul>
-                  </div>
+                    <a href="#!">
+                        <img class="h-[200px] w-[250px] object-cover rounded-t-lg "
+                            src="{{ asset('assets/img/mentor/rifda.jpeg') }}" alt="" />
+                    </a>
+                    <div class="p-3">
+                        <h5 class="p-700 text-black text-base font-medium mb-1 uppercase">Rifda Faticha Alfa Aziza</h5>
+                        <p class="text-gray-700 mb-3 text-xs">
+                            UX Reseacher
+                        </p>
+                        <p class="text-gray-700 text-xs text-left">
+                            Experience :
+                        </p>
+                        <ul class="text-gray-700 mb-2 text-xs text-left list-disc px-3">
+                            <li>Dosen Prodi Informatika</li>
+                            <li>Project Manager Manasta Studio</li>
+                            <li>CTO Perempuan Punya Karya</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
             <div class="flex justify-center mb-3 h-full">
                 <div class="rounded-lg shadow-lg bg-white max-w-sm">
-                  <a href="#!">
-                    <img class="h-[200px] w-[250px] object-cover rounded-t-lg " src="{{ asset('assets/img/mentor/donni.jpeg') }}" alt=""/>
-                  </a>
-                  <div class="p-3">
-                    <h5 class="p-700 text-black text-base font-medium mb-1 uppercase">Donni Prabowo</h5>
-                    <p class="text-gray-700 mb-3 text-xs">
-                        Startup Development
-                    </p>
-                    <p class="text-gray-700 text-xs text-left">
-                        Experience :
-                    </p>
-                    <ul class="text-gray-700 mb-2 text-xs text-left list-disc px-3">
-                        <li>10 Tahun pengalaman <br> bidang startup development</li>
-                        <li>2 Tahun pengalaman <br> di Venture Capital</li>
-                    </ul>
-                  </div>
+                    <a href="#!">
+                        <img class="h-[200px] w-[250px] object-cover rounded-t-lg "
+                            src="{{ asset('assets/img/mentor/donni.jpeg') }}" alt="" />
+                    </a>
+                    <div class="p-3">
+                        <h5 class="p-700 text-black text-base font-medium mb-1 uppercase">Donni Prabowo</h5>
+                        <p class="text-gray-700 mb-3 text-xs">
+                            Startup Development
+                        </p>
+                        <p class="text-gray-700 text-xs text-left">
+                            Experience :
+                        </p>
+                        <ul class="text-gray-700 mb-2 text-xs text-left list-disc px-3">
+                            <li>10 Tahun pengalaman <br> bidang startup development</li>
+                            <li>2 Tahun pengalaman <br> di Venture Capital</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
 
-      </section>
+    </section>
 
     <!-- sejarah amicta -->
     <section class="px-[8px] sm:px-[50px] lg:px-[150px] relative">
@@ -713,43 +812,44 @@
             class="text-center bg-white drop-shadow-lg rounded-3xl py-6 absolute top-[-90px] left-[10px] right-[10px] sm:left-[150px] sm:right-[150px]">
             <h2 class="text-xl sm:text-3xl p-700 mb-5">Sejarah AMICTA</h2>
 
-            <div id="carouselsejarah" class="carousel slide relative carousel-dark" data-bs-interval="false" data-bs-ride="carousel">
+            <div id="carouselsejarah" class="carousel slide relative carousel-dark" data-bs-interval="false"
+                data-bs-ride="carousel">
                 <div class="carousel-inner relative w-full overflow-hidden">
                     <!-- loop card data pemenang -->
-                    <button type="button" class="carousel-item active relative float-left w-full" data-modal-toggle="popup-modal">
+                    <button type="button" class="carousel-item active relative float-left w-full"
+                        data-modal-toggle="popup-modal">
                         <img class="rounded-xl shadow-lg mb-6 mx-auto object-cover w-1/2"
-                            src="{{ asset('assets/img/2014/1.jpeg') }}" alt="amicta 2014"
-                             />
+                            src="{{ asset('assets/img/2014/1.jpeg') }}" alt="amicta 2014" />
                         <div class="flex flex-wrap justify-center">
                             <div class="grow-0 shrink-0 basis-auto w-full lg:w-8/12 px-3">
                                 <h5 class="text-sm sm:text-lg p-700 mb-3">AMICTA 2014</h5>
                             </div>
                         </div>
                     </button>
-                    <button type="button" class="carousel-item relative float-left w-full" data-modal-toggle="popup-modal-1">
+                    <button type="button" class="carousel-item relative float-left w-full"
+                        data-modal-toggle="popup-modal-1">
                         <img class="rounded-xl shadow-lg mb-6 mx-auto object-cover w-1/2"
-                            src="{{ asset('assets/img/2015/3.jpg') }}" alt="amicta 2015"
-                             />
+                            src="{{ asset('assets/img/2015/3.jpg') }}" alt="amicta 2015" />
                         <div class="flex flex-wrap justify-center">
                             <div class="grow-0 shrink-0 basis-auto w-full lg:w-8/12 px-3">
                                 <h5 class="text-sm sm:text-lg p-700 mb-3">AMICTA 2015</h5>
                             </div>
                         </div>
                     </button>
-                    <button type="button" class="carousel-item relative float-left w-full" data-modal-toggle="popup-modal-2">
+                    <button type="button" class="carousel-item relative float-left w-full"
+                        data-modal-toggle="popup-modal-2">
                         <img class="rounded-xl shadow-lg mb-6 mx-auto object-cover w-1/2"
-                            src="{{ asset('assets/img/2016/1.jpg') }}" alt="amicta 2016"
-                             />
+                            src="{{ asset('assets/img/2016/1.jpg') }}" alt="amicta 2016" />
                         <div class="flex flex-wrap justify-center">
                             <div class="grow-0 shrink-0 basis-auto w-full lg:w-8/12 px-3">
                                 <h5 class="text-sm sm:text-lg p-700 mb-3">AMICTA 2016</h5>
                             </div>
                         </div>
                     </button>
-                    <button type="button" class="carousel-item relative float-left w-full" data-modal-toggle="popup-modal-3">
+                    <button type="button" class="carousel-item relative float-left w-full"
+                        data-modal-toggle="popup-modal-3">
                         <img class="rounded-xl shadow-lg mb-6 mx-auto object-cover w-1/2"
-                            src="{{ asset('assets/img/2017/6.jpg') }}" alt="amicta 2017"
-                             />
+                            src="{{ asset('assets/img/2017/6.jpg') }}" alt="amicta 2017" />
                         <div class="flex flex-wrap justify-center">
                             <div class="grow-0 shrink-0 basis-auto w-full lg:w-8/12 px-3">
                                 <h5 class="text-sm sm:text-lg p-700 mb-3">AMICTA 2017</h5>
@@ -777,7 +877,8 @@
 
     <!-- sponsor -->
     <section class="text-center bg-white mt-[300px] px-8 sm:px-[50px] lg:px-[150px] pt-[300px]">
-        <h1 class="my-7 sm:my-14 p-700 text-sm sm:text-[20px] lg:text-[30px] lg:leading-[46px]">IN COLLABORATION WITH</h1>
+        <h1 class="my-7 sm:my-14 p-700 text-sm sm:text-[20px] lg:text-[30px] lg:leading-[46px]">IN COLLABORATION WITH
+        </h1>
         <div class="flex justify-center mb-7 sm:mb-14">
             <img class="w-[50px] sm:w-[100px] lg:w-[180px] mx-auto" src="{{ asset('assets/img/aws.png') }}"
                 alt="">
@@ -787,8 +888,10 @@
                 alt="">
         </div>
 
-        <h1 class="my-7 sm:my-14 p-700 text-sm sm:text-[20px] lg:text-[30px] lg:leading-[46px]">OUR COMMUNITY PARTNER</h1>
-        <div id="carouselsponsor" class="carousel slide relative carousel-dark" data-bs-interval="false" data-bs-ride="carousel">
+        <h1 class="my-7 sm:my-14 p-700 text-sm sm:text-[20px] lg:text-[30px] lg:leading-[46px]">OUR COMMUNITY PARTNER
+        </h1>
+        <div id="carouselsponsor" class="carousel slide relative carousel-dark" data-bs-interval="false"
+            data-bs-ride="carousel">
             <div class="carousel-inner relative w-full">
                 <!-- loop card data media partner -->
                 <div class="carousel-item active relative float-left w-full">
@@ -803,7 +906,8 @@
                 </div>
                 <div class="carousel-item relative float-left w-full">
                     <div class="flex justify-center">
-                        <img class="lg:mb-6 mx-1 sm:mx-8 w-[35px] sm:w-[50px] lg:w-[100px]" src="{{ asset('assets/img/himtekk.png') }}" />
+                        <img class="lg:mb-6 mx-1 sm:mx-8 w-[35px] sm:w-[50px] lg:w-[100px]"
+                            src="{{ asset('assets/img/himtekk.png') }}" />
                         <img class="lg:mb-6 mx-1 sm:mx-8 w-[35px] sm:w-[50px] lg:w-[100px]"
                             src="{{ asset('assets/img/himmi.png') }}" />
                         <img class="lg:mb-6 mx-1 sm:mx-8 w-[35px] sm:w-[50px] lg:w-[100px]"
@@ -838,148 +942,208 @@
 
         <div class="accordion text-black" id="accordionExample">
             <div class="accordion-item bg-white border-gray-200 mb-3">
-              <h2 class="accordion-header mb-0" id="headingOne">
-                <button class="accordion-button relative flex text-left sm:items-center w-full py-4 px-5 text-sm lg:text-base p-700 bg-white border-0 rounded-none transition focus:outline-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                    Kak, kompetisi AMICTA ini dilaksanakan secara online atau offline?
-                </button>
-              </h2>
-              <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                <div class="text-black text-left accordion-body py-4 px-5 text-xs lg:text-sm">
-                  Halo sobat AMICTA, kompetisi ini akan dilaksanakan secara <strong>offline</strong>.
+                <h2 class="accordion-header mb-0" id="headingOne">
+                    <button
+                        class="accordion-button relative flex text-left sm:items-center w-full py-4 px-5 text-sm lg:text-base p-700 bg-white border-0 rounded-none transition focus:outline-none"
+                        type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
+                        aria-controls="collapseOne">
+                        Kak, kompetisi AMICTA ini dilaksanakan secara online atau offline?
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                    data-bs-parent="#accordionExample">
+                    <div class="text-black text-left accordion-body py-4 px-5 text-xs lg:text-sm">
+                        Halo sobat AMICTA, kompetisi ini akan dilaksanakan secara <strong>offline</strong>.
+                    </div>
                 </div>
-              </div>
             </div>
             <div class="accordion-item bg-white border-gray-200 mb-3">
-              <h2 class="accordion-header mb-0" id="headingTwo">
-                <button class="accordion-button collapsed relative flex text-left sm:items-center w-full py-4 px-5 text-sm lg:text-base p-700 bg-white border-0 rounded-none transition focus:outline-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-                    Kak, untuk mengikuti TM nanti apakah harus full team ya? atau boleh perwakilan?
-                </button>
-              </h2>
-              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                <div class="text-black text-left accordion-body py-4 px-5 text-xs lg:text-sm">
-                  Halo sobat AMICTA, untuk mengikuti TM kategori <strong>Hackathon</strong> diwajibkan untuk hadir dan mengikuti seluruh rangkaian TM, dan untuk kategori <strong>Product Based</strong> boleh perwakilan dari masing-masing team yaaa.
+                <h2 class="accordion-header mb-0" id="headingTwo">
+                    <button
+                        class="accordion-button collapsed relative flex text-left sm:items-center w-full py-4 px-5 text-sm lg:text-base p-700 bg-white border-0 rounded-none transition focus:outline-none"
+                        type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true"
+                        aria-controls="collapseTwo">
+                        Kak, untuk mengikuti TM nanti apakah harus full team ya? atau boleh perwakilan?
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                    data-bs-parent="#accordionExample">
+                    <div class="text-black text-left accordion-body py-4 px-5 text-xs lg:text-sm">
+                        Halo sobat AMICTA, untuk mengikuti TM kategori <strong>Hackathon</strong> diwajibkan untuk hadir
+                        dan mengikuti seluruh rangkaian TM, dan untuk kategori <strong>Product Based</strong> boleh
+                        perwakilan dari masing-masing team yaaa.
+                    </div>
                 </div>
-              </div>
             </div>
             <div class="accordion-item bg-white border-gray-200 mb-3">
-              <h2 class="accordion-header mb-0" id="headingThree">
-                <button class="accordion-button collapsed relative flex text-left sm:items-center w-full py-4 px-5 text-sm lg:text-base p-700 bg-white border-0 rounded-none transition focus:outline-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
-                  Kak, apakah peserta lomba yang tidak juara juga akan mendapatkan sertifikat?
-                </button>
-              </h2>
-              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                <div class="text-black text-left accordion-body py-4 px-5 text-xs lg:text-sm">
-                  Halo sobat AMICTA, Jadi untuk peserta yang gagal menuju tahap selanjutnya akan mendapatkan e-sertifikat, dengan catatan peserta harus lulus tahap 2 (submit video).
+                <h2 class="accordion-header mb-0" id="headingThree">
+                    <button
+                        class="accordion-button collapsed relative flex text-left sm:items-center w-full py-4 px-5 text-sm lg:text-base p-700 bg-white border-0 rounded-none transition focus:outline-none"
+                        type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree"
+                        aria-expanded="true" aria-controls="collapseThree">
+                        Kak, apakah peserta lomba yang tidak juara juga akan mendapatkan sertifikat?
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                    data-bs-parent="#accordionExample">
+                    <div class="text-black text-left accordion-body py-4 px-5 text-xs lg:text-sm">
+                        Halo sobat AMICTA, Jadi untuk peserta yang gagal menuju tahap selanjutnya akan mendapatkan
+                        e-sertifikat, dengan catatan peserta harus lulus tahap 2 (submit video).
+                    </div>
                 </div>
-              </div>
             </div>
             <div class="accordion-item bg-white border-gray-200 mb-3">
-              <h2 class="accordion-header mb-0" id="headingFour">
-                <button class="accordion-button collapsed relative flex text-left sm:items-center w-full py-4 px-5 text-sm lg:text-base p-700 bg-white border-0 rounded-none transition focus:outline-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
-                  Apakah acara AMICTA 2022 ada biaya pendaftaran?
-                </button>
-              </h2>
-              <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
-                <div class="text-black text-left accordion-body py-4 px-5 text-xs lg:text-sm">
-                  Halo sobat AMICTA, untuk pendaftaran tidak ada biaya sama sekali alias gratis.
+                <h2 class="accordion-header mb-0" id="headingFour">
+                    <button
+                        class="accordion-button collapsed relative flex text-left sm:items-center w-full py-4 px-5 text-sm lg:text-base p-700 bg-white border-0 rounded-none transition focus:outline-none"
+                        type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="true"
+                        aria-controls="collapseFour">
+                        Apakah acara AMICTA 2022 ada biaya pendaftaran?
+                    </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                    data-bs-parent="#accordionExample">
+                    <div class="text-black text-left accordion-body py-4 px-5 text-xs lg:text-sm">
+                        Halo sobat AMICTA, untuk pendaftaran tidak ada biaya sama sekali alias gratis.
+                    </div>
                 </div>
-              </div>
             </div>
             <div class="accordion-item bg-white border-gray-200 mb-3">
-              <h2 class="accordion-header mb-0" id="headingFive">
-                <button class="accordion-button collapsed relative flex text-left sm:items-center w-full py-4 px-5 text-sm lg:text-base p-700 bg-white border-0 rounded-none transition focus:outline-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
-                  Apakah ada ketentuan format dan bahasa pemrograman pada aplikasi yang dibuat?
-                </button>
-              </h2>
-              <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
-                <div class="text-black text-left accordion-body py-4 px-5 text-xs lg:text-sm">
-                  Halo sobat AMICTA, Format dan Bahasa dibebaskan, namun perlu diingat bahwa proyek harus mengandung IOT, Kecerdasan buatan, AR/VR, dan Animasi.
+                <h2 class="accordion-header mb-0" id="headingFive">
+                    <button
+                        class="accordion-button collapsed relative flex text-left sm:items-center w-full py-4 px-5 text-sm lg:text-base p-700 bg-white border-0 rounded-none transition focus:outline-none"
+                        type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="true"
+                        aria-controls="collapseFive">
+                        Apakah ada ketentuan format dan bahasa pemrograman pada aplikasi yang dibuat?
+                    </button>
+                </h2>
+                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+                    data-bs-parent="#accordionExample">
+                    <div class="text-black text-left accordion-body py-4 px-5 text-xs lg:text-sm">
+                        Halo sobat AMICTA, Format dan Bahasa dibebaskan, namun perlu diingat bahwa proyek harus
+                        mengandung IOT, Kecerdasan buatan, AR/VR, dan Animasi.
+                    </div>
                 </div>
-              </div>
             </div>
             <div class="accordion-item bg-white border-gray-200 mb-3">
-              <h2 class="accordion-header mb-0" id="headingSix">
-                <button class="accordion-button collapsed relative flex text-left sm:items-center w-full py-4 px-5 text-sm lg:text-base p-700 bg-white border-0 rounded-none transition focus:outline-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
-                  Jika misalnya saat pengumpulan proposal ada kendala teknis gimanaya Kak?
-                </button>
-              </h2>
-              <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
-                <div class="text-black text-left accordion-body py-4 px-5 text-xs lg:text-sm">
-                  Halo sobat AMICTA, jika terjadi kendala saat pengumpulan proposal bisa disampaikan kepada narahubung yang tersedia ya.
+                <h2 class="accordion-header mb-0" id="headingSix">
+                    <button
+                        class="accordion-button collapsed relative flex text-left sm:items-center w-full py-4 px-5 text-sm lg:text-base p-700 bg-white border-0 rounded-none transition focus:outline-none"
+                        type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="true"
+                        aria-controls="collapseSix">
+                        Jika misalnya saat pengumpulan proposal ada kendala teknis gimanaya Kak?
+                    </button>
+                </h2>
+                <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
+                    data-bs-parent="#accordionExample">
+                    <div class="text-black text-left accordion-body py-4 px-5 text-xs lg:text-sm">
+                        Halo sobat AMICTA, jika terjadi kendala saat pengumpulan proposal bisa disampaikan kepada
+                        narahubung yang tersedia ya.
+                    </div>
                 </div>
-              </div>
             </div>
             <div class="accordion-item bg-white border-gray-200 mb-3">
-              <h2 class="accordion-header mb-0" id="headingSeven">
-                <button class="accordion-button collapsed relative flex text-left sm:items-center w-full py-4 px-5 text-sm lg:text-base p-700 bg-white border-0 rounded-none transition focus:outline-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="true" aria-controls="collapseSeven">
-                    Kak, kalau sudah mendaftarkan Tim 3 orang kemudian saat hari H acara salah satu anggota tidak bisa hadir apakah bisa di ganti tidak ya?
-                </button>
-              </h2>
-              <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#accordionExample">
-                <div class="text-black text-left accordion-body py-4 px-5 text-xs lg:text-sm">
-                    Halo sobat AMICTA, untuk tim yang sudah mendaftarkan anggotanya tidak dapat di ganti ya.
+                <h2 class="accordion-header mb-0" id="headingSeven">
+                    <button
+                        class="accordion-button collapsed relative flex text-left sm:items-center w-full py-4 px-5 text-sm lg:text-base p-700 bg-white border-0 rounded-none transition focus:outline-none"
+                        type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven"
+                        aria-expanded="true" aria-controls="collapseSeven">
+                        Kak, kalau sudah mendaftarkan Tim 3 orang kemudian saat hari H acara salah satu anggota tidak
+                        bisa hadir apakah bisa di ganti tidak ya?
+                    </button>
+                </h2>
+                <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven"
+                    data-bs-parent="#accordionExample">
+                    <div class="text-black text-left accordion-body py-4 px-5 text-xs lg:text-sm">
+                        Halo sobat AMICTA, untuk tim yang sudah mendaftarkan anggotanya tidak dapat di ganti ya.
+                    </div>
                 </div>
-              </div>
             </div>
             <div class="accordion-item bg-white border-gray-200 mb-3">
-              <h2 class="accordion-header mb-0" id="headingEight">
-                <button class="accordion-button collapsed relative flex text-left sm:items-center w-full py-4 px-5 text-sm lg:text-base p-700 bg-white border-0 rounded-none transition focus:outline-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="true" aria-controls="collapseEight">
-                    Kak, apakah diizinkan untuk mengganti proyek untuk Kategori Product Based yang sudah di submit?
-                </button>
-              </h2>
-              <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight" data-bs-parent="#accordionExample">
-                <div class="text-black text-left accordion-body py-4 px-5 text-xs lg:text-sm">
-                    Halo sobat AMICTA, untuk mengganti proyek tidak bisa ya karena untuk submit proposal hanya bisa dilakukan 1 kali. Jadi, harap sebelum mengumpulkan bisa di fix kan ya.
+                <h2 class="accordion-header mb-0" id="headingEight">
+                    <button
+                        class="accordion-button collapsed relative flex text-left sm:items-center w-full py-4 px-5 text-sm lg:text-base p-700 bg-white border-0 rounded-none transition focus:outline-none"
+                        type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight"
+                        aria-expanded="true" aria-controls="collapseEight">
+                        Kak, apakah diizinkan untuk mengganti proyek untuk Kategori Product Based yang sudah di submit?
+                    </button>
+                </h2>
+                <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight"
+                    data-bs-parent="#accordionExample">
+                    <div class="text-black text-left accordion-body py-4 px-5 text-xs lg:text-sm">
+                        Halo sobat AMICTA, untuk mengganti proyek tidak bisa ya karena untuk submit proposal hanya bisa
+                        dilakukan 1 kali. Jadi, harap sebelum mengumpulkan bisa di fix kan ya.
+                    </div>
                 </div>
-              </div>
             </div>
             <div class="accordion-item bg-white border-gray-200 mb-3">
-              <h2 class="accordion-header mb-0" id="headingNine">
-                <button class="accordion-button collapsed relative flex text-left sm:items-center w-full py-4 px-5 text-sm lg:text-base p-700 bg-white border-0 rounded-none transition focus:outline-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine" aria-expanded="true" aria-controls="collapseNine">
-                    Apakah ada ketentuan produk akhir dalam bentuk apa? Apakah produk akhir harus berbentuk aplikasi yang sudah jadi?
-                </button>
-              </h2>
-              <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine" data-bs-parent="#accordionExample">
-                <div class="text-black text-left accordion-body py-4 px-5 text-xs lg:text-sm">
-                    Halo sobat AMICTA, untuk ketentuan produk akhir harus berbentuk prototype ya.
+                <h2 class="accordion-header mb-0" id="headingNine">
+                    <button
+                        class="accordion-button collapsed relative flex text-left sm:items-center w-full py-4 px-5 text-sm lg:text-base p-700 bg-white border-0 rounded-none transition focus:outline-none"
+                        type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine" aria-expanded="true"
+                        aria-controls="collapseNine">
+                        Apakah ada ketentuan produk akhir dalam bentuk apa? Apakah produk akhir harus berbentuk aplikasi
+                        yang sudah jadi?
+                    </button>
+                </h2>
+                <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine"
+                    data-bs-parent="#accordionExample">
+                    <div class="text-black text-left accordion-body py-4 px-5 text-xs lg:text-sm">
+                        Halo sobat AMICTA, untuk ketentuan produk akhir harus berbentuk prototype ya.
+                    </div>
                 </div>
-              </div>
             </div>
             <div class="accordion-item bg-white border-gray-200 mb-3">
-              <h2 class="accordion-header mb-0" id="headingTen">
-                <button class="accordion-button collapsed relative flex text-left sm:items-center w-full py-4 px-5 text-sm lg:text-base p-700 bg-white border-0 rounded-none transition focus:outline-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTen" aria-expanded="true" aria-controls="collapseTen">
-                    Hak aplikasi yang di-submit apakah sepenuhnya milik panitia atau dapat dikembangkan lagi menjadi produk untuk pribadi?
-                </button>
-              </h2>
-              <div id="collapseTen" class="accordion-collapse collapse" aria-labelledby="headingTen" data-bs-parent="#accordionExample">
-                <div class="text-black text-left accordion-body py-4 px-5 text-xs lg:text-sm">
-                    Halo sobat AMICTA, Hak intelektual masih menjadi milik peserta selama belum ada kesepakatan peralihan hak intelektual dari penyelenggara, namun ide yang dihasilkan dapat diadopsi dengan kesepakatan dari kedua belah pihak.
+                <h2 class="accordion-header mb-0" id="headingTen">
+                    <button
+                        class="accordion-button collapsed relative flex text-left sm:items-center w-full py-4 px-5 text-sm lg:text-base p-700 bg-white border-0 rounded-none transition focus:outline-none"
+                        type="button" data-bs-toggle="collapse" data-bs-target="#collapseTen" aria-expanded="true"
+                        aria-controls="collapseTen">
+                        Hak aplikasi yang di-submit apakah sepenuhnya milik panitia atau dapat dikembangkan lagi menjadi
+                        produk untuk pribadi?
+                    </button>
+                </h2>
+                <div id="collapseTen" class="accordion-collapse collapse" aria-labelledby="headingTen"
+                    data-bs-parent="#accordionExample">
+                    <div class="text-black text-left accordion-body py-4 px-5 text-xs lg:text-sm">
+                        Halo sobat AMICTA, Hak intelektual masih menjadi milik peserta selama belum ada kesepakatan
+                        peralihan hak intelektual dari penyelenggara, namun ide yang dihasilkan dapat diadopsi dengan
+                        kesepakatan dari kedua belah pihak.
+                    </div>
                 </div>
-              </div>
             </div>
             <div class="accordion-item bg-white border-gray-200 mb-3">
-              <h2 class="accordion-header mb-0" id="headingEleven">
-                <button class="accordion-button collapsed relative flex text-left sm:items-center w-full py-4 px-5 text-sm lg:text-base p-700 bg-white border-0 rounded-none transition focus:outline-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEleven" aria-expanded="true" aria-controls="collapseEleven">
-                    Peserta yang dapat mendaftar AMICTA siapa aja ya kak?
-                </button>
-              </h2>
-              <div id="collapseEleven" class="accordion-collapse collapse" aria-labelledby="headingEleven" data-bs-parent="#accordionExample">
-                <div class="text-black text-left accordion-body py-4 px-5 text-xs lg:text-sm">
-                    Halo sobat AMICTA, acara AMICTA dapat diikuti oleh seluruh mahasiswa Amikom ya.
+                <h2 class="accordion-header mb-0" id="headingEleven">
+                    <button
+                        class="accordion-button collapsed relative flex text-left sm:items-center w-full py-4 px-5 text-sm lg:text-base p-700 bg-white border-0 rounded-none transition focus:outline-none"
+                        type="button" data-bs-toggle="collapse" data-bs-target="#collapseEleven"
+                        aria-expanded="true" aria-controls="collapseEleven">
+                        Peserta yang dapat mendaftar AMICTA siapa aja ya kak?
+                    </button>
+                </h2>
+                <div id="collapseEleven" class="accordion-collapse collapse" aria-labelledby="headingEleven"
+                    data-bs-parent="#accordionExample">
+                    <div class="text-black text-left accordion-body py-4 px-5 text-xs lg:text-sm">
+                        Halo sobat AMICTA, acara AMICTA dapat diikuti oleh seluruh mahasiswa Amikom ya.
+                    </div>
                 </div>
-              </div>
             </div>
             <div class="accordion-item bg-white border-gray-200 mb-3">
-              <h2 class="accordion-header mb-0" id="headingTwelve">
-                <button class="accordion-button collapsed relative flex text-left sm:items-center w-full py-4 px-5 text-sm lg:text-base p-700 bg-white border-0 rounded-none transition focus:outline-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwelve" aria-expanded="true" aria-controls="collapseTwelve">
-                    Kak, saya orangnya gak punya ide yang bagus, apakah masih bisa ikut AMICTA?
-                </button>
-              </h2>
-              <div id="collapseTwelve" class="accordion-collapse collapse" aria-labelledby="headingTwelve" data-bs-parent="#accordionExample">
-                <div class="text-black text-left accordion-body py-4 px-5 text-xs lg:text-sm">
-                    Halo sobat AMICTA, tentu saja bisa kak, jika tidak punya ide pun AMICTA masih ada perlombaan Fun Tech, yang dimana perlombaan lebih Have Fun :)
+                <h2 class="accordion-header mb-0" id="headingTwelve">
+                    <button
+                        class="accordion-button collapsed relative flex text-left sm:items-center w-full py-4 px-5 text-sm lg:text-base p-700 bg-white border-0 rounded-none transition focus:outline-none"
+                        type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwelve"
+                        aria-expanded="true" aria-controls="collapseTwelve">
+                        Kak, saya orangnya gak punya ide yang bagus, apakah masih bisa ikut AMICTA?
+                    </button>
+                </h2>
+                <div id="collapseTwelve" class="accordion-collapse collapse" aria-labelledby="headingTwelve"
+                    data-bs-parent="#accordionExample">
+                    <div class="text-black text-left accordion-body py-4 px-5 text-xs lg:text-sm">
+                        Halo sobat AMICTA, tentu saja bisa kak, jika tidak punya ide pun AMICTA masih ada perlombaan Fun
+                        Tech, yang dimana perlombaan lebih Have Fun :)
+                    </div>
                 </div>
-              </div>
             </div>
         </div>
     </section>

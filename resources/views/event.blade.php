@@ -27,6 +27,19 @@
             }
         }
     </script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-93ZHXK6RDS"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-93ZHXK6RDS');
+    </script>
 </head>
 
 <body>
@@ -93,9 +106,12 @@
                 <div class="z-10 self-center text-xs mx-3 lg:text-sm"><a href="{{ route('welcome') }}">Home</a></div>
                 <div class="z-10 self-center text-xs mx-3 lg:text-sm"><a href="{{ route('event.index') }}">Seminar</a>
                 </div>
-                <div class="z-10 self-center text-xs mx-3 lg:text-sm"><a href="{{ route('welcome') }}#main-issue">Lomba</a></div>
-                <div class="z-10 self-center text-xs mx-3 lg:text-sm"><a href="{{ route('welcome') }}#description">Tentang</a></div>
-                <a href="#" class="z-10 self-center text-xs mx-3 lg:text-sm button-color p-3 rounded-xl shadow-md hover:bg-orange-700 hover:shadow-lg active:bg-orange-800 active:shadow-lg">
+                <div class="z-10 self-center text-xs mx-3 lg:text-sm"><a
+                        href="{{ route('welcome') }}#main-issue">Lomba</a></div>
+                <div class="z-10 self-center text-xs mx-3 lg:text-sm"><a
+                        href="{{ route('welcome') }}#description">Tentang</a></div>
+                <a href="#"
+                    class="z-10 self-center text-xs mx-3 lg:text-sm button-color p-3 rounded-xl shadow-md hover:bg-orange-700 hover:shadow-lg active:bg-orange-800 active:shadow-lg">
                     Rulebook Lomba
                 </a>
             </div>
@@ -113,7 +129,8 @@
                     secara paralel berbagi kisah sukses, lesson learned dalam perjalanannya menyelesaikan berbagai
                     masalah menggunakan teknologi. Inspiring and Insightful.</p>
                 <div class="flex justify-start mt-3">
-                    <a href="#form-daftar" class="self-center button-color p-2 lg:p-3 rounded-3xl mr-6 text-xs lg:text-sm z-50">
+                    <a href="#form-daftar"
+                        class="self-center button-color p-2 lg:p-3 rounded-3xl mr-6 text-xs lg:text-sm z-50">
                         Daftar Sekarang
                     </a>
                 </div>
@@ -156,7 +173,7 @@
                         {{ $event->quota - $event->current_participant }}</div>
                     <br>
 
-                    @if($event->id == $data['events']->first()->id)
+                    @if ($event->id == $data['events']->first()->id)
                         <div class="p-700 text-base">SESI 1</div>
                         <div class="flex flex-col sm:flex-row justify-center my-3">
                             <div class="mx-auto mb-2">
@@ -381,7 +398,8 @@
                             style="width: 150px; height:150px;" />
                         <div class="flex flex-wrap justify-center">
                             <div class="grow-0 shrink-0 basis-auto w-full lg:w-8/12 px-3">
-                                <h5 class="text-sm sm:text-lg font-bold mb-3">Fathin Naufal - Product Manager at Gojek</h5>
+                                <h5 class="text-sm sm:text-lg font-bold mb-3">Fathin Naufal - Product Manager at Gojek
+                                </h5>
                                 <p class="text-xs lg:text-sm font-medium text-gray-700 mb-4">
                                     Track Product Development : How to Build Digital Product
                                 </p>
@@ -394,7 +412,8 @@
                             style="width: 150px; height:150px;" />
                         <div class="flex flex-wrap justify-center">
                             <div class="grow-0 shrink-0 basis-auto w-full lg:w-8/12 px-3">
-                                <h5 class="text-sm sm:text-lg font-bold mb-3">Alwy Herfian S - CEO at Widya Robotic</h5>
+                                <h5 class="text-sm sm:text-lg font-bold mb-3">Alwy Herfian S - CEO at Widya Robotic
+                                </h5>
                                 <p class="text-xs lg:text-sm font-medium text-gray-700 mb-4">
                                     Track Startup Journey : Startup Preneur Zillenials
                                 </p>
