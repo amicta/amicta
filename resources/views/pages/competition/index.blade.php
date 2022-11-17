@@ -17,7 +17,7 @@
 
         <div class="row">
             @forelse ($data['competitions'] as $competition)
-                <div class="col-md-4">
+                <div class="col-md-4 mb-4">
                     <div class="card h-100 d-flex justify-content-between" style="padding: 25px;">
                         <div>
                             <h4 class="text-center p-600 mb-2" style="color: black; font-size: 16px">{{ $competition->name }}</h4>
