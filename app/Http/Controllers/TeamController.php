@@ -14,10 +14,11 @@ class TeamController extends Controller
 {
     public function index(User $user)
     {
-        $userId = Auth::user()->id;
+        $user = Auth::user();
+        $data['user'] = $user;
         $productBased = Competition::where('type', 'product')->first()->id;
 
-        $data['team'] = Team::where('leader_id', $userId)->where('competition_id', $productBased)->first();
+        $data['team'] = Team::where('leader_id', $user->id)->where('competition_id', $productBased)->first();
         $team = $data['team'];
 
         return view('pages.team.index', compact('data', 'team'));

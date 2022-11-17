@@ -32,6 +32,7 @@
                         <h2 class="section-title">Tim Saya</h2>
                         <p class="section-lead">Informasi tim kamu</p>
                         @forelse ($user->teams as $team)
+                            @if ($team->name != 'Belum dibuat')
                             <div class="card">
                                 <div class="card-header">
                                     <h4 style="color: black">{{ $team->competition->name }}</h4>
@@ -52,20 +53,26 @@
                                         </tr>
                                         <tr style="background-color: transparent">
                                             <td class="align-top" style="color: black">Ketua</td>
-                                            <td class="align-top">{{ $team->user->name }}</td>
+                                            <td class="align-top">{{ $team->user->name . ' (' . $team->user->nim . ')'}}</td>
                                         </tr>
                                         <tr style="background-color: transparent">
                                             <td class="align-top" style="color: black">Anggota</td>
                                             <td class="align-top">
-                                                <div class="">{{ $team->member[0]['name'] }}</div>
-                                                @if (!empty($data['team']->member[1]))
-                                                    <div class="">{{ $team->member[1]['name'] }}</div>
+                                                <div class="">{{ $team->member[0]['name'] . ' (' . $team->member[0]['nim'] . ')' }}</div>
+                                                @if (!empty($team->member[1]))
+                                                <div class="">{{ $team->member[1]['name'] . ' (' . $team->member[1]['nim'] . ')'}}</div>
                                                 @endif
                                             </td>
                                         </tr>
                                     </table>
                                 </div>
                             </div>
+                            @else
+                            <li class="gap-1 list-group-item d-flex justify-content-between align-items-center text-danger">
+                                Kamu belum melengkapi data TIM
+                                <a href="{{ route('teams.index') }}" class="btn text-white button-base">Lengkapi</a>
+                            </li>
+                            @endif
                         @empty
                             <ul class="list-group">
                                 <li class="list-group-item">Kamu belum memiliki tim</li>

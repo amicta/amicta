@@ -50,6 +50,22 @@
                                         @endif
                                     </div>
 
+                                    <div class="section-title mt-0">Ketua Tim</div>
+                                    <div class="form-row">
+                                        <div class="form-group col-md-3">
+                                            <label for="member-nim">NIM*</label>
+                                            <input type="text" class="form-control" id="member-nim"
+                                                placeholder="xx.xx.xxxx" required
+                                                value="{{ $data['user']->nim }}" disabled>
+                                        </div>
+                                        <div class="form-group col-md-9">
+                                            <label for="member-name">Nama*</label>
+                                            <input type="text" class="form-control" id="member-name"
+                                                placeholder="Nama Lengkap" required
+                                                 value="{{ $data['user']->name }}" disabled>
+                                        </div>
+                                    </div>
+
                                     <div class="section-title mt-0">Anggota 1</div>
                                     <div class="form-row">
                                         <div class="form-group col-md-3">
@@ -66,7 +82,7 @@
                                         </div>
                                     </div>
 
-                                    @if (empty($data['team']->member[1]) || $data['team']->name == 'Belum dibuat')
+                                    @if (!empty($data['team']->member[1]) || $data['team']->name == 'Belum dibuat')
                                         <div class="section-title mt-0">Anggota 2</div>
                                         <div class="form-row">
                                             <div class="form-group col-md-3">
