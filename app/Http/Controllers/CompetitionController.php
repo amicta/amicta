@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\CompetitionRegisterRequest;
 use App\Models\Assignment;
 use App\Models\Category;
 use App\Models\Competition;
@@ -19,12 +20,19 @@ class CompetitionController extends Controller
         return view('pages.competition.index', compact('data'));
     }
 
+    public function funcoding()
+    {
+        $registeredFunCoding = Auth::user()->competitions()->where('type', 'fungame')->count() > 0;
+
+        return view('pages.competition.funcoding', compact('registeredFunCoding'));
+    }
+
     public function create()
     {
         //
     }
 
-    public function store(Request $request)
+    public function store(CompetitionRegisterRequest $request)
     {
         $user = Auth::user();
 
@@ -34,8 +42,17 @@ class CompetitionController extends Controller
         $hackathon = Competition::where('type', 'hackathon')->first()->id;
         $firstAssignmentH = Assignment::where('competition_id', $hackathon)->where('assign_registered', true)->first()->id;
 
-        $user->competitions()->attach($request->competition_id);
+        $funGame = Competition::where('type', 'fungame')->first()->id;
+        $funCoding = Category::where('name', 'Coding Competition')->first()->id;
 
+        // Attach to pivot table
+        if ($request->category_id) {
+            $user->competitions()->attach($request->competition_id, ['category_id' => $request->category_id]);
+        } else {
+            $user->competitions()->attach($request->competition_id, ['category_id' => null]);
+        }
+
+        // Product based
         if ($request->category_id && $request->competition_id == $productBased) {
             $team = $user->teams()->create([
                 'name' => 'Belum dibuat',
@@ -59,6 +76,7 @@ class CompetitionController extends Controller
             ]);
         }
 
+        // Hackathon
         if ($request->competition_id == $hackathon) {
             $user->submissions()->create([
                 'assignment_id' => $firstAssignmentH,
@@ -70,6 +88,14 @@ class CompetitionController extends Controller
             return redirect()->route('submissions.index')->with('status', [
                 'element' => 'success',
                 'message' => 'Pendaftaran berhasil! Silahkan menyelesaikan submisi kamu'
+            ]);
+        }
+
+        // Fun Coding
+        if ($request->competition_id == $funGame && $request->category_id == $funCoding) {
+            return redirect()->route('funcoding')->with('status', [
+                'element' => 'success',
+                'message' => 'Pendaftaran berhasil! Silahkan menyelesaikan step-step berikutnya sesuai instruksi dibawah ini'
             ]);
         }
 

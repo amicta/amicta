@@ -39,9 +39,11 @@ Route::group(['middleware' => ['auth:web']], function () {
     Route::get('/dashboard', [HomeController::class, 'dashboard'])->name('dashboard');
 
     Route::resource('/competitions', CompetitionController::class);
-    Route::get('/funcoding', function () {
-        return view('pages.competition.funcoding');
-    })->name('funcoding');
+    Route::get('/funcoding', [CompetitionController::class, 'funcoding'])->name('funcoding');
+
+    // Route::get('/funcoding', function () {
+    //     return view('pages.competition.funcoding');
+    // })->name('funcoding');
 
     Route::resource('/teams', TeamController::class);
     Route::resource('/submissions', SubmissionController::class);

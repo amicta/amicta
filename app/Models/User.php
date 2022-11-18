@@ -47,7 +47,12 @@ class User extends Authenticatable
 
     public function competitions()
     {
-        return $this->belongsToMany(Competition::class, 'competition_user');
+        return $this->belongsToMany(Competition::class, 'user_competition_category');
+    }
+
+    public function categories()
+    {
+        return $this->belongsToMany(Category::class, 'user_competition_category');
     }
 
     public function teams()
