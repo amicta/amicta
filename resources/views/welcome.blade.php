@@ -709,7 +709,7 @@
         <h1 class="mt-14 p-700 text-2xl lg:text-5xl">TIMELINE</h1>
         <!-- <p class="mt-3 text-xs lg:text-sm">Tiga topik berikut menjadi sasaran utama kasus yang perlu dipecahkan melalui seluruh cabang kompetisi AMICTA 2022</p> -->
         <div class="mt-6 flex justify-center">
-            <img class="w-[90%] md:w-3/4" src="{{ asset('assets/img/timeline.png') }}" alt="">
+            <img class="w-100 md:w-100" src="{{ asset('assets/img/timeline.png') }}" alt="">
         </div>
 
         {{-- mentor --}}
