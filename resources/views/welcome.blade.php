@@ -336,6 +336,10 @@
                                 </li>
                                 <li>
                                     <a target="_blank" class="dropdown-item text-xs sm:text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100"
+                                        href="{{ route('event.index') }}">Seminar</a>
+                                </li>
+                                <li>
+                                    <a target="_blank" class="dropdown-item text-xs sm:text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100"
                                         href="https://drive.google.com/drive/folders/1ak6mo6ZH35nphXSeM-rN5uPd4h5rgKAN?usp=share_link">Rulebook</a>
                                 </li>
                                 <li>
@@ -349,7 +353,7 @@
                                 <li>
                                     <a class="dropdown-item button-color rounded p-2 text-white text-xs sm:text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100"
                                         href="{{ route('login') }}" style="background-color: #F55553; color: white;">
-                                        Login Tim
+                                        Login
                                     </a>
                                 </li>
                             </ul>
@@ -360,14 +364,17 @@
             <!-- default navbar -->
             <div class="flex text-white p-700 text-center navbar">
                 <div class="z-10 self-center text-xs mx-3 lg:text-sm"><a href="{{ route('welcome') }}">Home</a></div>
-                <div target="_blank" class="z-10 self-center text-xs mx-3 lg:text-sm"><a
+                <div class="z-10 self-center text-xs mx-3 lg:text-sm"><a target="_blank"
+                        href="{{ route('event.index') }}">Seminar</a>
+                </div>
+                <div class="z-10 self-center text-xs mx-3 lg:text-sm"><a target="_blank"
                         href="https://drive.google.com/drive/folders/1ak6mo6ZH35nphXSeM-rN5uPd4h5rgKAN?usp=share_link">Rulebook</a>
                 </div>
                 <div class="z-10 self-center text-xs mx-3 lg:text-sm"><a href="#main-issue">Lomba</a></div>
                 <div class="z-10 self-center text-xs mx-3 lg:text-sm"><a href="#description">Tentang</a></div>
                 <a href="{{ route('login') }}"
                     class="z-10 self-center text-xs mx-3 lg:text-sm button-color p-3 rounded-xl shadow-md hover:bg-orange-700 hover:shadow-lg active:bg-orange-800 active:shadow-lg">
-                    Login Tim
+                    Login
                 </a>
             </div>
         </div>
@@ -530,7 +537,7 @@
     <section class="text-center text-white px-[50px] lg:px-[150px]">
 
         <!-- multitrack seminar -->
-        {{-- <section>
+        <section>
             <h1 class="mt-6 p-700 text-sm sm:text-[20px] lg:text-[30px] lg:leading-[46px]">Multitrack Seminar AMICTA 2022</h1>
             <p class="mt-3 text-xs lg:text-sm">Empat narasumber professional industri teknologi, secara
                 paralel berbagi kisah sukses, lesson learned dalam perjalanannya menyelesaikan berbagai masalah menggunakan
@@ -612,16 +619,20 @@
                         </button>
                     </div>
                 </div>
+                <br>
+                <div class="mt-6 flex justify-center">
+                    <iframe class="w-full h-[50vh]" src="https://www.youtube.com/embed/PfyFWusTsYs" frameborder="0"></iframe>
+                </div>
             </section>
 
-            <br>
+            {{-- <br>
             <p class="mt-3 text-xs lg:text-sm">Sayangnya tempat terbatas. Siapa cepat dia dapat! Yuks Daftar Segera!</p>
             <br>
             <div class="mt-6">
                 <a class="text-xs lg:text-sm button-color p-3 rounded-xl shadow-md hover:bg-orange-700 hover:shadow-lg active:bg-orange-800 active:shadow-lg"
                     href="{{ route('event.index') }}">Daftar Sekarang</a>
-            </div>
-        </section> --}}
+            </div> --}}
+        </section>
 
         <!-- main issue -->
         <div id="main-issue">
@@ -820,6 +831,27 @@
                             <li>Business Unit Development<br>Manager PT.Arfa Sukses Mulia</li>
                             <li>Founder Taka Keyboard</li>
                             <li>Winner AMICTA 2019</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-center mb-3 h-full">
+                <div class="rounded-lg shadow-lg bg-white max-w-sm">
+                    <a href="#!">
+                        <img class="h-[200px] w-[250px] object-cover rounded-t-lg "
+                            src="{{ asset('assets/img/mentor/arifiyanto.jpeg') }}" alt="" />
+                    </a>
+                    <div class="p-3">
+                        <h5 class="p-700 text-black text-base font-medium mb-1 uppercase">Arifiyanto Hadinegoro </h5>
+                        <p class="text-gray-700 mb-3 text-xs">
+                            Networking, Hardware 
+                        </p>
+                        <p class="text-gray-700 text-xs text-left">
+                            Experience :
+                        </p>
+                        <ul class="text-gray-700 mb-2 text-xs text-left list-disc px-3">
+                            <li>IT Freelance</li>
+                            <li>Lecturer</li>
                         </ul>
                     </div>
                 </div>

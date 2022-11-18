@@ -55,10 +55,10 @@
 
                                                 @if ($submission->status == 'assigned')
                                                     <a href="{{ route('submissions.edit', ['submission' => $submission->id]) }}"
-                                                        class="btn text-white btn-warning">Lihat</a>
+                                                        class="btn text-white btn-warning self-center">Lihat</a>
                                                 @else
                                                     <a href="{{ route('submissions.show', ['submission' => $submission->id]) }}"
-                                                        class="btn text-white button-base">Lihat</a>
+                                                        class="btn text-white button-base self-center">Lihat</a>
                                                 @endif
                                             </div>
                                         </div>
