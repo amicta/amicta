@@ -27,13 +27,13 @@
                                 <a target="_blank" style="color: #206F80" href="https://gethired.id/employee/signup">https://gethired.id/employee/signup</a>
                             </li>
                             <li>Peserta dapat melihat bussines flow pada link dibawah ini <br>
-                                <a target="_blank" style="color: #206F80" href="https://gethired.id/employee/signup">https://blablabla</a>
+                                <a target="_blank" style="color: #206F80" href="https://drive.google.com/drive/folders/1ZTEFAIbm3tG4yUTo-e1F_CAmXXOw73rF?usp=sharing">https://drive.google.com/drive/folders/1ZTEFAIbm3tG4yUTo-e1F_CAmXXOw73rF?usp=sharing</a>
                             </li>
                             <li>Pilih kategori dibawah ini. Peserta diperbolehkan mengikuti keduanya</li>
                         </ul>
                         <div class="row my-3">
                             <div class="col-md-12 text-center">
-                                <img width="50%" src="{{ asset('assets/img/poster.jpeg') }}" alt="">
+                                <img width="50%" src="{{ asset('assets/img/flyer_ss.png') }}" alt="">
                             </div>
                         </div>
                         <div class="row">

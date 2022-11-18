@@ -81,7 +81,7 @@
                             @elseif ($competition->type == 'hackathon')
                                 <a target="_blank" href="https://ungu.in/hackathon" class="w-100 btn mt-2 button-base-outline">Detail</a>
                             @else
-                                <a href="{{ route('funtech') }}" class="w-100 btn mt-2 button-base-outline">Detail</a>
+                                <a href="{{ route('funcoding') }}" class="w-100 btn mt-2 button-base-outline">Detail</a>
                             @endif
                         </div>
                     </div>
