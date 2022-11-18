@@ -92,19 +92,24 @@
                                         <div class="form-group col-md-3">
                                             <label for="member-nim">NIM*</label>
                                             <input type="text"
-                                                class="form-control @error('member[0]') is-invalid @enderror"
+                                                class="form-control @error('member.0.nim') is-invalid @enderror"
                                                 id="member-nim" name="member[0][nim]" placeholder="xx.xx.xxxx" required
                                                 @if ($data['team']->name != 'Belum dibuat') value="{{ $data['team']->member[0]['nim'] }}" disabled @endif>
                                         </div>
                                         <div class="form-group col-md-9">
                                             <label for="member-name">Nama*</label>
                                             <input type="text"
-                                                class="form-control @error('member[0]') is-invalid @enderror"
+                                                class="form-control @error('member.0.name') is-invalid @enderror"
                                                 id="member-name" name="member[0][name]" placeholder="Nama Lengkap" required
                                                 @if ($data['team']->name != 'Belum dibuat') value="{{ $data['team']->member[0]['name'] }}" disabled @endif>
                                         </div>
 
-                                        @error('member[0]')
+                                        @error('member.0.nim')
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                        @enderror
+                                        @error('member.0.name')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
                                             </span>
@@ -116,13 +121,13 @@
                                         <div class="form-row">
                                             <div class="form-group col-md-3">
                                                 <label for="member2-nim">NIM</label>
-                                                <input type="text" class="form-control" id="member2-nim"
+                                                <input type="text" class="form-control @error('member.1') is-invalid @enderror" id="member2-nim"
                                                     name="member[1][nim]" placeholder="xx.xx.xxxx"
                                                     @if ($data['team']->name != 'Belum dibuat') value="{{ $data['team']->member[1]['nim'] }}" disabled @endif>
                                             </div>
                                             <div class="form-group col-md-9">
                                                 <label for="member2-name">Nama</label>
-                                                <input type="text" class="form-control" id="member2-name"
+                                                <input type="text" class="form-control @error('member.1') is-invalid @enderror" id="member2-name"
                                                     name="member[1][name]" placeholder="Nama Lengkap"
                                                     @if ($data['team']->name != 'Belum dibuat') value="{{ $data['team']->member[1]['name'] }}" disabled @endif>
                                             </div>
