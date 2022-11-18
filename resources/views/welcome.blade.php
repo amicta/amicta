@@ -335,7 +335,7 @@
                                         href="{{ route('welcome') }}">Home</a>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item text-xs sm:text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100"
+                                    <a target="_blank" class="dropdown-item text-xs sm:text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100"
                                         href="https://drive.google.com/drive/folders/1ak6mo6ZH35nphXSeM-rN5uPd4h5rgKAN?usp=share_link">Rulebook</a>
                                 </li>
                                 <li>
@@ -360,7 +360,7 @@
             <!-- default navbar -->
             <div class="flex text-white p-700 text-center navbar">
                 <div class="z-10 self-center text-xs mx-3 lg:text-sm"><a href="{{ route('welcome') }}">Home</a></div>
-                <div class="z-10 self-center text-xs mx-3 lg:text-sm"><a
+                <div target="_blank" class="z-10 self-center text-xs mx-3 lg:text-sm"><a
                         href="https://drive.google.com/drive/folders/1ak6mo6ZH35nphXSeM-rN5uPd4h5rgKAN?usp=share_link">Rulebook</a>
                 </div>
                 <div class="z-10 self-center text-xs mx-3 lg:text-sm"><a href="#main-issue">Lomba</a></div>
@@ -467,16 +467,16 @@
 
             <div class="mt-14 mb-3 p-700 text-sm sm:text-[20px] lg:text-[30px] lg:leading-[46px]">Apa itu AMICTA ?
             </div>
-            <div class="flex flex-col sm:flex-row px-[8px] sm:px-[50px] lg:px-[75px] items-center">
+            <div class="flex flex-col px-[8px] sm:px-[50px] lg:px-[75px] items-center">
                 <img class="w-40 lg:w-60" src="{{ asset('assets/img/logo-normal.png') }}" alt="">
-                <div class="text-left">
+                <div class="text-center">
                     <div class="mt-3 text-xs lg:text-sm">AMICTA 2022 adalah Kompetisi inovasi produk digital
                         tingkat fakultas ilmu komputer (FIK) untuk memecahkan masalah masyarakat Indonesia, khususnya
                         pada
                         sektor Industri UMKM, Pertanian & Perikanan atau Antisipasi Perubahan Iklim.</div>
                     <br>
                     <div class="text-xs lg:text-sm">Solusi-solusi yang dilombakan harus menggunakan salah
-                        satu dari empat teknologi berikut (1) Internet of Things, (2) Kecerdasan Buatan, (3) AR/VR atau
+                        satu dari empat teknologi berikut <br> (1) Internet of Things, (2) Kecerdasan Buatan, (3) AR/VR atau
                         (4)
                         Animasi.</div>
                     <br>
@@ -715,7 +715,7 @@
         {{-- mentor --}}
         <h1 class="mt-14 p-700 text-sm sm:text-[20px] lg:text-[30px] lg:leading-[46px]">Mentor</h1>
         <div
-            class="mt-6 mb-[164px] flex flex-col sm:grid sm:grid-cols-2 lg:grid-cols-4 gap-0.5 sm:gap-7 lg:gap-4 items-center">
+            class="mt-6 mb-[164px] flex flex-col sm:grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-0.5 sm:gap-7 lg:gap-4 items-center">
             <div class="flex justify-center mb-3 h-full">
                 <div class="rounded-lg shadow-lg bg-white max-w-sm">
                     <a href="#!">
@@ -745,7 +745,7 @@
                     </a>
                     <div class="p-3">
                         <h5 class="p-700 text-black text-base font-medium mb-1 uppercase">Eli Pujastuti </h5>
-                        <p class="text-gray-700 mb-3 text-xs whitespace-pre-line">
+                        <p class="text-gray-700 mb-3 text-xs">
                             Digital Marketing,<br> UX Strategy, SME Digitization
                         </p>
                         <p class="text-gray-700 text-xs text-left">
@@ -798,6 +798,28 @@
                         <ul class="text-gray-700 mb-2 text-xs text-left list-disc px-3">
                             <li>10 Tahun pengalaman <br> bidang startup development</li>
                             <li>2 Tahun pengalaman <br> di Venture Capital</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-center mb-3 h-full">
+                <div class="rounded-lg shadow-lg bg-white max-w-sm">
+                    <a href="#!">
+                        <img class="h-[200px] w-[250px] object-cover rounded-t-lg "
+                            src="{{ asset('assets/img/mentor/akbar.png') }}" alt="" />
+                    </a>
+                    <div class="p-3">
+                        <h5 class="p-700 text-black text-base font-medium mb-1 uppercase">Muhammad<br>Akbar Maulana</h5>
+                        <p class="text-gray-700 mb-3 text-xs">
+                            Entrepeneur,<br>Management, Elektronika
+                        </p>
+                        <p class="text-gray-700 text-xs text-left">
+                            Experience :
+                        </p>
+                        <ul class="text-gray-700 mb-2 text-xs text-left list-disc px-3">
+                            <li>Business Unit Development<br>Manager PT.Arfa Sukses Mulia</li>
+                            <li>Founder Taka Keyboard</li>
+                            <li>Winner AMICTA 2019</li>
                         </ul>
                     </div>
                 </div>
@@ -899,6 +921,8 @@
                         <img class="lg:mb-6 mx-1 sm:mx-8 w-[35px] sm:w-[50px] lg:w-[100px]"
                             src="{{ asset('assets/img/if.png') }}" />
                         <img class="lg:mb-6 mx-1 sm:mx-8 w-[35px] sm:w-[50px] lg:w-[100px]"
+                            src="{{ asset('assets/img/mi.png') }}" />
+                        <img class="lg:mb-6 mx-1 sm:mx-8 w-[35px] sm:w-[50px] lg:w-[100px]"
                             src="{{ asset('assets/img/hmif.png') }}" />
                         <img class="lg:mb-6 mx-1 sm:mx-8 w-[35px] sm:w-[50px] lg:w-[100px]"
                             src="{{ asset('assets/img/fa.png') }}" />
@@ -908,6 +932,8 @@
                     <div class="flex justify-center">
                         <img class="lg:mb-6 mx-1 sm:mx-8 w-[35px] sm:w-[50px] lg:w-[100px]"
                             src="{{ asset('assets/img/himtekk.png') }}" />
+                        <img class="lg:mb-6 mx-1 sm:mx-8 w-[35px] sm:w-[50px] lg:w-[100px]"
+                            src="{{ asset('assets/img/cs.png') }}" />
                         <img class="lg:mb-6 mx-1 sm:mx-8 w-[35px] sm:w-[50px] lg:w-[100px]"
                             src="{{ asset('assets/img/himmi.png') }}" />
                         <img class="lg:mb-6 mx-1 sm:mx-8 w-[35px] sm:w-[50px] lg:w-[100px]"

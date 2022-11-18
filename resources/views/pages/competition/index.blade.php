@@ -17,7 +17,7 @@
 
         <div class="row">
             @forelse ($data['competitions'] as $competition)
-                <div class="col-md-4">
+                <div class="col-md-4 mb-4">
                     <div class="card h-100 d-flex justify-content-between" style="padding: 25px;">
                         <div>
                             <h4 class="text-center p-600 mb-2" style="color: black; font-size: 16px">{{ $competition->name }}</h4>
@@ -33,7 +33,6 @@
                                     <img src="{{ asset('assets/img/icon6.svg') }}" class="card-img-top" alt="Fun Games"
                                         style="width: 100px">
                                 @endif
-
                             </div>
                             <br>
                             <p>{{ $competition->description }}</p>
@@ -77,6 +76,13 @@
                                     </button>
                                 @endif
                             </form>
+                            @if ($competition->type == 'product')
+                                <a target="_blank" href="https://ungu.in/product-based" class="w-100 btn mt-2 button-base-outline">Detail</a>
+                            @elseif ($competition->type == 'hackathon')
+                                <a target="_blank" href="https://ungu.in/hackathon" class="w-100 btn mt-2 button-base-outline">Detail</a>
+                            @else
+                                <a href="{{ route('funtech') }}" class="w-100 btn mt-2 button-base-outline">Detail</a>
+                            @endif
                         </div>
                     </div>
                 </div>
