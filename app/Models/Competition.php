@@ -30,12 +30,20 @@ class Competition extends Model
 
     public function getIsRegisteredAttribute()
     {
+        // if($this->type == 'fungame'){
+        //     return Auth::user()->competitions()->where('competition_id', $this->id)->count() >= 2;
+        // }
         return Auth::user()->competitions()->where('competition_id', $this->id)->count() == 1;
     }
 
     public function categories()
     {
         return $this->hasMany(Category::class);
+    }
+
+    public function user_categories()
+    {
+        return $this->belongsToMany(Category::class, 'user_competition_category');
     }
 
     public function assignments()
@@ -50,7 +58,7 @@ class Competition extends Model
 
     public function users()
     {
-        return $this->belongsToMany(User::class, 'competition_user');
+        return $this->belongsToMany(User::class, 'user_competition_category');
     }
 
     public function teams()

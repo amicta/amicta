@@ -24,4 +24,9 @@ class Category extends Model
     {
         return $this->belongsTo(Competition::class);
     }
+
+    public function user_competitions()
+    {
+        return $this->belongsToMany(Competition::class, 'user_competition_category');
+    }
 }

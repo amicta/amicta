@@ -20,7 +20,8 @@
                 <div class="col-md-4 mb-4">
                     <div class="card h-100 d-flex justify-content-between" style="padding: 25px;">
                         <div>
-                            <h4 class="text-center p-600 mb-2" style="color: black; font-size: 16px">{{ $competition->name }}</h4>
+                            <h4 class="text-center p-600 mb-2" style="color: black; font-size: 16px">
+                                {{ $competition->name }}</h4>
                             <br>
                             <div class="d-flex justify-content-center">
                                 @if ($competition->type == 'product')
@@ -46,7 +47,7 @@
                                 @if (!$competition->categories->isEmpty())
                                     <p class="p-700" style="margin-bottom: 0px">Kategori Lomba</p>
 
-                                    <select class="form-control" style="border-radius: 3px" name="category_id" required
+                                    <select class="form-control @error('category_id') is-invalid @enderror" style="border-radius: 3px" name="category_id" required
                                         @if ($competition->is_registered) disabled @endif>
 
                                         <option value="" selected disabled hidden>
@@ -54,22 +55,30 @@
                                         </option>
 
                                         @foreach ($competition->teams as $team)
-                                        <option selected disabled hidden>{{ $team->category->name }}</option>
+                                            <option selected disabled hidden>{{ $team->category->name }}</option>
+                                        @endforeach
+
+                                        @foreach ($competition->user_categories as $category)
+                                            <option selected disabled hidden>{{ $category->name }}</option>
                                         @endforeach
 
                                         @foreach ($competition->categories as $category)
-                                            <option value="{{ $category->id }}">
+                                            <option value="{{ $category->id }}"
+                                                @if ($category->is_publish == false) disabled hidden @endif>
                                                 {{ $category->name }}
                                             </option>
                                         @endforeach
 
                                     </select>
+                                @else
+                                    <input type="hidden" name="category_id" value="0">
                                 @endif
 
                                 @if ($competition->is_registered)
                                     <button class="w-100 btn text-white mt-4 btn-secondary" disabled>Telah Daftar</button>
                                 @elseif ($competition->is_open)
-                                    <button type="submit" class="w-100 btn text-white mt-4 button-base register_confirm">Daftar</button>
+                                    <button type="submit"
+                                        class="w-100 btn text-white mt-4 button-base register_confirm">Daftar</button>
                                 @else
                                     <button class="w-100 btn text-white mt-4 btn-secondary" disabled>
                                         Pendaftaran Ditutup
@@ -77,9 +86,11 @@
                                 @endif
                             </form>
                             @if ($competition->type == 'product')
-                                <a target="_blank" href="https://ungu.in/product-based" class="w-100 btn mt-2 button-base-outline">Detail</a>
+                                <a target="_blank" href="https://ungu.in/product-based"
+                                    class="w-100 btn mt-2 button-base-outline">Detail</a>
                             @elseif ($competition->type == 'hackathon')
-                                <a target="_blank" href="https://ungu.in/hackathon" class="w-100 btn mt-2 button-base-outline">Detail</a>
+                                <a target="_blank" href="https://ungu.in/hackathon"
+                                    class="w-100 btn mt-2 button-base-outline">Detail</a>
                             @else
                                 <a target="_blank" href="{{ route('funcoding') }}" class="w-100 btn mt-2 button-base-outline">Detail</a>
                             @endif
