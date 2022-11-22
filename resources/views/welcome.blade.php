@@ -544,105 +544,6 @@
     </section>
 
     <section class="text-center text-white px-[50px] lg:px-[150px]">
-
-        <!-- multitrack seminar -->
-        <section>
-            <h1 class="mt-6 p-700 text-sm sm:text-[20px] lg:text-[30px] lg:leading-[46px]">Multitrack Seminar AMICTA 2022</h1>
-            <p class="mt-3 text-xs lg:text-sm">Empat narasumber professional industri teknologi, secara
-                paralel berbagi kisah sukses, lesson learned dalam perjalanannya menyelesaikan berbagai masalah menggunakan
-                teknologi. Inspiring and Insightful.</p>
-            <br>
-            <!-- pemateri -->
-            <section class="px-[8px] sm:px-[50px] lg:px-[150px]">
-                <div class="text-center bg-white drop-shadow-lg rounded-3xl py-6">
-                    <h2 class="text-xl sm:text-3xl p-700 mb-12 text-black">Pemateri</h2>
-
-                    <div id="carouselsejarah" class="carousel slide relative carousel-dark" data-bs-ride="carousel">
-                        <div class="carousel-inner relative w-full overflow-hidden">
-                            <!-- loop card data pemateri -->
-                            <div class="carousel-item active relative float-left w-full">
-                                <img class="rounded-full shadow-xl bg-gray-100 mb-6 mx-auto"
-                                    src="{{ asset('assets/img/fathin.png') }}" alt="avatar"
-                                    style="width: 150px; height:150px;" />
-                                <div class="flex flex-wrap justify-center">
-                                    <div class="grow-0 shrink-0 basis-auto w-full lg:w-8/12 px-3">
-                                        <h5 class="text-black text-sm sm:text-lg font-bold mb-3">Fathin Naufal - Product Manager at Gojek</h5>
-                                        <p class="text-xs lg:text-sm font-medium text-gray-700 mb-4">
-                                            Track Product Development : How to Build Digital Product
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="carousel-item relative float-left w-full">
-                                <img class="rounded-full shadow-xl bg-gray-100 mb-6 mx-auto"
-                                    src="{{ asset('assets/img/alwy.png') }}" alt="avatar"
-                                    style="width: 150px; height:150px;" />
-                                <div class="flex flex-wrap justify-center">
-                                    <div class="grow-0 shrink-0 basis-auto w-full lg:w-8/12 px-3">
-                                        <h5 class="text-black text-sm sm:text-lg font-bold mb-3">Alwy Herfian S - CEO at Widya Robotic</h5>
-                                        <p class="text-xs lg:text-sm font-medium text-gray-700 mb-4">
-                                            Track Startup Journey : Startup Preneur Zillenials
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="carousel-item relative float-left w-full">
-                                <img class="rounded-full shadow-xl bg-gray-100 mb-6 mx-auto"
-                                    src="{{ asset('assets/img/andrean.png') }}" alt="avatar"
-                                    style="width: 150px; height:150px;" />
-                                <div class="flex flex-wrap justify-center">
-                                    <div class="grow-0 shrink-0 basis-auto w-full lg:w-8/12 px-3">
-                                        <h5 class="text-black text-sm sm:text-lg font-bold mb-3">Andrean N - CEO at WHOUSE</h5>
-                                        <p class="text-xs lg:text-sm font-medium text-gray-700 mb-4">
-                                            Track Startup Journey : From Engineer to be Entrepreneur
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="carousel-item relative float-left w-full">
-                                <img class="rounded-full shadow-xl bg-gray-100 mb-6 mx-auto"
-                                    src="{{ asset('assets/img/delta.png') }}" alt="avatar"
-                                    style="width: 150px; height:150px;" />
-                                <div class="flex flex-wrap justify-center">
-                                    <div class="grow-0 shrink-0 basis-auto w-full lg:w-8/12 px-3">
-                                        <h5 class="text-black text-sm sm:text-lg font-bold mb-3">Delta Purna W - CEO at Qiscus</h5>
-                                        <p class="text-xs lg:text-sm font-medium text-gray-700 mb-4">
-                                            Track Startup Journey : From Engineer to be Entrepreneur
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- end loop data -->
-                        </div>
-                        <button
-                            class="carousel-control-prev absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline left-0"
-                            type="button" data-bs-target="#carouselsejarah" data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon inline-block bg-no-repeat" aria-hidden="true"></span>
-                            <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button
-                            class="carousel-control-next absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline right-0"
-                            type="button" data-bs-target="#carouselsejarah" data-bs-slide="next">
-                            <span class="carousel-control-next-icon inline-block bg-no-repeat" aria-hidden="true"></span>
-                            <span class="visually-hidden">Next</span>
-                        </button>
-                    </div>
-                </div>
-                <br>
-                <div class="mt-6 flex justify-center">
-                    <iframe class="w-full h-[50vh]" src="https://www.youtube.com/embed/PfyFWusTsYs" frameborder="0"></iframe>
-                </div>
-            </section>
-
-            {{-- <br>
-            <p class="mt-3 text-xs lg:text-sm">Sayangnya tempat terbatas. Siapa cepat dia dapat! Yuks Daftar Segera!</p>
-            <br>
-            <div class="mt-6">
-                <a class="text-xs lg:text-sm button-color p-3 rounded-xl shadow-md hover:bg-orange-700 hover:shadow-lg active:bg-orange-800 active:shadow-lg"
-                    href="{{ route('event.index') }}">Daftar Sekarang</a>
-            </div> --}}
-        </section>
-
         <!-- main issue -->
         <div id="main-issue">
             <h1 class="mt-14 p-700 text-sm sm:text-[20px] lg:text-[30px] lg:leading-[46px]">PERMASALAHAN DI INDONESIA
@@ -749,8 +650,7 @@
 
         {{-- mentor --}}
         <h1 class="mt-14 p-700 text-sm sm:text-[20px] lg:text-[30px] lg:leading-[46px]">Mentor</h1>
-        <div
-            class="mt-6 mb-[164px] flex flex-col sm:grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-0.5 sm:gap-7 lg:gap-4 items-center">
+        <div class="mt-6 flex flex-col sm:grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-0.5 sm:gap-7 lg:gap-4 items-center">
             <div class="flex justify-center mb-3 h-full">
                 <div class="rounded-lg shadow-lg bg-white max-w-sm">
                     <a href="#!">
@@ -866,7 +766,7 @@
                             src="{{ asset('assets/img/mentor/arifiyanto.jpeg') }}" alt="" />
                     </a>
                     <div class="p-3">
-                        <h5 class="p-700 text-black text-base font-medium mb-1 uppercase">Arifiyanto Hadinegoro </h5>
+                        <h5 class="p-700 text-black text-base font-medium mb-1 uppercase">Arifiyanto Hadinegoro</h5>
                         <p class="text-gray-700 mb-3 text-xs">
                             Networking, Hardware 
                         </p>
@@ -880,14 +780,213 @@
                     </div>
                 </div>
             </div>
+            <div class="flex justify-center mb-3 h-full">
+                <div class="rounded-lg shadow-lg bg-white max-w-sm">
+                    <a href="#!">
+                        <img class="h-[200px] w-[250px] object-cover rounded-t-lg "
+                            src="{{ asset('assets/img/mentor/jeki.jpeg') }}" alt="" />
+                    </a>
+                    <div class="p-3">
+                        <h5 class="p-700 text-black text-base font-medium mb-1 uppercase">Jeki Kuswanto</h5>
+                        <p class="text-gray-700 mb-3 text-xs">
+                            IoT Analyst 
+                        </p>
+                        <p class="text-gray-700 text-xs text-left">
+                            Experience :
+                        </p>
+                        <ul class="text-gray-700 mb-2 text-xs text-left list-disc px-3">
+                            <li>Founder Gablind</li>
+                            <li>Founder Digital Farm</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-center mb-3 h-full">
+                <div class="rounded-lg shadow-lg bg-white max-w-sm">
+                    <a href="#!">
+                        <img class="h-[200px] w-[250px] object-cover rounded-t-lg "
+                            src="{{ asset('assets/img/mentor/arvin.jpeg') }}" alt="" />
+                    </a>
+                    <div class="p-3">
+                        <h5 class="p-700 text-black text-base font-medium mb-1 uppercase">Arvin<br>Claudy Frobenius</h5>
+                        <p class="text-gray-700 mb-3 text-xs">
+                            System Analysis, Design UI/UX,<br>Business Development 
+                        </p>
+                        <p class="text-gray-700 text-xs text-left">
+                            Experience :
+                        </p>
+                        <ul class="text-gray-700 mb-2 text-xs text-left list-disc px-3">
+                            <li>COO PT. Rapidev<br>Inovasi Nusantara</li>
+                            <li>Manager Incubation<br>Amikom Business Park</li>
+                            <li>Mentor Program LPDB<br>Kemenkop Inkubasi Akselerasi</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-center mb-3 h-full">
+                <div class="rounded-lg shadow-lg bg-white max-w-sm">
+                    <a href="#!">
+                        <img class="h-[200px] w-[250px] object-cover rounded-t-lg "
+                            src="{{ asset('assets/img/mentor/krisna.jpeg') }}" alt="" />
+                    </a>
+                    <div class="p-3">
+                        <h5 class="p-700 text-black text-base font-medium mb-1 uppercase">I Gusti Gede<br>Krisna Dewanta</h5>
+                        <p class="text-gray-700 mb-3 text-xs">
+                            Solution Architect, Networking,<br>Technical cloud conceptor
+                        </p>
+                        <p class="text-gray-700 text-xs text-left">
+                            Experience :
+                        </p>
+                        <ul class="text-gray-700 mb-2 text-xs text-left list-disc px-3">
+                            <li>ViBiCloud<br>Solution Architect</li>
+                            <li>Samafitro Business<br>Imaging Solution</li>
+                            <li>MNC Media<br>Programming Staff iNewsTV</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-center mb-3 h-full">
+                <div class="rounded-lg shadow-lg bg-white max-w-sm">
+                    <a href="#!">
+                        <img class="h-[200px] w-[250px] object-cover rounded-t-lg "
+                            src="{{ asset('assets/img/mentor/ryanno.jpeg') }}" alt="" />
+                    </a>
+                    <div class="p-3">
+                        <h5 class="p-700 text-black text-base font-medium mb-1 uppercase">Ryanno Lukman</h5>
+                        <p class="text-gray-700 mb-3 text-xs">
+                            Business solution,<br>Cloud business conceptor,<br>Business strategic
+                        </p>
+                        <p class="text-gray-700 text-xs text-left">
+                            Experience :
+                        </p>
+                        <ul class="text-gray-700 mb-2 text-xs text-left list-disc px-3">
+                            <li>ViBiCloud<br>Business Solution</li>
+                            <li>TYCHE Consultant<br>Head of Business Development</li>
+                            <li>PT TBU<br>Corporate Secretary</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-center mb-3 h-full">
+                <div class="rounded-lg shadow-lg bg-white max-w-sm">
+                    <a href="#!">
+                        <img class="h-[200px] w-[250px] object-cover rounded-t-lg "
+                            src="{{ asset('assets/img/mentor/hasan.jpeg') }}" alt="" />
+                    </a>
+                    <div class="p-3">
+                        <h5 class="p-700 text-black text-base font-medium mb-1 uppercase">FAHRUDDIN HASAN</h5>
+                        <p class="text-gray-700 mb-3 text-xs">
+                            HARDWARE DEVELOPER, IOT<br>ELECTRONICS ENGINEER, ROBOTICS
+                        </p>
+                        <p class="text-gray-700 text-xs text-left">
+                            Experience :
+                        </p>
+                        <ul class="text-gray-700 mb-2 text-xs text-left list-disc px-3">
+                            <li>World Skill Competition 2015<br>Sao Paulo Brazil</li>
+                            <li>Speaker at Start up talk<br>#28 Universitas Amikom</li>
+                            <li>Speaker at<br>Technopreneur Talk UMY</li>
+                            <li>Founder Jogjakartech</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
+
+        <!-- multitrack seminar -->
+        <section>
+            <h1 class="mt-14 p-700 text-sm sm:text-[20px] lg:text-[30px] lg:leading-[46px]">Multitrack Seminar AMICTA 2022</h1>
+            <p class="mt-3 text-xs lg:text-sm">Empat narasumber professional industri teknologi, secara
+                paralel berbagi kisah sukses, lesson learned dalam perjalanannya menyelesaikan berbagai masalah menggunakan
+                teknologi. Inspiring and Insightful.</p>
+            <br>
+            <!-- pemateri -->
+            <section class="px-[8px] sm:px-[50px] lg:px-[150px]">
+                <div class="text-center bg-white drop-shadow-lg rounded-3xl py-6">
+                    <h2 class="text-xl sm:text-3xl p-700 mb-12 text-black">Pemateri</h2>
+
+                    <div id="carouselsejarah" class="carousel slide relative carousel-dark" data-bs-ride="carousel">
+                        <div class="carousel-inner relative w-full overflow-hidden">
+                            <!-- loop card data pemateri -->
+                            <div class="carousel-item active relative float-left w-full">
+                                <img class="rounded-full shadow-xl bg-gray-100 mb-6 mx-auto"
+                                    src="{{ asset('assets/img/fathin.png') }}" alt="avatar"
+                                    style="width: 150px; height:150px;" />
+                                <div class="flex flex-wrap justify-center">
+                                    <div class="grow-0 shrink-0 basis-auto w-full lg:w-8/12 px-3">
+                                        <h5 class="text-black text-sm sm:text-lg font-bold mb-3">Fathin Naufal - Product Manager at Gojek</h5>
+                                        <p class="text-xs lg:text-sm font-medium text-gray-700 mb-4">
+                                            Track Product Development : How to Build Digital Product
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item relative float-left w-full">
+                                <img class="rounded-full shadow-xl bg-gray-100 mb-6 mx-auto"
+                                    src="{{ asset('assets/img/alwy.png') }}" alt="avatar"
+                                    style="width: 150px; height:150px;" />
+                                <div class="flex flex-wrap justify-center">
+                                    <div class="grow-0 shrink-0 basis-auto w-full lg:w-8/12 px-3">
+                                        <h5 class="text-black text-sm sm:text-lg font-bold mb-3">Alwy Herfian S - CEO at Widya Robotic</h5>
+                                        <p class="text-xs lg:text-sm font-medium text-gray-700 mb-4">
+                                            Track Startup Journey : Startup Preneur Zillenials
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item relative float-left w-full">
+                                <img class="rounded-full shadow-xl bg-gray-100 mb-6 mx-auto"
+                                    src="{{ asset('assets/img/andrean.png') }}" alt="avatar"
+                                    style="width: 150px; height:150px;" />
+                                <div class="flex flex-wrap justify-center">
+                                    <div class="grow-0 shrink-0 basis-auto w-full lg:w-8/12 px-3">
+                                        <h5 class="text-black text-sm sm:text-lg font-bold mb-3">Andrean N - CEO at WHOUSE</h5>
+                                        <p class="text-xs lg:text-sm font-medium text-gray-700 mb-4">
+                                            Track Startup Journey : From Engineer to be Entrepreneur
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item relative float-left w-full">
+                                <img class="rounded-full shadow-xl bg-gray-100 mb-6 mx-auto"
+                                    src="{{ asset('assets/img/delta.png') }}" alt="avatar"
+                                    style="width: 150px; height:150px;" />
+                                <div class="flex flex-wrap justify-center">
+                                    <div class="grow-0 shrink-0 basis-auto w-full lg:w-8/12 px-3">
+                                        <h5 class="text-black text-sm sm:text-lg font-bold mb-3">Delta Purna W - CEO at Qiscus</h5>
+                                        <p class="text-xs lg:text-sm font-medium text-gray-700 mb-4">
+                                            Track Startup Journey : From Engineer to be Entrepreneur
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end loop data -->
+                        </div>
+                        <button
+                            class="carousel-control-prev absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline left-0"
+                            type="button" data-bs-target="#carouselsejarah" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon inline-block bg-no-repeat" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button
+                            class="carousel-control-next absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline right-0"
+                            type="button" data-bs-target="#carouselsejarah" data-bs-slide="next">
+                            <span class="carousel-control-next-icon inline-block bg-no-repeat" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+                <br>
+                <div class="mb-[164px] mt-6 flex justify-center">
+                    <iframe class="w-full h-[50vh]" src="https://www.youtube.com/embed/PfyFWusTsYs" frameborder="0"></iframe>
+                </div>
+            </section>
+        </section>        
 
     </section>
 
     <!-- sejarah amicta -->
     <section class="px-[8px] sm:px-[50px] lg:px-[150px] relative">
-        <div
-            class="text-center bg-white drop-shadow-lg rounded-3xl py-6 absolute top-[-90px] left-[10px] right-[10px] sm:left-[150px] sm:right-[150px]">
+        <div class="text-center bg-white drop-shadow-lg rounded-3xl py-6 absolute top-[-90px] left-[10px] right-[10px] sm:left-[150px] sm:right-[150px]">
             <h2 class="text-xl sm:text-3xl p-700 mb-5">Sejarah AMICTA</h2>
 
             <div id="carouselsejarah" class="carousel slide relative carousel-dark" data-bs-interval="false"
