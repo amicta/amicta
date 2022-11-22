@@ -6,6 +6,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\ParticipantController;
 use App\Http\Controllers\CompetitionController;
+use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\SubmissionController;
 use App\Http\Controllers\TeamController;
 
@@ -24,10 +25,6 @@ Route::get('/', function () {
     return view('welcome');
 })->name('welcome');
 
-Route::get('/ktm', function () {
-    return view('pages.team.idcard');
-})->name('ktm');
-
 Route::get('/seminar', [EventController::class, 'index'])->name('event.index');
 Route::post('/seminar', [ParticipantController::class, 'store'])->name('event.register');
 
@@ -41,6 +38,8 @@ Route::group(['middleware' => ['auth:web']], function () {
     })->name('home');
 
     Route::get('/dashboard', [HomeController::class, 'dashboard'])->name('dashboard');
+
+    Route::get('/profile/ktm', [ProfileController::class, 'ktm'])->name('profile.ktm');
 
     Route::resource('/competitions', CompetitionController::class);
     Route::get('/funcoding', [CompetitionController::class, 'funcoding'])->name('funcoding');
