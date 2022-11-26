@@ -11,6 +11,7 @@
                     <i class="fas fa-plus"></i> Baru
                 </button>
             </div> --}}
+            <a href="{{ route('admin.submissions.export') }}" class="btn btn-success btn-icon icon-left mx-2" target="_blank"><i class="fas fa-file-download mr-1"></i>EXPORT EXCEL</a>
         </div>
 
         @include('admin.partials.flash')
@@ -42,8 +43,8 @@
                                             <td scope="row" class="text-center">{{ $loop->iteration }}</td>
                                             <td>{{ $submission->competition->name }}</td>
                                             <td>{{ $submission->user->name }}</td>
-                                            <td>{{ $submission->team->name ?? '-'}}</td>
-                                            <td>{{ $submission->team->product ?? '-'}}</td>
+                                            <td>{{ $submission->team->name ?? '-' }}</td>
+                                            <td>{{ $submission->team->product ?? '-' }}</td>
                                             <td>{{ $submission->assignment->title }}</td>
                                             <td>
                                                 @if ($submission->status == 'accepted')
@@ -65,9 +66,10 @@
                                             </td> --}}
                                             <td>
                                                 <div class="btn-group">
-                                                    <a href="https://wa.me/62{{ ltrim($submission->user->phone, "0") }}" target="_blank" class="btn btn-sm btn-success btn-icon mr-1">
+                                                    <a href="https://wa.me/62{{ ltrim($submission->user->phone, '0') }}"
+                                                        target="_blank" class="btn btn-sm btn-success btn-icon mr-1">
                                                         <i class="fab fa-whatsapp"></i> WhatsApp
-                                                      </a>
+                                                    </a>
                                                     <a href="{{ route('admin.submissions.edit', ['submission' => $submission['id']]) }}"
                                                         class="btn btn-sm btn-warning btn-icon mr-1">
                                                         <i class="fas fa-eye"></i> Review
