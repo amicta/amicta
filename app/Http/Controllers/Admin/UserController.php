@@ -56,4 +56,15 @@ class UserController extends Controller
             'message' => 'Akun Peserta berhasil dihapus!'
         ]);
     }
+
+    public function ktm()
+    {
+        $data['review'] = User::where('status', 'review')->get();
+        $data['unverified'] = User::where('status', 'unverified')->get();
+        $data['verified'] = User::where('status', 'verified')->get();
+
+        // dd($data);
+
+        return view('admin.pages.users.ktm', compact('data'));
+    }
 }

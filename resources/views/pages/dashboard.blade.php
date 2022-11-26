@@ -11,6 +11,9 @@
                 </div>
             </div>
         </div>
+
+        @include('partials.flash')
+
         <div class="row dashboard">
             <div class="col-md-6">
                 <div class="row">

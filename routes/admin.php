@@ -12,7 +12,10 @@ Route::group(['middleware' => ['auth:admin']], function () {
 
     Route::resource('/competitions', 'CompetitionController')->except('create', 'show');
     Route::resource('/categories', 'CategoryController')->except('create', 'show');
+
+    Route::get('/users/ktm', 'UserController@ktm')->name('ktm');
     Route::resource('/users', 'UserController')->except('create', 'show');
+
     Route::resource('/teams', 'TeamController')->except('create', 'show');
     Route::resource('/assignments', 'AssignmentController')->except('create', 'show');
     Route::resource('/submissions', 'SubmissionController')->except('create');

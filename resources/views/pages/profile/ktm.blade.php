@@ -8,8 +8,10 @@
             <h4 style="color: #206F80">Upload KTM (Kartu Tanda Mahasiswa)</h4>
         </div>
 
+        {{-- <img src="{{ $user->getFirstMediaUrl('ktm') }}" alt=""> --}}
         <div class="card-body">
-            <form method="POST" action="{{ route('register') }}">
+
+            <form action="{{ route('ktm.store') }}" method="POST" enctype="multipart/form-data">
                 @csrf
 
                 <div class="form-group">
@@ -18,19 +20,12 @@
                 </div>
                 <div class="form-group">
                     <label for="nim">NIM</label>
-                    <input id="nim" type="text" class="form-control" name="nim" value="{{ $user->nim }}"
-                        placeholder="xx.xx.xxxx" required disabled>
-
-                    @error('nim')
-                        <span class="invalid-feedback" role="alert">
-                            <strong>{{ $message }}</strong>
-                        </span>
-                    @enderror
+                    <input id="nim" type="text" class="form-control" name="nim" value="{{ $user->nim }}" required disabled>
                 </div>
                 <div class="form-group" style="margin-bottom: 50px">
                     <div class="section-title">Upload File</div>
                     <div class="custom-file">
-                        <input type="file" class="custom-file-input @error('ktm') is-invalid @enderror" id="customFile">
+                        <input type="file" class="custom-file-input @error('ktm') is-invalid @enderror" id="customFile" name="ktm" required>
                         <label class="custom-file-label" for="customFile">Choose file</label>
                     </div>
 
