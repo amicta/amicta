@@ -25,6 +25,7 @@
                         </div>
                     </div>
                     <div class="col-md-12">
+                        @if ($submission->is_open)
                         <div class="card" style="padding: 25px;">
                             <form action="{{ route('submissions.update', ['submission' => $submission->id]) }}"
                                 method="POST">
@@ -44,6 +45,12 @@
                                     type="submit">Kirim Submisi</button>
                             </form>
                         </div>
+                        @else
+                        <div class="alert alert-danger alert-has-icon alert-dismissible show fade">
+                            <div class="alert-icon"><i class="far fa-lightbulb"></i></div>
+                            Pengumpulan submisi sudah ditutup!
+                        </div>
+                        @endif
                     </div>
                 </div>
             </div>

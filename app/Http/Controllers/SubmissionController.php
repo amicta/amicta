@@ -35,6 +35,7 @@ class SubmissionController extends Controller
 
     public function edit(Submission $submission)
     {
+        // dd($submission->is_open);
         return view('pages.submission.edit', compact('submission'));
     }
 

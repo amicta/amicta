@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -18,6 +19,17 @@ class Submission extends Model
         'competition_id',
         'assignment_id',
     ];
+
+    protected $appends = [
+        'is_open',
+    ];
+
+    public function getIsOpenAttribute()
+    {
+        $now = Carbon::now()->format('Y-m-d H:i:s');
+
+        return $this->assignment->due_date >= $now;
+    }
 
     public function assignment()
     {
