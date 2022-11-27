@@ -29,6 +29,11 @@ class Submission extends Model
         return $this->belongsTo(Competition::class);
     }
 
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
+    }
+
     public function user()
     {
         return $this->belongsTo(User::class);
