@@ -24,7 +24,17 @@ class ParticipantController extends Controller
 
         return redirect()->route('event.index')->with('status', [
             'element' => 'success',
-            'message' => 'Pendaftaran berhasil!'
+            'message' => 'Pendaftaran berhasil! Silahkan menunggu email undangan dari kami'
+        ]);
+    }
+
+    public function registerCelebration(ParticipantCreateRequest $request)
+    {
+        Participant::create($request->validated());
+
+        return redirect()->route('celebration.index')->with('status', [
+            'element' => 'success',
+            'message' => 'Pendaftaran berhasil! Silahkan menunggu email undangan dari kami'
         ]);
     }
 }

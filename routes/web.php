@@ -27,6 +27,9 @@ Route::get('/', function () {
 Route::get('/seminar', [EventController::class, 'index'])->name('event.index');
 Route::post('/seminar', [ParticipantController::class, 'store'])->name('event.register');
 
+Route::get('/celebration', [EventController::class, 'celebration'])->name('celebration.index');
+Route::post('/celebration', [ParticipantController::class, 'registerCelebration'])->name('celebration.register');
+
 Auth::routes();
 // Auth::routes(['register' => false]);
 
