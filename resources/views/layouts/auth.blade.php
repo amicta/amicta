@@ -41,16 +41,12 @@
                     </div>
 
                     @if (session()->has('info'))
-                        <div class="alert alert-primary">
+                        <div class="alert alert-info">
                             {{ session()->get('info') }}
                         </div>
                     @endif
 
-                    @if (session()->has('status'))
-                        <div class="alert alert-info">
-                            {{ session()->get('status') }}
-                        </div>
-                    @endif
+                    @include('partials.flash')
 
                     @yield('content')
 

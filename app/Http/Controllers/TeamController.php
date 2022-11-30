@@ -12,6 +12,18 @@ use Illuminate\Support\Facades\Auth;
 
 class TeamController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware(function ($request, $next) {
+            if(Auth::user()->status == 'unverified')
+            {
+                return redirect()->route('ktm');
+            }
+
+            return $next($request);
+        });
+    }
+    
     public function index(User $user)
     {
         $user = Auth::user();

@@ -8,6 +8,7 @@ use App\Http\Controllers\ParticipantController;
 use App\Http\Controllers\CompetitionController;
 use App\Http\Controllers\SubmissionController;
 use App\Http\Controllers\TeamController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -38,8 +39,11 @@ Route::group(['middleware' => ['auth:web']], function () {
 
     Route::get('/dashboard', [HomeController::class, 'dashboard'])->name('dashboard');
 
+    Route::get('/profile/ktm', [UserController::class, 'ktm'])->name('ktm');
+    Route::post('/profile/ktm', [UserController::class, 'storeKtm'])->name('ktm.store');
+
+    Route::get('/competitions/funcoding', [CompetitionController::class, 'funcoding'])->name('funcoding');
     Route::resource('/competitions', CompetitionController::class);
-    Route::get('/funcoding', [CompetitionController::class, 'funcoding'])->name('funcoding');
 
     Route::resource('/teams', TeamController::class);
     Route::resource('/submissions', SubmissionController::class);

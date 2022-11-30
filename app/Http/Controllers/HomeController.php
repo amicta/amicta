@@ -15,6 +15,15 @@ class HomeController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
+
+        $this->middleware(function ($request, $next) {
+            if(Auth::user()->status == 'unverified')
+            {
+                return redirect()->route('ktm');
+            }
+
+            return $next($request);
+        });
     }
 
     /**
