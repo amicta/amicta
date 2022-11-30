@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SEMINAR AMICTA 2022 | Amikom Innovative, Creative, Technology, Awards</title>
+    <title>CELEBRATION DAY AMICTA 2022 | Amikom Innovative, Creative, Technology, Awards</title>
     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/font.css') }}">
@@ -78,9 +78,13 @@
                                     <a class="dropdown-item text-xs sm:text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100"
                                         href="{{ route('welcome') }}">Home</a>
                                 </li>
-                                <li>
+                                {{-- <li>
                                     <a class="dropdown-item text-xs sm:text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100"
                                         href="{{ route('event.index') }}">Seminar</a>
+                                </li> --}}
+                                <li>
+                                    <a class="dropdown-item text-xs sm:text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100"
+                                        href="{{ route('celebration.index') }}">Celebration Day</a>
                                 </li>
                                 <li>
                                     <a class="dropdown-item text-xs sm:text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100"
@@ -104,7 +108,8 @@
             <!-- default navbar -->
             <div class="flex text-white p-700 text-center navbar">
                 <div class="z-10 self-center text-xs mx-3 lg:text-sm"><a href="{{ route('welcome') }}">Home</a></div>
-                <div class="z-10 self-center text-xs mx-3 lg:text-sm"><a href="{{ route('event.index') }}">Seminar</a>
+                {{-- <div class="z-10 self-center text-xs mx-3 lg:text-sm"><a href="{{ route('event.index') }}">Seminar</a> --}}
+                <div class="z-10 self-center text-xs mx-3 lg:text-sm"><a href="{{ route('celebration.index') }}">Celebration Day</a>
                 </div>
                 <div class="z-10 self-center text-xs mx-3 lg:text-sm"><a
                         href="{{ route('welcome') }}#main-issue">Lomba</a></div>

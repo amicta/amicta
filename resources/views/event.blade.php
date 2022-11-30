@@ -79,9 +79,13 @@
                                     <a class="dropdown-item text-xs sm:text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100"
                                         href="{{ route('welcome') }}">Home</a>
                                 </li>
-                                <li>
+                                {{-- <li>
                                     <a target="_blank" class="dropdown-item text-xs sm:text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100"
                                         href="{{ route('event.index') }}">Seminar</a>
+                                </li> --}}
+                                <li>
+                                    <a target="_blank" class="dropdown-item text-xs sm:text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100"
+                                        href="{{ route('celebration.index') }}">Celebration Day</a>
                                 </li>
                                 <li>
                                     <a target="_blank" class="dropdown-item text-xs sm:text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100"
@@ -109,8 +113,8 @@
             <!-- default navbar -->
             <div class="flex text-white p-700 text-center navbar">
                 <div class="z-10 self-center text-xs mx-3 lg:text-sm"><a href="{{ route('welcome') }}">Home</a></div>
-                <div target="_blank" class="z-10 self-center text-xs mx-3 lg:text-sm"><a
-                        href="{{ route('event.index') }}">Seminar</a>
+                {{-- <div target="_blank" class="z-10 self-center text-xs mx-3 lg:text-sm"><a href="{{ route('event.index') }}">Seminar</a> --}}
+                <div class="z-10 self-center text-xs mx-3 lg:text-sm"><a href="{{ route('celebration.index') }}">Celebration Day</a>
                 </div>
                 <div target="_blank" class="z-10 self-center text-xs mx-3 lg:text-sm"><a
                         href="https://drive.google.com/drive/folders/1ak6mo6ZH35nphXSeM-rN5uPd4h5rgKAN?usp=share_link">Rulebook</a>
