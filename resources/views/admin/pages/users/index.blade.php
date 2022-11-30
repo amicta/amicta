@@ -45,7 +45,17 @@
                                             @forelse ($competition->users as $user)
                                                 <tr>
                                                     <td scope="row" class="text-center">{{ $loop->iteration }}</td>
-                                                    <td>{{ $user->nim }}</td>
+                                                    {{-- <td><img src="{{ $user->getFirstMediaUrl('ktm') }}" alt=""></td> --}}
+                                                    <td>
+                                                        <a href="{{ $user->getFirstMediaUrl('ktm') }}" target="_blank"
+                                                            class="@if ($user->status == 'unverified') text-danger
+                                                            @elseif ($user->status == 'review')
+                                                            text-primary
+                                                            @else
+                                                            text-success @endif">
+                                                            {{ $user->nim }}
+                                                        </a>
+                                                    </td>
                                                     <td>{{ $user->name }}</td>
                                                     <td>{{ $user->program_study }}</td>
                                                     <td>{{ $user->email }}</td>

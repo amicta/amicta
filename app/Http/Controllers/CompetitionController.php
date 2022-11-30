@@ -12,6 +12,18 @@ use Illuminate\Support\Facades\Auth;
 
 class CompetitionController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware(function ($request, $next) {
+            if(Auth::user()->status == 'unverified')
+            {
+                return redirect()->route('ktm');
+            }
+
+            return $next($request);
+        });
+    }
+
     public function index()
     {
         $data['competitions'] = Competition::with(['categories', 'teams'])->where('is_publish', true)->get();

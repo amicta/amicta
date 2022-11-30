@@ -24,10 +24,15 @@
                 </div>
                 <div class="form-group" style="margin-bottom: 50px">
                     <div class="section-title">Upload File</div>
-                    <div class="custom-file">
+                    {{-- <div class="custom-file">
                         <input type="file" class="custom-file-input @error('ktm') is-invalid @enderror" id="customFile" name="ktm" required>
-                        <label class="custom-file-label" for="customFile">Choose file</label>
-                    </div>
+                        <label class="custom-file-label" for="customFile"></label>
+                    </div> --}}
+
+                    <div class="input-group mb-3">
+                        <input type="file" class="form-control @error('ktm') is-invalid @enderror" id="inputGroupFile02" name="ktm" required>
+                        <label class="input-group-text" for="inputGroupFile02">Browse</label>
+                      </div>
 
                     @error('ktm')
                         <span class="invalid-feedback" role="alert">

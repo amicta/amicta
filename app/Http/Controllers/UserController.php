@@ -65,7 +65,7 @@ class UserController extends Controller
             $user->status = 'review';
             $user->save();
 
-            return redirect()->route('home')->with('status', [
+            return redirect()->route('dashboard')->with('status', [
                 'element' => 'success',
                 'message' => 'Berhasil mengupload KTM! KTM kamu akan segera kami verifikasi'
             ]);
