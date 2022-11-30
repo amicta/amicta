@@ -13,4 +13,11 @@ class EventController extends Controller
 
         return view('event', compact('data'));
     }
+
+    public function celebration()
+    {
+        $data['events'] = Event::where('is_publish', true)->get();
+
+        return view('celebration', compact('data'));
+    }
 }

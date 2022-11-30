@@ -23,6 +23,11 @@ class EventCreateRequest extends FormRequest
      */
     public function rules()
     {
-        
+        return [
+            'name' => 'required|string|min:1',
+            'location' => 'required|string|min:1',
+            'quota' => 'required|integer|min:1',
+            'description' => 'nullable|string|min:1',
+        ];
     }
 }
