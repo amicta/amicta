@@ -11,6 +11,7 @@
                     <i class="fas fa-plus"></i> Baru
                 </button>
             </div> --}}
+            <a href="{{ route('admin.submissions.export') }}" class="btn btn-success btn-icon icon-left mx-2" target="_blank"><i class="fas fa-file-download mr-1"></i>EXPORT EXCEL</a>
         </div>
 
         @include('admin.partials.flash')
@@ -28,8 +29,9 @@
                                     <tr>
                                         <th class="text-center">#</th>
                                         <th>Lomba</th>
-                                        <th>Tim</th>
                                         <th>Peserta/Ketua</th>
+                                        <th>Tim</th>
+                                        <th>Produk</th>
                                         <th>Tugas</th>
                                         <th>Status</th>
                                         <th>Action</th>
@@ -40,8 +42,9 @@
                                         <tr>
                                             <td scope="row" class="text-center">{{ $loop->iteration }}</td>
                                             <td>{{ $submission->competition->name }}</td>
-                                            <td>{{ $submission->team->name ?? '-'}}</td>
                                             <td>{{ $submission->user->name }}</td>
+                                            <td>{{ $submission->team->name ?? '-' }}</td>
+                                            <td>{{ $submission->team->product ?? '-' }}</td>
                                             <td>{{ $submission->assignment->title }}</td>
                                             <td>
                                                 @if ($submission->status == 'accepted')
@@ -63,8 +66,12 @@
                                             </td> --}}
                                             <td>
                                                 <div class="btn-group">
+                                                    <a href="https://wa.me/62{{ ltrim($submission->user->phone, '0') }}"
+                                                        target="_blank" class="btn btn-sm btn-success btn-icon mr-1">
+                                                        <i class="fab fa-whatsapp"></i> WhatsApp
+                                                    </a>
                                                     <a href="{{ route('admin.submissions.edit', ['submission' => $submission['id']]) }}"
-                                                        class="btn btn-sm btn-warning btn-icon">
+                                                        class="btn btn-sm btn-warning btn-icon mr-1">
                                                         <i class="fas fa-eye"></i> Review
                                                     </a>
                                                     <form
@@ -73,7 +80,7 @@
                                                         @csrf
                                                         @method('delete')
                                                         <button type="submit"
-                                                            class="btn btn-sm btn-outline-danger btn-icon mx-1 delete_confirm">
+                                                            class="btn btn-sm btn-outline-danger btn-icon mr-1 delete_confirm">
                                                             <i class="fas fa-trash"></i> Hapus
                                                         </button>
                                                     </form>

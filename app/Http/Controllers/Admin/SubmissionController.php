@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Exports\SubmissionExport;
 use App\Http\Controllers\Controller;
 use App\Models\Assignment;
 use App\Models\Competition;
@@ -74,5 +75,9 @@ class SubmissionController extends Controller
             'element' => 'success',
             'message' => 'Submisi berhasil dihapus!'
         ]);
+    }
+
+    public function export(){
+        return \Maatwebsite\Excel\Facades\Excel::download(new SubmissionExport,'Submission.xlsx');
     }
 }

@@ -18,6 +18,8 @@ Route::group(['middleware' => ['auth:admin']], function () {
 
     Route::resource('/teams', 'TeamController')->except('create', 'show');
     Route::resource('/assignments', 'AssignmentController')->except('create', 'show');
+
+    Route::get('/submissions/export', 'SubmissionController@export')->name('submissions.export');
     Route::resource('/submissions', 'SubmissionController')->except('create');
 });
 
