@@ -6,11 +6,14 @@
     <div id="dashboard" class="container section">
         <div class="row justify-content-center">
             <div class="col-md-12">
-                <div class="card section-header" style="border-radius: 10px;align-items: unset; margin-bottom: unset;">
+                <div class="card section-header mb-3" style="border-radius: 10px;align-items: unset;">
                     <h1>Dashboard</h1>
                 </div>
             </div>
         </div>
+
+        @include('partials.flash')
+
         <div class="row dashboard">
             <div class="col-md-6">
                 <div class="row">

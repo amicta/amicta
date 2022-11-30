@@ -54,8 +54,8 @@
     <section id="particles-js"></section>
     <!-- navbar -->
     <div id="navbar" class="grid grid-cols-3 items-center px-2 sm:px-12">
-        <div class="w-20 lg:w-40"><a href="index.html"><img src="{{ asset('assets/img/logo-white.png') }}"
-                    alt=""></a></div>
+        <a class="z-10 w-20 lg:w-30 pt-3" href="{{ route('welcome') }}"><img
+                src="{{ asset('assets/img/logo-white.png') }}" alt=""></a>
         <div class="col-span-2 justify-self-end">
             <!-- drop navbar -->
             <div class="drop z-51">
@@ -64,7 +64,8 @@
                         <div class="dropdown relative">
                             <button
                                 class="z-51 dropdown-toggle px-6 py-2.5 bg-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-gray-200 hover:shadow-lg focus:bg-gray-200 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-gray-300 active:shadow-lg active:text-black transition duration-150 ease-in-out flex items-center whitespace-nowrap"
-                                type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+                                aria-expanded="false">
                                 <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="caret-down"
                                     class="w-2" role="img" xmlns="http://www.w3.org/2000/svg"
                                     viewBox="0 0 320 512">
@@ -79,8 +80,12 @@
                                         href="{{ route('welcome') }}">Home</a>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item text-xs sm:text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100"
+                                    <a target="_blank" class="dropdown-item text-xs sm:text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100"
                                         href="{{ route('event.index') }}">Seminar</a>
+                                </li>
+                                <li>
+                                    <a target="_blank" class="dropdown-item text-xs sm:text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100"
+                                        href="https://drive.google.com/drive/folders/1ak6mo6ZH35nphXSeM-rN5uPd4h5rgKAN?usp=share_link">Rulebook</a>
                                 </li>
                                 <li>
                                     <a class="dropdown-item text-xs sm:text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100"
@@ -92,8 +97,8 @@
                                 </li>
                                 <li>
                                     <a class="dropdown-item button-color rounded p-2 text-white text-xs sm:text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100"
-                                        href="#">
-                                        Rulebook Lomba
+                                        href="{{ route('login') }}" style="background-color: #F55553; color: white;">
+                                        Login
                                     </a>
                                 </li>
                             </ul>
@@ -104,15 +109,17 @@
             <!-- default navbar -->
             <div class="flex text-white p-700 text-center navbar">
                 <div class="z-10 self-center text-xs mx-3 lg:text-sm"><a href="{{ route('welcome') }}">Home</a></div>
-                <div class="z-10 self-center text-xs mx-3 lg:text-sm"><a href="{{ route('event.index') }}">Seminar</a>
+                <div target="_blank" class="z-10 self-center text-xs mx-3 lg:text-sm"><a
+                        href="{{ route('event.index') }}">Seminar</a>
                 </div>
-                <div class="z-10 self-center text-xs mx-3 lg:text-sm"><a
-                        href="{{ route('welcome') }}#main-issue">Lomba</a></div>
-                <div class="z-10 self-center text-xs mx-3 lg:text-sm"><a
-                        href="{{ route('welcome') }}#description">Tentang</a></div>
-                <a href="#"
+                <div target="_blank" class="z-10 self-center text-xs mx-3 lg:text-sm"><a
+                        href="https://drive.google.com/drive/folders/1ak6mo6ZH35nphXSeM-rN5uPd4h5rgKAN?usp=share_link">Rulebook</a>
+                </div>
+                <div class="z-10 self-center text-xs mx-3 lg:text-sm"><a href="{{ route('welcome') }}#main-issue">Lomba</a></div>
+                <div class="z-10 self-center text-xs mx-3 lg:text-sm"><a href="{{ route('welcome') }}#description">Tentang</a></div>
+                <a href="{{ route('login') }}"
                     class="z-10 self-center text-xs mx-3 lg:text-sm button-color p-3 rounded-xl shadow-md hover:bg-orange-700 hover:shadow-lg active:bg-orange-800 active:shadow-lg">
-                    Rulebook Lomba
+                    Login
                 </a>
             </div>
         </div>

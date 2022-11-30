@@ -1,11 +1,11 @@
 @extends('admin.layouts.app')
 
-@section('title', 'Peserta Lomba')
+@section('title', 'KTM Peserta')
 
 @section('content')
     <section class="section">
         <div class="section-header">
-            <h1>Peserta Lomba</h1>
+            <h1>KTM Peserta</h1>
             {{-- <div class="section-header-button">
                 <button class="btn btn-primary btn-icon icon-left" data-toggle="modal" data-target="#modal-add">
                     <i class="fas fa-plus"></i> Baru
@@ -15,18 +15,18 @@
 
         @include('admin.partials.flash')
 
-        @forelse ($data['competitions'] as $competition)
+        @forelse ($data as $user)
             <div class="row">
                 <div class="col-12">
                     <div class="card">
                         <div class="card-header">
-                            <h4>{{ $competition->name }}</h4>
+                            <h4>{{ $data }}</h4>
                             <div class="card-header-action">
-                                <a data-collapse="#competition-{{ $competition->id }}" class="btn btn-icon btn-warning"
-                                    href="#"><i class="fas fa-plus"></i></a>
+                                {{-- <a data-collapse="#user-{{ $user->id }}" class="btn btn-icon btn-warning"
+                                    href="#"><i class="fas fa-plus"></i></a> --}}
                             </div>
                         </div>
-                        <div class="collapse" id="competition-{{ $competition->id }}">
+                        <div class="collapse" id="user-id">
                             <div class="card-body">
                                 <div class="table-responsive">
                                     <table class="table table-striped" id="table-1">
@@ -42,20 +42,10 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            @forelse ($competition->users as $user)
+                                            {{-- @forelse ($user->users as $user)
                                                 <tr>
                                                     <td scope="row" class="text-center">{{ $loop->iteration }}</td>
-                                                    {{-- <td><img src="{{ $user->getFirstMediaUrl('ktm') }}" alt=""></td> --}}
-                                                    <td>
-                                                        <a href="{{ $user->getFirstMediaUrl('ktm') }}" target="_blank"
-                                                            class="@if ($user->status == 'unverified') text-danger
-                                                            @elseif ($user->status == 'review')
-                                                            text-primary
-                                                            @else
-                                                            text-success @endif">
-                                                            {{ $user->nim }}
-                                                        </a>
-                                                    </td>
+                                                    <td>{{ $user->nim }}</td>
                                                     <td>{{ $user->name }}</td>
                                                     <td>{{ $user->program_study }}</td>
                                                     <td>{{ $user->email }}</td>
@@ -63,9 +53,9 @@
 
                                                     <td>
                                                         <div class="btn-group">
-                                                            {{-- <a href="{{ route('admin.users.edit', ['competition' => $competition['id']]) }}" class="btn btn-sm btn-warning btn-icon">
+                                                            {{-- <a href="{{ route('admin.users.edit', ['user' => $user['id']]) }}" class="btn btn-sm btn-warning btn-icon">
                                                     <i class="fas fa-check"></i> Edit
-                                                    </a> --}}
+                                                    </a> --}
 
                                                             <form class="mx-1"
                                                                 action="{{ route('admin.users.update', ['user' => $user['id']]) }}"
@@ -73,8 +63,8 @@
                                                                 @csrf
                                                                 @method('patch')
 
-                                                                <input type="hidden" name="competition_id"
-                                                                    value="{{ $competition->id }}" />
+                                                                <input type="hidden" name="user_id"
+                                                                    value="{{ $user->id }}" />
                                                                 <button type="submit"
                                                                     class="btn btn-sm btn-danger btn-icon delete_confirm">
                                                                     <i class="fas fa-times-circle"></i> Hapus Peserta
@@ -98,7 +88,7 @@
                                                 <tr>
                                                     <td colspan="20" class="text-center">Belum ada data</td>
                                                 </tr>
-                                            @endforelse
+                                            @endforelse --}}
 
                                         </tbody>
                                     </table>

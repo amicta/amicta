@@ -41,6 +41,15 @@
 
         gtag('config', 'G-93ZHXK6RDS');
     </script>
+    <!-- FB Share -->
+    <meta property="og:url" content="URLHERE" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="TITLE HERE" />
+    <meta property="og:description" content="DESC HERE" />
+    <meta property="og:image" content="URLIMAGE" />
+    <meta property="og:image:width" content="800" />
+    <meta property="og:image:height" content="600" />
+    <!-- FB Share -->
 </head>
 
 <body>
@@ -336,6 +345,10 @@
                                 </li>
                                 <li>
                                     <a target="_blank" class="dropdown-item text-xs sm:text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100"
+                                        href="{{ route('event.index') }}">Seminar</a>
+                                </li>
+                                <li>
+                                    <a target="_blank" class="dropdown-item text-xs sm:text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100"
                                         href="https://drive.google.com/drive/folders/1ak6mo6ZH35nphXSeM-rN5uPd4h5rgKAN?usp=share_link">Rulebook</a>
                                 </li>
                                 <li>
@@ -349,7 +362,7 @@
                                 <li>
                                     <a class="dropdown-item button-color rounded p-2 text-white text-xs sm:text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100"
                                         href="{{ route('login') }}" style="background-color: #F55553; color: white;">
-                                        Login Tim
+                                        Login
                                     </a>
                                 </li>
                             </ul>
@@ -360,14 +373,17 @@
             <!-- default navbar -->
             <div class="flex text-white p-700 text-center navbar">
                 <div class="z-10 self-center text-xs mx-3 lg:text-sm"><a href="{{ route('welcome') }}">Home</a></div>
-                <div target="_blank" class="z-10 self-center text-xs mx-3 lg:text-sm"><a
+                <div class="z-10 self-center text-xs mx-3 lg:text-sm"><a target="_blank"
+                        href="{{ route('event.index') }}">Seminar</a>
+                </div>
+                <div class="z-10 self-center text-xs mx-3 lg:text-sm"><a target="_blank"
                         href="https://drive.google.com/drive/folders/1ak6mo6ZH35nphXSeM-rN5uPd4h5rgKAN?usp=share_link">Rulebook</a>
                 </div>
                 <div class="z-10 self-center text-xs mx-3 lg:text-sm"><a href="#main-issue">Lomba</a></div>
                 <div class="z-10 self-center text-xs mx-3 lg:text-sm"><a href="#description">Tentang</a></div>
                 <a href="{{ route('login') }}"
                     class="z-10 self-center text-xs mx-3 lg:text-sm button-color p-3 rounded-xl shadow-md hover:bg-orange-700 hover:shadow-lg active:bg-orange-800 active:shadow-lg">
-                    Login Tim
+                    Login
                 </a>
             </div>
         </div>
@@ -528,101 +544,6 @@
     </section>
 
     <section class="text-center text-white px-[50px] lg:px-[150px]">
-
-        <!-- multitrack seminar -->
-        {{-- <section>
-            <h1 class="mt-6 p-700 text-sm sm:text-[20px] lg:text-[30px] lg:leading-[46px]">Multitrack Seminar AMICTA 2022</h1>
-            <p class="mt-3 text-xs lg:text-sm">Empat narasumber professional industri teknologi, secara
-                paralel berbagi kisah sukses, lesson learned dalam perjalanannya menyelesaikan berbagai masalah menggunakan
-                teknologi. Inspiring and Insightful.</p>
-            <br>
-            <!-- pemateri -->
-            <section class="px-[8px] sm:px-[50px] lg:px-[150px]">
-                <div class="text-center bg-white drop-shadow-lg rounded-3xl py-6">
-                    <h2 class="text-xl sm:text-3xl p-700 mb-12 text-black">Pemateri</h2>
-
-                    <div id="carouselsejarah" class="carousel slide relative carousel-dark" data-bs-ride="carousel">
-                        <div class="carousel-inner relative w-full overflow-hidden">
-                            <!-- loop card data pemateri -->
-                            <div class="carousel-item active relative float-left w-full">
-                                <img class="rounded-full shadow-xl bg-gray-100 mb-6 mx-auto"
-                                    src="{{ asset('assets/img/fathin.png') }}" alt="avatar"
-                                    style="width: 150px; height:150px;" />
-                                <div class="flex flex-wrap justify-center">
-                                    <div class="grow-0 shrink-0 basis-auto w-full lg:w-8/12 px-3">
-                                        <h5 class="text-black text-sm sm:text-lg font-bold mb-3">Fathin Naufal - Product Manager at Gojek</h5>
-                                        <p class="text-xs lg:text-sm font-medium text-gray-700 mb-4">
-                                            Track Product Development : How to Build Digital Product
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="carousel-item relative float-left w-full">
-                                <img class="rounded-full shadow-xl bg-gray-100 mb-6 mx-auto"
-                                    src="{{ asset('assets/img/alwy.png') }}" alt="avatar"
-                                    style="width: 150px; height:150px;" />
-                                <div class="flex flex-wrap justify-center">
-                                    <div class="grow-0 shrink-0 basis-auto w-full lg:w-8/12 px-3">
-                                        <h5 class="text-black text-sm sm:text-lg font-bold mb-3">Alwy Herfian S - CEO at Widya Robotic</h5>
-                                        <p class="text-xs lg:text-sm font-medium text-gray-700 mb-4">
-                                            Track Startup Journey : Startup Preneur Zillenials
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="carousel-item relative float-left w-full">
-                                <img class="rounded-full shadow-xl bg-gray-100 mb-6 mx-auto"
-                                    src="{{ asset('assets/img/andrean.png') }}" alt="avatar"
-                                    style="width: 150px; height:150px;" />
-                                <div class="flex flex-wrap justify-center">
-                                    <div class="grow-0 shrink-0 basis-auto w-full lg:w-8/12 px-3">
-                                        <h5 class="text-black text-sm sm:text-lg font-bold mb-3">Andrean N - CEO at WHOUSE</h5>
-                                        <p class="text-xs lg:text-sm font-medium text-gray-700 mb-4">
-                                            Track Startup Journey : From Engineer to be Entrepreneur
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="carousel-item relative float-left w-full">
-                                <img class="rounded-full shadow-xl bg-gray-100 mb-6 mx-auto"
-                                    src="{{ asset('assets/img/delta.png') }}" alt="avatar"
-                                    style="width: 150px; height:150px;" />
-                                <div class="flex flex-wrap justify-center">
-                                    <div class="grow-0 shrink-0 basis-auto w-full lg:w-8/12 px-3">
-                                        <h5 class="text-black text-sm sm:text-lg font-bold mb-3">Delta Purna W - CEO at Qiscus</h5>
-                                        <p class="text-xs lg:text-sm font-medium text-gray-700 mb-4">
-                                            Track Startup Journey : From Engineer to be Entrepreneur
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- end loop data -->
-                        </div>
-                        <button
-                            class="carousel-control-prev absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline left-0"
-                            type="button" data-bs-target="#carouselsejarah" data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon inline-block bg-no-repeat" aria-hidden="true"></span>
-                            <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button
-                            class="carousel-control-next absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline right-0"
-                            type="button" data-bs-target="#carouselsejarah" data-bs-slide="next">
-                            <span class="carousel-control-next-icon inline-block bg-no-repeat" aria-hidden="true"></span>
-                            <span class="visually-hidden">Next</span>
-                        </button>
-                    </div>
-                </div>
-            </section>
-
-            <br>
-            <p class="mt-3 text-xs lg:text-sm">Sayangnya tempat terbatas. Siapa cepat dia dapat! Yuks Daftar Segera!</p>
-            <br>
-            <div class="mt-6">
-                <a class="text-xs lg:text-sm button-color p-3 rounded-xl shadow-md hover:bg-orange-700 hover:shadow-lg active:bg-orange-800 active:shadow-lg"
-                    href="{{ route('event.index') }}">Daftar Sekarang</a>
-            </div>
-        </section> --}}
-
         <!-- main issue -->
         <div id="main-issue">
             <h1 class="mt-14 p-700 text-sm sm:text-[20px] lg:text-[30px] lg:leading-[46px]">PERMASALAHAN DI INDONESIA
@@ -653,6 +574,11 @@
 
         <div class="mt-10">
             <div class="mb-5 bg-white p-6 rounded-3xl">
+                <div class="relative">
+                    <a class="absolute rounded-full button-color p-3 top-[-40px] right-[-40px]" target="_blank" href="whatsapp://send?text=Kuliah kebanyakan teori, saatnya ikut kompetisi!%0a%0aPernah menyaksikan Keseruan Hackathon pada Drakor Startup ?%0a%0aKabar baik nih, tidak lama lagi hadir di AMIKOM.  Kamu bisa merasakan Sensasi membangun Produk Digital dalam 5 Hari, melalui Hackathon.%0a%0aSelain itu, ini momentum yang tepat buat Kamu mewujudkan Ide briliant penerapan teknologi AI, AR/VR, IoT atau Animasi dalam rangkaian Kompetisi Produk.%0a%0aMenangkan Jutaan Rupiah, dan puluhan benefit lainnya dari Amazone Web Service dan Vibicloud.%0a%0aSayangnya waktu pendaftaran terbatas. Ketuk tautan sekarang juga.%0a%0ahttps://amicta.amikom.ac.id" data-action="share/whatsapp/share">
+                        <svg  style="width: 15px; fill: white;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M307 34.8c-11.5 5.1-19 16.6-19 29.2v64H176C78.8 128 0 206.8 0 304C0 417.3 81.5 467.9 100.2 478.1c2.5 1.4 5.3 1.9 8.1 1.9c10.9 0 19.7-8.9 19.7-19.7c0-7.5-4.3-14.4-9.8-19.5C108.8 431.9 96 414.4 96 384c0-53 43-96 96-96h96v64c0 12.6 7.4 24.1 19 29.2s25 3 34.4-5.4l160-144c6.7-6.1 10.6-14.7 10.6-23.8s-3.8-17.7-10.6-23.8l-160-144c-9.4-8.5-22.9-10.6-34.4-5.4z"/></svg>
+                    </a>        
+                </div>
                 <div class="flex flex-col sm:grid sm:grid-cols-6 gap-0.5 lg:gap-2 items-center">
                     <div class="w-16 lg:w-28 p-1 mb-2 sm:mb-0"><img src="{{ asset('assets/img/icon4.svg') }}"
                             alt=""></div>
@@ -670,6 +596,11 @@
                 </div>
             </div>
             <div class="mb-5 bg-white p-6 rounded-3xl">
+                <div class="relative">
+                    <a class="absolute rounded-full button-color p-3 top-[-40px] right-[-40px]" target="_blank" href="whatsapp://send?text=Kuliah kebanyakan teori, saatnya ikut kompetisi!%0a%0aPernah menyaksikan Keseruan Hackathon pada Drakor Startup ?%0a%0aKabar baik nih, tidak lama lagi hadir di AMIKOM.  Kamu bisa merasakan Sensasi membangun Produk Digital dalam 5 Hari, melalui Hackathon.%0a%0aSelain itu, ini momentum yang tepat buat Kamu mewujudkan Ide briliant penerapan teknologi AI, AR/VR, IoT atau Animasi dalam rangkaian Kompetisi Produk.%0a%0aMenangkan Jutaan Rupiah, dan puluhan benefit lainnya dari Amazone Web Service dan Vibicloud.%0a%0aSayangnya waktu pendaftaran terbatas. Ketuk tautan sekarang juga.%0a%0ahttps://amicta.amikom.ac.id" data-action="share/whatsapp/share">
+                        <svg  style="width: 15px; fill: white;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M307 34.8c-11.5 5.1-19 16.6-19 29.2v64H176C78.8 128 0 206.8 0 304C0 417.3 81.5 467.9 100.2 478.1c2.5 1.4 5.3 1.9 8.1 1.9c10.9 0 19.7-8.9 19.7-19.7c0-7.5-4.3-14.4-9.8-19.5C108.8 431.9 96 414.4 96 384c0-53 43-96 96-96h96v64c0 12.6 7.4 24.1 19 29.2s25 3 34.4-5.4l160-144c6.7-6.1 10.6-14.7 10.6-23.8s-3.8-17.7-10.6-23.8l-160-144c-9.4-8.5-22.9-10.6-34.4-5.4z"/></svg>
+                    </a>        
+                </div>
                 <div class="flex flex-col sm:grid sm:grid-cols-6 gap-0.5 lg:gap-2 items-center">
                     <div class="w-16 lg:w-28 p-1 mb-2 sm:mb-0"><img src="{{ asset('assets/img/icon5.svg') }}"
                             alt=""></div>
@@ -688,6 +619,11 @@
                 </div>
             </div>
             <div class="mb-5 bg-white p-6 rounded-3xl">
+                <div class="relative">
+                    <a class="absolute rounded-full button-color p-3 top-[-40px] right-[-40px]" target="_blank" href="whatsapp://send?text=Kuliah kebanyakan teori, saatnya ikut kompetisi!%0a%0aPernah menyaksikan Keseruan Hackathon pada Drakor Startup ?%0a%0aKabar baik nih, tidak lama lagi hadir di AMIKOM.  Kamu bisa merasakan Sensasi membangun Produk Digital dalam 5 Hari, melalui Hackathon.%0a%0aSelain itu, ini momentum yang tepat buat Kamu mewujudkan Ide briliant penerapan teknologi AI, AR/VR, IoT atau Animasi dalam rangkaian Kompetisi Produk.%0a%0aMenangkan Jutaan Rupiah, dan puluhan benefit lainnya dari Amazone Web Service dan Vibicloud.%0a%0aSayangnya waktu pendaftaran terbatas. Ketuk tautan sekarang juga.%0a%0ahttps://amicta.amikom.ac.id" data-action="share/whatsapp/share">
+                        <svg  style="width: 15px; fill: white;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M307 34.8c-11.5 5.1-19 16.6-19 29.2v64H176C78.8 128 0 206.8 0 304C0 417.3 81.5 467.9 100.2 478.1c2.5 1.4 5.3 1.9 8.1 1.9c10.9 0 19.7-8.9 19.7-19.7c0-7.5-4.3-14.4-9.8-19.5C108.8 431.9 96 414.4 96 384c0-53 43-96 96-96h96v64c0 12.6 7.4 24.1 19 29.2s25 3 34.4-5.4l160-144c6.7-6.1 10.6-14.7 10.6-23.8s-3.8-17.7-10.6-23.8l-160-144c-9.4-8.5-22.9-10.6-34.4-5.4z"/></svg>
+                    </a>        
+                </div>
                 <div class="flex flex-col sm:grid sm:grid-cols-6 gap-0.5 lg:gap-2 items-center">
                     <div class="w-16 lg:w-28 p-1 mb-2 sm:mb-0"><img src="{{ asset('assets/img/icon6.svg') }}"
                             alt=""></div>
@@ -714,8 +650,7 @@
 
         {{-- mentor --}}
         <h1 class="mt-14 p-700 text-sm sm:text-[20px] lg:text-[30px] lg:leading-[46px]">Mentor</h1>
-        <div
-            class="mt-6 mb-[164px] flex flex-col sm:grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-0.5 sm:gap-7 lg:gap-4 items-center">
+        <div class="mt-6 flex flex-col sm:grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-0.5 sm:gap-7 lg:gap-4 items-center">
             <div class="flex justify-center mb-3 h-full">
                 <div class="rounded-lg shadow-lg bg-white max-w-sm">
                     <a href="#!">
@@ -824,14 +759,234 @@
                     </div>
                 </div>
             </div>
+            <div class="flex justify-center mb-3 h-full">
+                <div class="rounded-lg shadow-lg bg-white max-w-sm">
+                    <a href="#!">
+                        <img class="h-[200px] w-[250px] object-cover rounded-t-lg "
+                            src="{{ asset('assets/img/mentor/arifiyanto.jpeg') }}" alt="" />
+                    </a>
+                    <div class="p-3">
+                        <h5 class="p-700 text-black text-base font-medium mb-1 uppercase">Arifiyanto Hadinegoro</h5>
+                        <p class="text-gray-700 mb-3 text-xs">
+                            Networking, Hardware 
+                        </p>
+                        <p class="text-gray-700 text-xs text-left">
+                            Experience :
+                        </p>
+                        <ul class="text-gray-700 mb-2 text-xs text-left list-disc px-3">
+                            <li>IT Freelance</li>
+                            <li>Lecturer</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-center mb-3 h-full">
+                <div class="rounded-lg shadow-lg bg-white max-w-sm">
+                    <a href="#!">
+                        <img class="h-[200px] w-[250px] object-cover rounded-t-lg "
+                            src="{{ asset('assets/img/mentor/jeki.jpeg') }}" alt="" />
+                    </a>
+                    <div class="p-3">
+                        <h5 class="p-700 text-black text-base font-medium mb-1 uppercase">Jeki Kuswanto</h5>
+                        <p class="text-gray-700 mb-3 text-xs">
+                            IoT Analyst 
+                        </p>
+                        <p class="text-gray-700 text-xs text-left">
+                            Experience :
+                        </p>
+                        <ul class="text-gray-700 mb-2 text-xs text-left list-disc px-3">
+                            <li>Founder Gablind</li>
+                            <li>Founder Digital Farm</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-center mb-3 h-full">
+                <div class="rounded-lg shadow-lg bg-white max-w-sm">
+                    <a href="#!">
+                        <img class="h-[200px] w-[250px] object-cover rounded-t-lg "
+                            src="{{ asset('assets/img/mentor/arvin.jpeg') }}" alt="" />
+                    </a>
+                    <div class="p-3">
+                        <h5 class="p-700 text-black text-base font-medium mb-1 uppercase">Arvin<br>Claudy Frobenius</h5>
+                        <p class="text-gray-700 mb-3 text-xs">
+                            System Analysis, Design UI/UX,<br>Business Development 
+                        </p>
+                        <p class="text-gray-700 text-xs text-left">
+                            Experience :
+                        </p>
+                        <ul class="text-gray-700 mb-2 text-xs text-left list-disc px-3">
+                            <li>COO PT. Rapidev<br>Inovasi Nusantara</li>
+                            <li>Manager Incubation<br>Amikom Business Park</li>
+                            <li>Mentor Program LPDB<br>Kemenkop Inkubasi Akselerasi</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-center mb-3 h-full">
+                <div class="rounded-lg shadow-lg bg-white max-w-sm">
+                    <a href="#!">
+                        <img class="h-[200px] w-[250px] object-cover rounded-t-lg "
+                            src="{{ asset('assets/img/mentor/krisna.jpeg') }}" alt="" />
+                    </a>
+                    <div class="p-3">
+                        <h5 class="p-700 text-black text-base font-medium mb-1 uppercase">I Gusti Gede<br>Krisna Dewanta</h5>
+                        <p class="text-gray-700 mb-3 text-xs">
+                            Solution Architect, Networking,<br>Technical cloud conceptor
+                        </p>
+                        <p class="text-gray-700 text-xs text-left">
+                            Experience :
+                        </p>
+                        <ul class="text-gray-700 mb-2 text-xs text-left list-disc px-3">
+                            <li>ViBiCloud<br>Solution Architect</li>
+                            <li>Samafitro Business<br>Imaging Solution</li>
+                            <li>MNC Media<br>Programming Staff iNewsTV</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-center mb-3 h-full">
+                <div class="rounded-lg shadow-lg bg-white max-w-sm">
+                    <a href="#!">
+                        <img class="h-[200px] w-[250px] object-cover rounded-t-lg "
+                            src="{{ asset('assets/img/mentor/ryanno.jpeg') }}" alt="" />
+                    </a>
+                    <div class="p-3">
+                        <h5 class="p-700 text-black text-base font-medium mb-1 uppercase">Ryanno Lukman</h5>
+                        <p class="text-gray-700 mb-3 text-xs">
+                            Business solution,<br>Cloud business conceptor,<br>Business strategic
+                        </p>
+                        <p class="text-gray-700 text-xs text-left">
+                            Experience :
+                        </p>
+                        <ul class="text-gray-700 mb-2 text-xs text-left list-disc px-3">
+                            <li>ViBiCloud<br>Business Solution</li>
+                            <li>TYCHE Consultant<br>Head of Business Development</li>
+                            <li>PT TBU<br>Corporate Secretary</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-center mb-3 h-full">
+                <div class="rounded-lg shadow-lg bg-white max-w-sm">
+                    <a href="#!">
+                        <img class="h-[200px] w-[250px] object-cover rounded-t-lg "
+                            src="{{ asset('assets/img/mentor/hasan.jpeg') }}" alt="" />
+                    </a>
+                    <div class="p-3">
+                        <h5 class="p-700 text-black text-base font-medium mb-1 uppercase">FAHRUDDIN HASAN</h5>
+                        <p class="text-gray-700 mb-3 text-xs">
+                            HARDWARE DEVELOPER, IOT<br>ELECTRONICS ENGINEER, ROBOTICS
+                        </p>
+                        <p class="text-gray-700 text-xs text-left">
+                            Experience :
+                        </p>
+                        <ul class="text-gray-700 mb-2 text-xs text-left list-disc px-3">
+                            <li>World Skill Competition 2015<br>Sao Paulo Brazil</li>
+                            <li>Speaker at Start up talk<br>#28 Universitas Amikom</li>
+                            <li>Speaker at<br>Technopreneur Talk UMY</li>
+                            <li>Founder Jogjakartech</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
+
+        <!-- multitrack seminar -->
+        <section>
+            <h1 class="mt-14 p-700 text-sm sm:text-[20px] lg:text-[30px] lg:leading-[46px]">Multitrack Seminar AMICTA 2022</h1>
+            <p class="mt-3 text-xs lg:text-sm">Empat narasumber professional industri teknologi, secara
+                paralel berbagi kisah sukses, lesson learned dalam perjalanannya menyelesaikan berbagai masalah menggunakan
+                teknologi. Inspiring and Insightful.</p>
+            <br>
+            <!-- pemateri -->
+            <section class="px-[8px] sm:px-[50px] lg:px-[150px]">
+                <div class="text-center bg-white drop-shadow-lg rounded-3xl py-6">
+                    <h2 class="text-xl sm:text-3xl p-700 mb-12 text-black">Pemateri</h2>
+
+                    <div id="carouselsejarah" class="carousel slide relative carousel-dark" data-bs-ride="carousel">
+                        <div class="carousel-inner relative w-full overflow-hidden">
+                            <!-- loop card data pemateri -->
+                            <div class="carousel-item active relative float-left w-full">
+                                <img class="rounded-full shadow-xl bg-gray-100 mb-6 mx-auto"
+                                    src="{{ asset('assets/img/fathin.png') }}" alt="avatar"
+                                    style="width: 150px; height:150px;" />
+                                <div class="flex flex-wrap justify-center">
+                                    <div class="grow-0 shrink-0 basis-auto w-full lg:w-8/12 px-3">
+                                        <h5 class="text-black text-sm sm:text-lg font-bold mb-3">Fathin Naufal - Product Manager at Gojek</h5>
+                                        <p class="text-xs lg:text-sm font-medium text-gray-700 mb-4">
+                                            Track Product Development : How to Build Digital Product
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item relative float-left w-full">
+                                <img class="rounded-full shadow-xl bg-gray-100 mb-6 mx-auto"
+                                    src="{{ asset('assets/img/alwy.png') }}" alt="avatar"
+                                    style="width: 150px; height:150px;" />
+                                <div class="flex flex-wrap justify-center">
+                                    <div class="grow-0 shrink-0 basis-auto w-full lg:w-8/12 px-3">
+                                        <h5 class="text-black text-sm sm:text-lg font-bold mb-3">Alwy Herfian S - CEO at Widya Robotic</h5>
+                                        <p class="text-xs lg:text-sm font-medium text-gray-700 mb-4">
+                                            Track Startup Journey : Startup Preneur Zillenials
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item relative float-left w-full">
+                                <img class="rounded-full shadow-xl bg-gray-100 mb-6 mx-auto"
+                                    src="{{ asset('assets/img/andrean.png') }}" alt="avatar"
+                                    style="width: 150px; height:150px;" />
+                                <div class="flex flex-wrap justify-center">
+                                    <div class="grow-0 shrink-0 basis-auto w-full lg:w-8/12 px-3">
+                                        <h5 class="text-black text-sm sm:text-lg font-bold mb-3">Andrean N - CEO at WHOUSE</h5>
+                                        <p class="text-xs lg:text-sm font-medium text-gray-700 mb-4">
+                                            Track Startup Journey : From Engineer to be Entrepreneur
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item relative float-left w-full">
+                                <img class="rounded-full shadow-xl bg-gray-100 mb-6 mx-auto"
+                                    src="{{ asset('assets/img/delta.png') }}" alt="avatar"
+                                    style="width: 150px; height:150px;" />
+                                <div class="flex flex-wrap justify-center">
+                                    <div class="grow-0 shrink-0 basis-auto w-full lg:w-8/12 px-3">
+                                        <h5 class="text-black text-sm sm:text-lg font-bold mb-3">Delta Purna W - CEO at Qiscus</h5>
+                                        <p class="text-xs lg:text-sm font-medium text-gray-700 mb-4">
+                                            Track Startup Journey : From Engineer to be Entrepreneur
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end loop data -->
+                        </div>
+                        <button
+                            class="carousel-control-prev absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline left-0"
+                            type="button" data-bs-target="#carouselsejarah" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon inline-block bg-no-repeat" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button
+                            class="carousel-control-next absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline right-0"
+                            type="button" data-bs-target="#carouselsejarah" data-bs-slide="next">
+                            <span class="carousel-control-next-icon inline-block bg-no-repeat" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+                <br>
+                <div class="mb-[164px] mt-6 flex justify-center">
+                    <iframe class="w-full h-[50vh]" src="https://www.youtube.com/embed/PfyFWusTsYs" frameborder="0"></iframe>
+                </div>
+            </section>
+        </section>        
 
     </section>
 
     <!-- sejarah amicta -->
     <section class="px-[8px] sm:px-[50px] lg:px-[150px] relative">
-        <div
-            class="text-center bg-white drop-shadow-lg rounded-3xl py-6 absolute top-[-90px] left-[10px] right-[10px] sm:left-[150px] sm:right-[150px]">
+        <div class="text-center bg-white drop-shadow-lg rounded-3xl py-6 absolute top-[-90px] left-[10px] right-[10px] sm:left-[150px] sm:right-[150px]">
             <h2 class="text-xl sm:text-3xl p-700 mb-5">Sejarah AMICTA</h2>
 
             <div id="carouselsejarah" class="carousel slide relative carousel-dark" data-bs-interval="false"
