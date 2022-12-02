@@ -49,7 +49,6 @@ class SubmissionController extends Controller
     public function edit(Submission $submission)
     {
         $now = Carbon::now()->format('Y-m-d H:i:s');
-
         $submission->is_open = $submission->assignment->due_date >= $now;
 
         return view('pages.submission.edit', compact('submission'));
@@ -57,6 +56,16 @@ class SubmissionController extends Controller
 
     public function update(SubmissionUpdateRequest $request, Submission $submission)
     {
+        $now = Carbon::now()->format('Y-m-d H:i:s');
+        $submission->is_open = $submission->assignment->due_date >= $now;
+
+        if(!$submission->is_open){
+            return redirect()->back()->with('status', [
+                'element' => 'danger',
+                'message' => 'Maaf, pengumpulan submisi sudah ditutup!'
+            ]);
+        }
+
         $request = $request->validated();
         $submission->response = $request['response'];
         $submission->status = 'submited';
