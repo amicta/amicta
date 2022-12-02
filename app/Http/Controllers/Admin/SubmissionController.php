@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Assignment;
 use App\Models\Competition;
 use App\Models\Submission;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class SubmissionController extends Controller
@@ -78,6 +79,8 @@ class SubmissionController extends Controller
     }
 
     public function export(){
-        return \Maatwebsite\Excel\Facades\Excel::download(new SubmissionExport,'Submission.xlsx');
+        $now = Carbon::now()->format('d-m-Y H:i:s');
+
+        return \Maatwebsite\Excel\Facades\Excel::download(new SubmissionExport,'Submission - ' . $now . '.xlsx');
     }
 }
