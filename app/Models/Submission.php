@@ -20,17 +20,6 @@ class Submission extends Model
         'assignment_id',
     ];
 
-    protected $appends = [
-        'is_open',
-    ];
-
-    public function getIsOpenAttribute()
-    {
-        $now = Carbon::now()->format('Y-m-d H:i:s');
-
-        return $this->assignment->due_date >= $now;
-    }
-
     public function assignment()
     {
         return $this->belongsTo(Assignment::class);

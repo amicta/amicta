@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\SubmissionUpdateRequest;
 use App\Models\Submission;
 use App\Models\User;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -21,7 +22,7 @@ class SubmissionController extends Controller
             return $next($request);
         });
     }
-    
+
     public function index(User $user)
     {
         $data['competitions'] = Auth::user()->competitions;
@@ -47,7 +48,10 @@ class SubmissionController extends Controller
 
     public function edit(Submission $submission)
     {
-        // dd($submission->is_open);
+        $now = Carbon::now()->format('Y-m-d H:i:s');
+
+        $submission->is_open = $submission->assignment->due_date >= $now;
+
         return view('pages.submission.edit', compact('submission'));
     }
 
