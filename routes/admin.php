@@ -8,6 +8,7 @@ Route::group(['middleware' => ['auth:admin']], function () {
     Route::get('/dashboard', 'HomeController@dashboard')->name('dashboard');
 
     Route::resource('/events', 'EventController')->except('create', 'show');
+    Route::get('/participants/export', 'ParticipantController@export')->name('participants.export');
     Route::resource('/participants', 'ParticipantController')->except('create', 'show');
 
     Route::resource('/competitions', 'CompetitionController')->except('create', 'show');

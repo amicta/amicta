@@ -11,6 +11,8 @@
                     <i class="fas fa-plus"></i> Baru
                 </button>
             </div> --}}
+            <a href="{{ route('admin.participants.export') }}" class="btn btn-success btn-icon icon-left mx-2"
+                target="_blank"><i class="fas fa-file-download mr-1"></i>EXPORT EXCEL</a>
         </div>
 
         @include('admin.partials.flash')

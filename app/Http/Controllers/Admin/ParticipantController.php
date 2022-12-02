@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Exports\ParticipantExport;
 use App\Http\Controllers\Controller;
 use App\Models\Event;
 use App\Models\Participant;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class ParticipantController extends Controller
@@ -49,5 +51,12 @@ class ParticipantController extends Controller
             'element' => 'success',
             'message' => 'Peserta berhasil dihapus!'
         ]);
+    }
+
+    public function export()
+    {
+        $now = Carbon::now()->format('d-m-Y H:i:s');
+
+        return \Maatwebsite\Excel\Facades\Excel::download(new ParticipantExport, 'Participant - ' . $now . '.xlsx');
     }
 }
