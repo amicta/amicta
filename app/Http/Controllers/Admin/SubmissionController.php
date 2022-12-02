@@ -56,7 +56,7 @@ class SubmissionController extends Controller
                     'assignment_id' => $nextAssignment,
                     'competition_id' => $submission->competition_id,
                     'user_id' => $submission->user->id,
-                    'team_id' => $submission->team->id,
+                    'team_id' => $submission->team->id ?? null,
                     'status' => 'assigned',
                 ]);
             }
