@@ -57,9 +57,9 @@ class SubmissionController extends Controller
     public function update(SubmissionUpdateRequest $request, Submission $submission)
     {
         $now = Carbon::now()->format('Y-m-d H:i:s');
-        $submission->is_open = $submission->assignment->due_date >= $now;
+        $is_open = $submission->assignment->due_date >= $now;
 
-        if(!$submission->is_open){
+        if(!$is_open){
             return redirect()->back()->with('status', [
                 'element' => 'danger',
                 'message' => 'Maaf, pengumpulan submisi sudah ditutup!'
