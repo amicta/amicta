@@ -36,6 +36,8 @@
                                                 <th>Ketua Tim</th>
                                                 <th>Nama Tim</th>
                                                 <th>Produk</th>
+                                                <th>Anggota 1</th>
+                                                <th>Anggota 2</th>
                                                 {{-- <th>Action</th> --}}
                                             </tr>
                                         </thead>
@@ -46,6 +48,8 @@
                                                     <td>{{ $team->user->name }}</td>
                                                     <td @if ($team->name == 'Belum dibuat') class="text-danger" @endif>{{ $team->name }}</td>
                                                     <td>{{ $team->product }}</td>
+                                                    <td>@if ($team->name == 'Belum dibuat') - @else {{ $team->member[0]['name'] . ' ('. $team->member[0]['nim'] . ')'}} @endif </td>
+                                                    <td>@if ($team->name == 'Belum dibuat') - @else {{ $team->member[1]['name'] . ' ('. $team->member[1]['nim'] . ')'}} @endif </td>
 
                                                     {{-- <td>
                                                         <div class="btn-group">
